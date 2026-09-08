@@ -100,7 +100,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: SaveState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 63
+    startLine: 82
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -135,7 +135,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 163
+    startLine: 202
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -170,7 +170,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: QueryState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 202
+    startLine: 241
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -233,7 +233,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetBulkState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 296
+    startLine: 335
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -268,7 +268,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: DeleteBulkState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 332
+    startLine: 371
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -303,7 +303,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: DeleteState
     path: ../../../src/Virtufin.Api/Services/StateService.cs
-    startLine: 399
+    startLine: 438
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

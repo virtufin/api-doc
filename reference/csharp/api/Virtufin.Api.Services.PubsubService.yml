@@ -183,7 +183,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Unsubscribe
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
-    startLine: 187
+    startLine: 207
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
