@@ -205,14 +205,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -372,14 +372,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -1041,6 +1041,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#state-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#resource-management" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1528,6 +1561,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#state-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#resource-management" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1797,8 +1863,48 @@
 <span class="w">  </span><span class="nx">timeout?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="w">  </span><span class="nx">correlationId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">})</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">SubscribeResponse</span><span class="o">&gt;</span>
-<span class="nx">subscribe</span><span class="p">(</span><span class="nx">services</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">topics</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">eventTypes</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">AsyncIterable</span><span class="o">&lt;</span><span class="nx">TopicEventRequest</span><span class="o">&gt;</span>
+<span class="nx">subscribeToTopics</span><span class="p">(</span><span class="nx">topics</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">AsyncIterable</span><span class="o">&lt;</span><span class="nx">SubscribeResponse</span><span class="o">&gt;</span>
+<span class="nx">subscribeToTopic</span><span class="p">(</span><span class="nx">topic</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">AsyncIterable</span><span class="o">&lt;</span><span class="nx">SubscribeResponse</span><span class="o">&gt;</span>
 </code></pre></div>
+<h4 id="state-operations">State Operations</h4>
+<div class="highlight"><pre><span></span><code><span class="nx">saveState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">etag?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">publishChange?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="nx">includeValue?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">ttlSeconds?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">createOnly?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">})</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">SaveStateResponse</span><span class="o">&gt;</span>
+<span class="nx">getState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">GetStateResponse</span><span class="o">&gt;</span>
+<span class="nx">deleteState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">etag?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">publishChange?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span><span class="w"> </span><span class="nx">includeValue?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="p">})</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">DeleteStateResponse</span><span class="o">&gt;</span>
+<span class="nx">queryState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">limit?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">QueryStateResponse</span><span class="o">&gt;</span>
+<span class="nx">getBulkState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">keys</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">GetBulkStateResponse</span><span class="o">&gt;</span>
+<span class="nx">deleteBulkState</span><span class="p">(</span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">keys</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[],</span><span class="w"> </span><span class="nx">publishChange?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">DeleteBulkStateResponse</span><span class="o">&gt;</span>
+</code></pre></div>
+<p><code>service</code> selects the Dapr state store and must name a registered service (exact,
+case-sensitive). It is not a namespace — see
+<a href="../security/#state-namespacing-is-not-an-access-boundary">security.md</a>.</p>
+<blockquote>
+<p>Writes report failure <strong>in-band</strong>: the gRPC call succeeds and
+<code>response.status.success</code> is <code>false</code>. Check it — catching thrown errors alone will
+read a failed save as a success. <code>deleteBulkState</code> additionally returns <code>failedKeys</code>
+on partial failure, so you can retry the stragglers rather than the whole batch.</p>
+</blockquote>
+<h4 id="trigger-operations">Trigger Operations</h4>
+<div class="highlight"><pre><span></span><code><span class="nx">scheduleTrigger</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">targetTopic</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">schedule?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">dueTime?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="nx">repeats?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">ttl?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">})</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ScheduleTriggerResponse</span><span class="o">&gt;</span>
+<span class="nx">getTrigger</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">GetTriggerResponse</span><span class="o">&gt;</span>
+<span class="nx">deleteTrigger</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">DeleteTriggerResponse</span><span class="o">&gt;</span>
+<span class="nx">listTriggers</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ListTriggersResponse</span><span class="o">&gt;</span>
+</code></pre></div>
+<p><code>schedule</code> is a 6-field cron expression or an <code>@every</code> duration. When the trigger fires,
+the API publishes an empty CloudEvent to <code>targetTopic</code>.</p>
+<h4 id="config-operations">Config Operations</h4>
+<div class="highlight"><pre><span></span><code><span class="nx">listConfigServices</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ListConfigServicesResponse</span><span class="o">&gt;</span>
+<span class="nx">getConfigService</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">GetConfigServiceResponse</span><span class="o">&gt;</span>
+</code></pre></div>
+<p><code>listConfigServices</code> returns every registered entry including non-dialable ones (those
+that exist only to resolve Dapr component names); <code>listServices</code> returns only the
+backends the gateway can invoke.</p>
 <p><strong>Example — Publish:</strong>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@bufbuild/protobuf"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CloudEventSchema</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./generated/cloudevents_pb.js"</span><span class="p">;</span>
@@ -1963,8 +2069,8 @@ equivalent of <code>DynamicObject</code> / <code>__getattr__</code> for runtime 
 <td>Subscribe to topics</td>
 </tr>
 <tr>
-<td><code>TopicEventRequest</code></td>
-<td>Event from subscription</td>
+<td><code>SubscribeResponse</code></td>
+<td>Event from subscription (<code>topic</code> + <code>cloudevent</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -2094,7 +2200,7 @@ equivalent of <code>DynamicObject</code> / <code>__getattr__</code> for runtime 
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-08T03:18:54Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-10T02:02:12Z</span>
 </div>
 
     </div>

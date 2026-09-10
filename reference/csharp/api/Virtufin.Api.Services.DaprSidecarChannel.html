@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class GatewayCircuitBreakerHealthCheck | Virtufin API - C# Reference </title>
+      <title>Class DaprSidecarChannel | Virtufin API - C# Reference </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GatewayCircuitBreakerHealthCheck | Virtufin API - C# Reference ">
+      <meta name="title" content="Class DaprSidecarChannel | Virtufin API - C# Reference ">
       
-      <meta name="description" content="Health check that reports the gateway circuit breaker&#39;s state.">
+      <meta name="description" content="The process-wide gRPC channel to the local Dapr sidecar.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,25 +88,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck">
+        <article data-uid="Virtufin.Api.Services.DaprSidecarChannel">
 
 
 
-  <h1 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck" class="text-break">
-Class GatewayCircuitBreakerHealthCheck  
+  <h1 id="Virtufin_Api_Services_DaprSidecarChannel" data-uid="Virtufin.Api.Services.DaprSidecarChannel" class="text-break">
+Class DaprSidecarChannel  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Virtufin.html">Virtufin</a>.<a class="xref" href="Virtufin.Api.html">Api</a>.<a class="xref" href="Virtufin.Api.HealthChecks.html">HealthChecks</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Virtufin.html">Virtufin</a>.<a class="xref" href="Virtufin.Api.html">Api</a>.<a class="xref" href="Virtufin.Api.Services.html">Services</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Virtufin.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Health check that reports the gateway circuit breaker's state.</p>
+  <div class="markdown summary"><p>The process-wide gRPC channel to the local Dapr sidecar.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GatewayCircuitBreakerHealthCheck : IHealthCheck</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DaprSidecarChannel : IDisposable</code></pre>
   </div>
 
 
@@ -116,14 +116,14 @@ Class GatewayCircuitBreakerHealthCheck
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">GatewayCircuitBreakerHealthCheck</span></div>
+      <div><span class="xref">DaprSidecarChannel</span></div>
     </dd>
   </dl>
 
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.ihealthcheck">IHealthCheck</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -154,16 +154,22 @@ Class GatewayCircuitBreakerHealthCheck
 
 
 
+  <h2 id="Virtufin_Api_Services_DaprSidecarChannel_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Registered as a singleton so every component talking to the sidecar shares one
+connection. Distinct from <a class="xref" href="Virtufin.Api.Services.GrpcChannelPool.html">GrpcChannelPool</a>, which manages channels to
+downstream <em>application</em> services across many hosts; this is a single fixed
+localhost target and needs no pooling or health validation.</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
 </h2>
 
 
-  <a id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck__ctor_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.#ctor*"></a>
+  <a id="Virtufin_Api_Services_DaprSidecarChannel__ctor_" data-uid="Virtufin.Api.Services.DaprSidecarChannel.#ctor*"></a>
 
-  <h3 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck__ctor_Virtufin_Api_HealthChecks_GatewayResiliencePipeline_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.#ctor(Virtufin.Api.HealthChecks.GatewayResiliencePipeline)">
-  GatewayCircuitBreakerHealthCheck(GatewayResiliencePipeline)
+  <h3 id="Virtufin_Api_Services_DaprSidecarChannel__ctor_Grpc_Net_Client_GrpcChannel_" data-uid="Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)">
+  DaprSidecarChannel(GrpcChannel)
   
   </h3>
 
@@ -171,12 +177,12 @@ Class GatewayCircuitBreakerHealthCheck
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GatewayCircuitBreakerHealthCheck(GatewayResiliencePipeline resilience)</code></pre>
+    <pre><code class="lang-csharp hljs">public DaprSidecarChannel(GrpcChannel channel)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>resilience</code> <a class="xref" href="Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html">GatewayResiliencePipeline</a></dt>
+    <dt><code>channel</code> <a class="xref" href="https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Net.Client/GrpcChannel.cs">GrpcChannel</a></dt>
     <dd></dd>
   </dl>
 
@@ -191,41 +197,61 @@ Class GatewayCircuitBreakerHealthCheck
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Virtufin_Api_Services_DaprSidecarChannel_Channel_" data-uid="Virtufin.Api.Services.DaprSidecarChannel.Channel*"></a>
+
+  <h3 id="Virtufin_Api_Services_DaprSidecarChannel_Channel" data-uid="Virtufin.Api.Services.DaprSidecarChannel.Channel">
+  Channel
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GrpcChannel Channel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Net.Client/GrpcChannel.cs">GrpcChannel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck_CheckHealthAsync_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.CheckHealthAsync*"></a>
+  <a id="Virtufin_Api_Services_DaprSidecarChannel_Dispose_" data-uid="Virtufin.Api.Services.DaprSidecarChannel.Dispose*"></a>
 
-  <h3 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck_CheckHealthAsync_Microsoft_Extensions_Diagnostics_HealthChecks_HealthCheckContext_System_Threading_CancellationToken_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.CheckHealthAsync(Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckContext,System.Threading.CancellationToken)">
-  CheckHealthAsync(HealthCheckContext, CancellationToken)
+  <h3 id="Virtufin_Api_Services_DaprSidecarChannel_Dispose" data-uid="Virtufin.Api.Services.DaprSidecarChannel.Dispose">
+  Dispose()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Runs the health check, returning the status of the component being checked.</p>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;HealthCheckResult&gt; CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.healthcheckcontext">HealthCheckContext</a></dt>
-    <dd><p>A context object associated with the current execution.</p>
-</dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the health check.</p>
-</dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.healthcheckresult">HealthCheckResult</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that completes when the health check has finished, yielding the status of the component being checked.</p>
-</dd>
-  </dl>
 
 
 

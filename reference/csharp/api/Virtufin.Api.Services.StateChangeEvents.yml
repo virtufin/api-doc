@@ -1,35 +1,47 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Virtufin.Api.Services.GatewaySubscription
-  commentId: T:Virtufin.Api.Services.GatewaySubscription
-  id: GatewaySubscription
+- uid: Virtufin.Api.Services.StateChangeEvents
+  commentId: T:Virtufin.Api.Services.StateChangeEvents
+  id: StateChangeEvents
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  - Virtufin.Api.Services.GatewaySubscription.AddedAt
-  - Virtufin.Api.Services.GatewaySubscription.Topic
-  - Virtufin.Api.Services.GatewaySubscription.Writer
+  - Virtufin.Api.Services.StateChangeEvents.Source
+  - Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  - Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
+  - Virtufin.Api.Services.StateChangeEvents.TypeSaved
   langs:
   - csharp
   - vb
-  name: GatewaySubscription
-  nameWithType: GatewaySubscription
-  fullName: Virtufin.Api.Services.GatewaySubscription
+  name: StateChangeEvents
+  nameWithType: StateChangeEvents
+  fullName: Virtufin.Api.Services.StateChangeEvents
   type: Class
   source:
     remote:
-      path: src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
+      path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: GatewaySubscription
-    path: ../../../src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-    startLine: 127
+    id: StateChangeEvents
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 122
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: CloudEvent attributes for the Tier 0 <code>state.change</code> topic.
+  remarks: >-
+    Per the pubsub-topics spec, a Tier 0 <code>ce-type</code> is
+
+    <code>com.virtufin.&lt;service&gt;.&lt;category&gt;.&lt;event&gt;</code> and <code>ce-source</code> is the
+
+    publishing service's URN. These were <code>com.dapr.event.sent</code> and
+
+    <code>urn:apigateway</code>: the same type for saves and deletes, so it discriminated
+
+    nothing and every subscriber had to parse the payload to learn which had happened.
+  example: []
   syntax:
-    content: public class GatewaySubscription
-    content.vb: Public Class GatewaySubscription
+    content: public static class StateChangeEvents
+    content.vb: Public Module StateChangeEvents
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,127 +52,125 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.GatewaySubscription.Writer
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.Writer
-  id: Writer
-  parent: Virtufin.Api.Services.GatewaySubscription
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  id: TypeSaved
+  parent: Virtufin.Api.Services.StateChangeEvents
   langs:
   - csharp
   - vb
-  name: Writer
-  nameWithType: GatewaySubscription.Writer
-  fullName: Virtufin.Api.Services.GatewaySubscription.Writer
-  type: Property
+  name: TypeSaved
+  nameWithType: StateChangeEvents.TypeSaved
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  type: Field
   source:
     remote:
-      path: src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
+      path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: Writer
-    path: ../../../src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-    startLine: 129
+    id: TypeSaved
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 124
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public ChannelWriter<SubscribeResponse> Writer { get; }
-    parameters: []
-    return:
-      type: System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse}
-    content.vb: Public ReadOnly Property Writer As ChannelWriter(Of SubscribeResponse)
-  overload: Virtufin.Api.Services.GatewaySubscription.Writer*
-- uid: Virtufin.Api.Services.GatewaySubscription.Topic
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.Topic
-  id: Topic
-  parent: Virtufin.Api.Services.GatewaySubscription
-  langs:
-  - csharp
-  - vb
-  name: Topic
-  nameWithType: GatewaySubscription.Topic
-  fullName: Virtufin.Api.Services.GatewaySubscription.Topic
-  type: Property
-  source:
-    remote:
-      path: src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: Topic
-    path: ../../../src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-    startLine: 130
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.Services
-  syntax:
-    content: public string Topic { get; }
-    parameters: []
+    content: public const string TypeSaved = "com.virtufin.state.change.saved"
     return:
       type: System.String
-    content.vb: Public ReadOnly Property Topic As String
-  overload: Virtufin.Api.Services.GatewaySubscription.Topic*
-- uid: Virtufin.Api.Services.GatewaySubscription.AddedAt
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.AddedAt
-  id: AddedAt
-  parent: Virtufin.Api.Services.GatewaySubscription
+    content.vb: Public Const TypeSaved As String = "com.virtufin.state.change.saved"
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  id: TypeDeleted
+  parent: Virtufin.Api.Services.StateChangeEvents
   langs:
   - csharp
   - vb
-  name: AddedAt
-  nameWithType: GatewaySubscription.AddedAt
-  fullName: Virtufin.Api.Services.GatewaySubscription.AddedAt
-  type: Property
+  name: TypeDeleted
+  nameWithType: StateChangeEvents.TypeDeleted
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  type: Field
   source:
     remote:
-      path: src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
+      path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: AddedAt
-    path: ../../../src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
+    id: TypeDeleted
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 125
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string TypeDeleted = "com.virtufin.state.change.deleted"
+    return:
+      type: System.String
+    content.vb: Public Const TypeDeleted As String = "com.virtufin.state.change.deleted"
+- uid: Virtufin.Api.Services.StateChangeEvents.Source
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.Source
+  id: Source
+  parent: Virtufin.Api.Services.StateChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: StateChangeEvents.Source
+  fullName: Virtufin.Api.Services.StateChangeEvents.Source
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Source
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 128
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: The API is the publishing service for these events.
+  example: []
+  syntax:
+    content: public const string Source = "urn:com.virtufin.api"
+    return:
+      type: System.String
+    content.vb: Public Const Source As String = "urn:com.virtufin.api"
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
+  commentId: M:Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
+  id: TypeForAction(System.String)
+  parent: Virtufin.Api.Services.StateChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: TypeForAction(string)
+  nameWithType: StateChangeEvents.TypeForAction(string)
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeForAction(string)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: TypeForAction
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 131
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: Maps a <xref href="Virtufin.Api.Services.StateActionConstants" data-throw-if-not-resolved="false"></xref> action to its ce-type.
+  example: []
   syntax:
-    content: public DateTime AddedAt { get; }
-    parameters: []
-    return:
-      type: System.DateTime
-    content.vb: Public ReadOnly Property AddedAt As Date
-  overload: Virtufin.Api.Services.GatewaySubscription.AddedAt*
-- uid: Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  commentId: M:Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  id: '#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})'
-  parent: Virtufin.Api.Services.GatewaySubscription
-  langs:
-  - csharp
-  - vb
-  name: GatewaySubscription(string, ChannelWriter<SubscribeResponse>)
-  nameWithType: GatewaySubscription.GatewaySubscription(string, ChannelWriter<SubscribeResponse>)
-  fullName: Virtufin.Api.Services.GatewaySubscription.GatewaySubscription(string, System.Threading.Channels.ChannelWriter<Virtufin.Api.Protos.SubscribeResponse>)
-  type: Constructor
-  source:
-    remote:
-      path: src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: .ctor
-    path: ../../../src/Virtufin.Api/Services/GatewaySubscriptionManager.cs
-    startLine: 133
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.Services
-  syntax:
-    content: public GatewaySubscription(string topic, ChannelWriter<SubscribeResponse> writer)
+    content: public static string TypeForAction(string action)
     parameters:
-    - id: topic
+    - id: action
       type: System.String
-    - id: writer
-      type: System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse}
-    content.vb: Public Sub New(topic As String, writer As ChannelWriter(Of SubscribeResponse))
-  overload: Virtufin.Api.Services.GatewaySubscription.#ctor*
-  nameWithType.vb: GatewaySubscription.New(String, ChannelWriter(Of SubscribeResponse))
-  fullName.vb: Virtufin.Api.Services.GatewaySubscription.New(String, System.Threading.Channels.ChannelWriter(Of Virtufin.Api.Protos.SubscribeResponse))
-  name.vb: New(String, ChannelWriter(Of SubscribeResponse))
+    return:
+      type: System.String
+    content.vb: Public Shared Function TypeForAction(action As String) As String
+  overload: Virtufin.Api.Services.StateChangeEvents.TypeForAction*
+  nameWithType.vb: StateChangeEvents.TypeForAction(String)
+  fullName.vb: Virtufin.Api.Services.StateChangeEvents.TypeForAction(String)
+  name.vb: TypeForAction(String)
 references:
 - uid: Virtufin.Api.Services
   commentId: N:Virtufin.Api.Services
@@ -429,114 +439,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Virtufin.Api.Services.GatewaySubscription.Writer*
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.Writer
-  href: Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Writer
-  name: Writer
-  nameWithType: GatewaySubscription.Writer
-  fullName: Virtufin.Api.Services.GatewaySubscription.Writer
-- uid: System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse}
-  commentId: T:System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse}
-  parent: System.Threading.Channels
-  definition: System.Threading.Channels.ChannelWriter`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  name: ChannelWriter<SubscribeResponse>
-  nameWithType: ChannelWriter<SubscribeResponse>
-  fullName: System.Threading.Channels.ChannelWriter<Virtufin.Api.Protos.SubscribeResponse>
-  nameWithType.vb: ChannelWriter(Of SubscribeResponse)
-  fullName.vb: System.Threading.Channels.ChannelWriter(Of Virtufin.Api.Protos.SubscribeResponse)
-  name.vb: ChannelWriter(Of SubscribeResponse)
-  spec.csharp:
-  - uid: System.Threading.Channels.ChannelWriter`1
-    name: ChannelWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  - name: <
-  - uid: Virtufin.Api.Protos.SubscribeResponse
-    name: SubscribeResponse
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Channels.ChannelWriter`1
-    name: ChannelWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Virtufin.Api.Protos.SubscribeResponse
-    name: SubscribeResponse
-  - name: )
-- uid: System.Threading.Channels.ChannelWriter`1
-  commentId: T:System.Threading.Channels.ChannelWriter`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  name: ChannelWriter<T>
-  nameWithType: ChannelWriter<T>
-  fullName: System.Threading.Channels.ChannelWriter<T>
-  nameWithType.vb: ChannelWriter(Of T)
-  fullName.vb: System.Threading.Channels.ChannelWriter(Of T)
-  name.vb: ChannelWriter(Of T)
-  spec.csharp:
-  - uid: System.Threading.Channels.ChannelWriter`1
-    name: ChannelWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Channels.ChannelWriter`1
-    name: ChannelWriter
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Threading.Channels
-  commentId: N:System.Threading.Channels
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Channels
-  nameWithType: System.Threading.Channels
-  fullName: System.Threading.Channels
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Channels
-    name: Channels
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Threading
-    name: Threading
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
-  - name: .
-  - uid: System.Threading.Channels
-    name: Channels
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.channels
-- uid: Virtufin.Api.Services.GatewaySubscription.Topic*
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.Topic
-  href: Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Topic
-  name: Topic
-  nameWithType: GatewaySubscription.Topic
-  fullName: Virtufin.Api.Services.GatewaySubscription.Topic
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -548,29 +450,15 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: Virtufin.Api.Services.GatewaySubscription.AddedAt*
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.AddedAt
-  href: Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_AddedAt
-  name: AddedAt
-  nameWithType: GatewaySubscription.AddedAt
-  fullName: Virtufin.Api.Services.GatewaySubscription.AddedAt
-- uid: System.DateTime
-  commentId: T:System.DateTime
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.datetime
-  name: DateTime
-  nameWithType: DateTime
-  fullName: System.DateTime
-  nameWithType.vb: Date
-  fullName.vb: Date
-  name.vb: Date
-- uid: Virtufin.Api.Services.GatewaySubscription.#ctor*
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.#ctor
-  href: Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription__ctor_System_String_System_Threading_Channels_ChannelWriter_Virtufin_Api_Protos_SubscribeResponse__
-  name: GatewaySubscription
-  nameWithType: GatewaySubscription.GatewaySubscription
-  fullName: Virtufin.Api.Services.GatewaySubscription.GatewaySubscription
-  nameWithType.vb: GatewaySubscription.New
-  fullName.vb: Virtufin.Api.Services.GatewaySubscription.New
-  name.vb: New
+- uid: Virtufin.Api.Services.StateActionConstants
+  commentId: T:Virtufin.Api.Services.StateActionConstants
+  href: Virtufin.Api.Services.StateActionConstants.html
+  name: StateActionConstants
+  nameWithType: StateActionConstants
+  fullName: Virtufin.Api.Services.StateActionConstants
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeForAction*
+  commentId: Overload:Virtufin.Api.Services.StateChangeEvents.TypeForAction
+  href: Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_TypeForAction_System_String_
+  name: TypeForAction
+  nameWithType: StateChangeEvents.TypeForAction
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeForAction

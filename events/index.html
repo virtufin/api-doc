@@ -205,14 +205,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -372,14 +372,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -722,33 +722,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-types" class="md-nav__link">
+  <a href="#the-wire-type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Types
+        The wire type
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Event Types">
+    <nav class="md-nav" aria-label="The wire type">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#topiceventrequest-grpc" class="md-nav__link">
+  <a href="#publish-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TopicEventRequest (gRPC)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-service-topic-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-service topic model
+        Publish validation
       
     </span>
   </a>
@@ -761,22 +750,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#grpc-streaming" class="md-nav__link">
+  <a href="#topic-naming" class="md-nav__link">
     <span class="md-ellipsis">
       
-        gRPC Streaming
+        Topic naming
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="gRPC Streaming">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-change-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State change events
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State change events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subscribe-method" class="md-nav__link">
+  <a href="#infrastructure-state-statechange-tier-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subscribe Method
+        Infrastructure state → state.change (Tier 0)
       
     </span>
   </a>
@@ -784,10 +784,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-service-methods" class="md-nav__link">
+  <a href="#domain-state-your-own-topic-tier-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Service Methods
+        Domain state → your own topic (Tier 1)
       
     </span>
   </a>
@@ -795,32 +795,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-change-event-payload" class="md-nav__link">
+  <a href="#delivery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Change Event Payload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c-client-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C# Client Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-client-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python Client Example
+        Delivery
       
     </span>
   </a>
@@ -833,29 +811,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dapr-pubsub-integration" class="md-nav__link">
+  <a href="#subscribing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dapr Pub/Sub Integration
+        Subscribing
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dapr Pub/Sub Integration">
+    <nav class="md-nav" aria-label="Subscribing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#unsubscribe-do-not-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Unsubscribe — do not use
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-reply-over-pubsub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request-reply over pub/sub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cron-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron triggers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -865,170 +870,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#message-handler" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Message Handler
+        Error handling
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dapr-client-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dapr Client Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-subscription-system" class="md-nav__link">
+  <a href="#client-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Subscription System
+        Client examples
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Event Subscription System">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scope Hierarchy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscription-matching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subscription Matching
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eventsubscriptionmanager" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EventSubscriptionManager
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#per-service-lifecycle-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-service Lifecycle Events
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Per-service Lifecycle Events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-status-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connection Status Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Flow
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-flow-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Flow Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Flow Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-state-change-event-via-savestate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 1: State Change Event via SaveState
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2-dapr-pubsub-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 2: Dapr Pub/Sub Event
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-3-system-connection-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 3: System Connection Event
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1036,38 +897,10 @@
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best Practices
+        Best practices
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscription-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subscription Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error Handling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1499,33 +1332,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-types" class="md-nav__link">
+  <a href="#the-wire-type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Types
+        The wire type
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Event Types">
+    <nav class="md-nav" aria-label="The wire type">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#topiceventrequest-grpc" class="md-nav__link">
+  <a href="#publish-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TopicEventRequest (gRPC)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-service-topic-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-service topic model
+        Publish validation
       
     </span>
   </a>
@@ -1538,22 +1360,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#grpc-streaming" class="md-nav__link">
+  <a href="#topic-naming" class="md-nav__link">
     <span class="md-ellipsis">
       
-        gRPC Streaming
+        Topic naming
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="gRPC Streaming">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-change-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State change events
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State change events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#subscribe-method" class="md-nav__link">
+  <a href="#infrastructure-state-statechange-tier-0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Subscribe Method
+        Infrastructure state → state.change (Tier 0)
       
     </span>
   </a>
@@ -1561,10 +1394,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-service-methods" class="md-nav__link">
+  <a href="#domain-state-your-own-topic-tier-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Service Methods
+        Domain state → your own topic (Tier 1)
       
     </span>
   </a>
@@ -1572,32 +1405,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-change-event-payload" class="md-nav__link">
+  <a href="#delivery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Change Event Payload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c-client-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        C# Client Example
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-client-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python Client Example
+        Delivery
       
     </span>
   </a>
@@ -1610,29 +1421,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dapr-pubsub-integration" class="md-nav__link">
+  <a href="#subscribing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dapr Pub/Sub Integration
+        Subscribing
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dapr Pub/Sub Integration">
+    <nav class="md-nav" aria-label="Subscribing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#unsubscribe-do-not-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Unsubscribe — do not use
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-reply-over-pubsub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request-reply over pub/sub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cron-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron triggers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1642,170 +1480,26 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#message-handler" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Message Handler
+        Error handling
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dapr-client-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dapr Client Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-subscription-system" class="md-nav__link">
+  <a href="#client-examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Event Subscription System
+        Client examples
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Event Subscription System">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scope Hierarchy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subscription-matching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subscription Matching
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eventsubscriptionmanager" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EventSubscriptionManager
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#per-service-lifecycle-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-service Lifecycle Events
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Per-service Lifecycle Events">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-status-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connection Status Events
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Flow
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#event-flow-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Event Flow Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Flow Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-state-change-event-via-savestate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 1: State Change Event via SaveState
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2-dapr-pubsub-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 2: Dapr Pub/Sub Event
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-3-system-connection-event" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 3: System Connection Event
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1813,38 +1507,10 @@
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best Practices
+        Best practices
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#subscription-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Subscription Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Error Handling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1866,370 +1532,383 @@
 
 
 <h1 id="event-streaming-architecture">Event Streaming Architecture</h1>
-<p>Documentation for event streaming in the Virtufin API, covering gRPC streaming and Dapr pub/sub integration.</p>
+<p>How events flow through the Virtufin API: CloudEvents over Dapr pub/sub, exposed to
+clients as gRPC streams.</p>
 <h2 id="overview">Overview</h2>
-<p>Virtufin API provides multiple event streaming mechanisms:</p>
+<p>Every event on the platform is a <a href="https://github.com/cloudevents/spec">CloudEvents v1.0</a>
+message. The API is the only component that talks to Dapr pub/sub; other services publish
+and subscribe through the <code>Pubsub</code> gRPC service.</p>
 <table>
 <thead>
 <tr>
 <th>Mechanism</th>
-<th>Protocol</th>
-<th>Use Case</th>
+<th>Direction</th>
+<th>Entry point</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>gRPC Streaming</td>
-<td>gRPC</td>
-<td>Native clients, high-performance</td>
+<td><code>Pubsub.PublishEvent</code></td>
+<td>client → Dapr topic</td>
+<td>unary gRPC / <code>POST /v1/pubsub/{topic}</code></td>
 </tr>
 <tr>
-<td>Dapr Pub/Sub</td>
-<td>Dapr</td>
-<td>Backend service integration</td>
+<td><code>Pubsub.Subscribe</code></td>
+<td>Dapr topic → client</td>
+<td>server-streaming gRPC</td>
+</tr>
+<tr>
+<td><code>Trigger.ScheduleTrigger</code></td>
+<td>cron → Dapr topic</td>
+<td>unary gRPC / <code>POST /v1/trigger/{name}</code></td>
+</tr>
+<tr>
+<td><code>State.SaveState(publish_change: true)</code></td>
+<td>state write → <code>state.change</code> topic</td>
+<td>unary gRPC</td>
 </tr>
 </tbody>
 </table>
-<h2 id="event-types">Event Types</h2>
-<h3 id="topiceventrequest-grpc">TopicEventRequest (gRPC)</h3>
-<p>Standard event message for business events, returned by <code>Gateway.Subscribe</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">message</span><span class="w"> </span><span class="nc">TopicEventRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// CloudEvent id</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span><span class="c1">// CloudEvent source</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">              </span><span class="c1">// CloudEvent type (ce-type)</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">spec_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">      </span><span class="c1">// CloudEvents spec version (e.g. "1.0")</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">data_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// CloudEvent data content type</span>
-<span class="w">  </span><span class="kt">bytes</span><span class="w"> </span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">               </span><span class="c1">// CloudEvent payload</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">             </span><span class="c1">// Dapr topic the message was published on</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">pubsub_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">       </span><span class="c1">// Dapr pubsub component name</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w">              </span><span class="c1">// Dapr-internal subject path</span>
+<h2 id="the-wire-type">The wire type</h2>
+<p>Events are the CloudEvent protobuf message (<code>proto/cloudevents.proto</code>,
+<code>package io.cloudevents.v1</code>), not a bespoke envelope:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">message</span><span class="w"> </span><span class="nc">CloudEvent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">        </span><span class="c1">// MUST be an absolute URI — see validation below</span>
+<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">spec_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">          </span><span class="c1">// "ce-type"; discriminates events within a topic</span>
+<span class="w">  </span><span class="n">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="n">CloudEventAttributeValue</span><span class="p">&gt;</span><span class="w"> </span><span class="na">attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">// optional + extension attributes</span>
+<span class="w">  </span><span class="k">oneof</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">bytes</span><span class="w"> </span><span class="na">binary_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">text_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="w">    </span><span class="n">google.protobuf.Any</span><span class="w"> </span><span class="na">proto_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="per-service-topic-model">Per-service topic model</h3>
-<p>Each service owns its pubsub topic for lifecycle events. The topic name is defined in the service's own <code>Configuration/Topics.cs</code> (e.g. <code>websocketmanager.lifecycle</code>, <code>workmanager.lifecycle</code>); <code>ce-type</code> discriminates events within the topic. The topic name is the public contract between the publisher and its consumers — see each service's <code>AGENTS.md</code> and <code>docs/v1/connection-lifecycle.md</code> (or equivalent) for the event taxonomy.</p>
-<hr />
-<h2 id="grpc-streaming">gRPC Streaming</h2>
-<h3 id="subscribe-method">Subscribe Method</h3>
-<div class="highlight"><pre><span></span><code><span class="k">rpc</span><span class="w"> </span><span class="n">Subscribe</span><span class="w"> </span><span class="p">(</span><span class="n">SubscribeRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">stream</span><span class="w"> </span><span class="n">TopicEventRequest</span><span class="p">);</span>
+<p>The <code>Pubsub</code> service surface (<code>proto/pubsub.proto</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">service</span><span class="w"> </span><span class="n">Pubsub</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">PublishEvent</span><span class="w"> </span><span class="p">(</span><span class="n">PublishRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">PublishResponse</span><span class="p">);</span>
+<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">Subscribe</span><span class="w"> </span><span class="p">(</span><span class="n">SubscribeRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">stream</span><span class="w"> </span><span class="n">SubscribeResponse</span><span class="p">);</span>
+<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">Unsubscribe</span><span class="w"> </span><span class="p">(</span><span class="n">UnsubscribeRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">UnsubscribeResponse</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="kd">message</span><span class="w"> </span><span class="nc">SubscribeRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">services</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">    </span><span class="c1">// Filter by services</span>
-<span class="w">  </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">      </span><span class="c1">// Filter by topics</span>
-<span class="w">  </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">event_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Filter by event types</span>
-<span class="p">}</span>
+<span class="kd">message</span><span class="w"> </span><span class="nc">PublishRequest</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">io.cloudevents.v1.CloudEvent</span><span class="w"> </span><span class="na">cloudevent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">message</span><span class="w"> </span><span class="nc">SubscribeRequest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">message</span><span class="w"> </span><span class="nc">SubscribeResponse</span><span class="p">{</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">io.cloudevents.v1.CloudEvent</span><span class="w"> </span><span class="na">cloudevent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
+<p><code>SubscribeRequest</code> filters by <strong>topic only</strong>. There is no service filter and no event-type
+filter on the wire; a subscriber that wants to react to a subset of a topic's events
+inspects <code>cloudevent.type</code> itself.</p>
+<h3 id="publish-validation">Publish validation</h3>
+<p><code>PublishEvent</code> rejects, with <code>InvalidArgument</code>:</p>
+<ul>
+<li>an empty <code>topic</code>;</li>
+<li>a missing <code>cloudevent</code>;</li>
+<li>an empty <code>cloudevent.source</code>;</li>
+<li>a <code>cloudevent.source</code> that is not an <strong>absolute</strong> URI. <code>"demo/notebook"</code> is rejected;
+  <code>"https://virtufin.com/demo/notebook"</code> and <code>"urn:virtufin:demo"</code> are accepted.</li>
+</ul>
+<p>Nothing else about a topic is validated — see "Topic naming" below.</p>
+<h2 id="topic-naming">Topic naming</h2>
+<p>Topic names follow the <code>&lt;service&gt;.&lt;event_category&gt;</code> convention:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Publisher</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>websocketmanager.lifecycle</code></td>
+<td>WebSocketManager</td>
+<td>connection lifecycle</td>
+</tr>
+<tr>
+<td><code>workmanager.lifecycle</code></td>
+<td>WorkManager</td>
+<td>worker lifecycle</td>
+</tr>
+<tr>
+<td><code>state.change</code></td>
+<td>the API itself</td>
+<td>state mutations (see below)</td>
+</tr>
+</tbody>
+</table>
+<p>The name is defined as a constant in the publishing service's own <code>Configuration/Topics.cs</code>
+and is the public contract between that publisher and its consumers. Consult each service's
+<code>AGENTS.md</code> for its event taxonomy.</p>
 <blockquote>
-<p><strong>Note:</strong> The <code>WatchSystemEvents</code> RPC was removed. All events (including per-service lifecycle events) are delivered through the regular <code>Subscribe</code> RPC. Subscribe to the appropriate per-service topic (e.g. <code>websocketmanager.lifecycle</code>, <code>workmanager.lifecycle</code>) to receive those events.</p>
+<p><strong>This convention is producer-side discipline, not an API guarantee.</strong> The API does not
+validate topic names against the convention, does not maintain an allow-list, and does not
+scope topics to callers. Any authenticated caller may publish to, and subscribe to, any
+topic string — including another service's lifecycle topic and <code>state.change</code>. Do not rely
+on the topic namespace for isolation.</p>
 </blockquote>
-<h3 id="state-service-methods">State Service Methods</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// In Protos/state.proto</span>
-<span class="kd">service</span><span class="w"> </span><span class="n">State</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">SaveState</span><span class="w"> </span><span class="p">(</span><span class="n">SaveStateRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">SaveStateResponse</span><span class="p">);</span>
-<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">GetState</span><span class="w"> </span><span class="p">(</span><span class="n">GetStateRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">GetStateResponse</span><span class="p">);</span>
-<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">GetAllState</span><span class="w"> </span><span class="p">(</span><span class="n">GetAllStateRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">GetAllStateResponse</span><span class="p">);</span>
-<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">RegisterKeys</span><span class="w"> </span><span class="p">(</span><span class="n">RegisterKeysRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">RegisterKeysResponse</span><span class="p">);</span>
-<span class="w">  </span><span class="k">rpc</span><span class="w"> </span><span class="n">DeleteState</span><span class="w"> </span><span class="p">(</span><span class="n">DeleteStateRequest</span><span class="p">)</span><span class="w"> </span><span class="k">returns</span><span class="w"> </span><span class="p">(</span><span class="n">DeleteStateResponse</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">SaveStateRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="kd">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c1">// Service name (e.g., "state")</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">         </span><span class="c1">// State key</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">       </span><span class="c1">// State value</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">etag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">        </span><span class="c1">// Optional ETag for concurrency</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="na">include_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">// If true, include value in event payload (default: false)</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">SaveStateResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">StatusResponse</span><span class="w"> </span><span class="na">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">GetStateRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="kd">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">GetStateResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">etag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">GetAllStateRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="kd">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">GetAllStateResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="na">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">RegisterKeysRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="kd">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">keys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">RegisterKeysResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">StatusResponse</span><span class="w"> </span><span class="na">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">DeleteStateRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="kd">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="na">include_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// If true, include last value in event payload (default: false)</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">DeleteStateResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">StatusResponse</span><span class="w"> </span><span class="na">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p><strong>Key behavior</strong>: 
-- <code>SaveState</code> broadcasts a state change event to the <code>state-changes</code> topic via Dapr pub/sub
-- When <code>include_value=true</code>, the event payload includes the value
-- <code>DeleteState</code> removes state and broadcasts a delete event with <code>action: "delete"</code></p>
-<h3 id="state-change-event-payload">State Change Event Payload</h3>
-<p>Events published to <code>state-changes</code> topic have the following structure:</p>
+<h2 id="state-change-events">State change events</h2>
+<p><code>State.SaveState</code>, <code>State.DeleteState</code> and <code>State.DeleteBulkState</code> accept a
+<code>publish_change</code> flag. When set, the API publishes a change notification <strong>after</strong> the
+write succeeds. Emitting one is opt-in per request — it is not a property of every state
+change.</p>
+<p>Where that notification goes depends on what kind of state you wrote.</p>
+<h3 id="infrastructure-state-statechange-tier-0">Infrastructure state → <code>state.change</code> (Tier 0)</h3>
+<p>Records whose owner is a platform service and whose meaning is deployment-scoped — worker
+registrations, connection records, leader leases. Leave <code>change</code> unset and the API
+publishes to the global <code>state.change</code> topic with:</p>
+<ul>
+<li><code>type</code> = <code>com.virtufin.state.change.saved</code> or <code>com.virtufin.state.change.deleted</code>, so
+  subscribers can filter on the action without parsing the payload;</li>
+<li><code>source</code> = <code>urn:com.virtufin.api</code>, the publishing service.</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workmanager"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-key"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"save"</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="s2">"delete"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-state-value"</span><span class="w">  </span><span class="c1">// only when include_value=true</span>
+<span class="w">  </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workmanager.worker.abc123"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"save"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the-state-value"</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="c-client-example">C# Client Example</h3>
-<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">Grpc.Core</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Virtufin.Api.Protos</span><span class="p">;</span>
-
-<span class="kt">var</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GrpcChannel</span><span class="p">.</span><span class="n">ForAddress</span><span class="p">(</span><span class="s">"http://localhost:5002"</span><span class="p">);</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">State</span><span class="p">.</span><span class="n">StateClient</span><span class="p">(</span><span class="n">channel</span><span class="p">);</span>
-
-<span class="c1">// Save state</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SaveStateRequest</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"state"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"mykey"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"myvalue"</span>
-<span class="p">};</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">SaveState</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Success: {response.Success}, Status: {response.Status}"</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="python-client-example">Python Client Example</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">grpc</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">gateway_pb2</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">gateway_pb2_grpc</span>
-
-<span class="n">channel</span> <span class="o">=</span> <span class="n">grpc</span><span class="o">.</span><span class="n">insecure_channel</span><span class="p">(</span><span class="s1">'localhost:5002'</span><span class="p">)</span>
-<span class="n">stub</span> <span class="o">=</span> <span class="n">gateway_pb2_grpc</span><span class="o">.</span><span class="n">GatewayStub</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
-
-<span class="n">request</span> <span class="o">=</span> <span class="n">gateway_pb2</span><span class="o">.</span><span class="n">SubscribeRequest</span><span class="p">(</span>
-    <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="s1">'workmanager'</span><span class="p">],</span>
-    <span class="n">event_types</span><span class="o">=</span><span class="p">[</span><span class="s1">'state'</span><span class="p">,</span> <span class="s1">'pubsub'</span><span class="p">]</span>
-<span class="p">)</span>
-
-<span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">stub</span><span class="o">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[</span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">service</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">topic</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">event_type</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Data: </span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<hr />
-<h2 id="dapr-pubsub-integration">Dapr Pub/Sub Integration</h2>
-<h3 id="architecture">Architecture</h3>
-<pre class="mermaid"><code>flowchart LR
-    Backend[Backend Service] --&gt; DaprSidecar[Dapr Sidecar]
-    DaprSidecar --&gt; DaprPubSub[Dapr PubSub]
-    DaprSidecar --&gt; Subscribe[Subscribe]
-    Subscribe --&gt; DaprStreamSub[DaprStreamingSub Manager]
-    DaprStreamSub --&gt; EventSubMgr[EventSub Manager]</code></pre>
-<h3 id="configuration">Configuration</h3>
-<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workmanager</span>
-<span class="w">    </span><span class="nt">pubsub</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">pubsubName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pubsub</span><span class="w">              </span><span class="c1"># Dapr pub/sub component name</span>
-</code></pre></div>
+<p><code>action</code> is <code>"save"</code> or <code>"delete"</code>. <code>value</code> appears only when the request sets
+<code>include_value: true</code>. <code>DeleteBulkState</code> publishes a <code>keys</code> array in place of <code>key</code>, and
+names only the keys actually deleted.</p>
 <blockquote>
-<p>Note: Dynamic pub/sub subscriptions are handled via the <code>PubsubService.Subscribe</code> gRPC method, not static YAML configuration. Topics are created dynamically at runtime.</p>
+<p><strong>These events carry no version, and cannot.</strong> Dapr's state API returns no etag from a
+write, and re-reading the key to get one would be worse than omitting it: a concurrent
+writer may have advanced the value in between, so the event would attribute a newer
+version to an older payload. A subscriber consuming <code>value</code> instead of reading state
+back is therefore relying on writes to that key being serialized. Where you need a real
+ordering guarantee, use the Tier 1 path below.</p>
 </blockquote>
-<h3 id="message-handler">Message Handler</h3>
-<p>When a Dapr message is received:</p>
-<div class="highlight"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">TopicResponseAction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">HandleMessageAsync</span><span class="p">(</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">serviceName</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">TopicMessage</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">ct</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// 1. Deserialize message</span>
-<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">eventData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">"O"</span><span class="p">),</span>
-<span class="w">        </span><span class="n">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serviceName</span><span class="p">,</span>
-<span class="w">        </span><span class="n">topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span>
-<span class="w">        </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Deserialize</span><span class="o">&lt;</span><span class="kt">object</span><span class="o">&gt;</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Span</span><span class="p">),</span>
-<span class="w">        </span><span class="n">messageId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">Id</span>
-<span class="w">    </span><span class="p">};</span>
-
-<span class="w">    </span><span class="c1">// 2. Broadcast to gRPC subscribers</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="n">_eventSubscriptionManager</span><span class="p">.</span><span class="n">BroadcastToTopicAsync</span><span class="p">(</span>
-<span class="w">        </span><span class="n">serviceName</span><span class="p">,</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Span</span><span class="p">.</span><span class="n">ToArray</span><span class="p">(),</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TopicResponseAction</span><span class="p">.</span><span class="n">Success</span><span class="p">;</span>
+<p><code>state.change</code> is one shared, unscoped topic, so <code>include_value: true</code> publishes that
+value to every subscriber of it.</p>
+<h3 id="domain-state-your-own-topic-tier-1">Domain state → your own topic (Tier 1)</h3>
+<p>Records that are scenario- or universe-scoped — positions, portfolios, orders, risk and
+P&amp;L artefacts. These do <strong>not</strong> belong on <code>state.change</code>: which service performed the
+write is an implementation detail, and subscribers route on the domain topic.</p>
+<p>The API cannot build that event for you. It has the store, the key and the bytes, but not
+the scenario, the world markers, the clock type, or your service's identity. So supply
+the whole CloudEvent and the topic it belongs on, via the <code>change</code> field:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workmanager"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workmanager.position.BTCUSDT"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"qty\":3}"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"publish_change"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"change"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sc.LIVE.trading.position.updated"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"cloudevent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"…"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.virtufin.position.flipped"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:com.virtufin.trading-engine"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"spec_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"text_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{\"symbol\":\"BTCUSDT\",\"qty\":3}"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="dapr-client-setup">Dapr Client Setup</h3>
-<div class="highlight"><pre><span></span><code><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">DaprClient</span><span class="o">&gt;</span><span class="p">(</span><span class="n">sp</span><span class="w"> </span><span class="o">=&gt;</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">DaprClientBuilder</span><span class="p">()</span>
-<span class="w">        </span><span class="p">.</span><span class="n">UseHttpEndpoint</span><span class="p">(</span><span class="s">$"http://localhost:{daprHttpPort}"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="n">UseGrpcEndpoint</span><span class="p">(</span><span class="s">$"http://localhost:{daprGrpcPort}"</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="n">Build</span><span class="p">());</span>
-</code></pre></div>
-<hr />
-<h2 id="event-subscription-system">Event Subscription System</h2>
-<h3 id="scope-hierarchy">Scope Hierarchy</h3>
-<p>Events flow through hierarchical scopes for flexible filtering:</p>
-<div class="highlight"><pre><span></span><code>global
-  │
-  ├── workmanager
-  │     ├── workmanager/workers
-  │     └── workmanager/deployments
-  │
-  ├── websocketmanager
-  │     └── websocketmanager/connections
-  │
-  └── event-type
-        ├── event-type/state
-        ├── event-type/pubsub
-        └── event-type/system
-</code></pre></div>
-<h3 id="subscription-matching">Subscription Matching</h3>
-<p>When an event is broadcast:</p>
-<ol>
-<li>Event arrives with service, topic, eventType</li>
-<li>Calculate all matching scopes:</li>
-<li><code>global</code></li>
-<li><code>{service}</code></li>
-<li><code>{service}/{topic}</code></li>
-<li><code>event-type/{eventType}</code></li>
-<li><code>event-type/{eventType}/{service}</code></li>
-<li>Find all subscriptions for each scope</li>
-<li>Write event to each matching subscription</li>
-<li>Remove dead subscriptions (failed writes)</li>
-</ol>
-<h3 id="eventsubscriptionmanager">EventSubscriptionManager</h3>
-<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EventSubscriptionManager</span>
+<p>The API publishes that event verbatim to that topic once the write lands, and does <strong>not</strong>
+also publish to <code>state.change</code> — publishing to both would double-deliver the change.</p>
+<p>Set both <code>topic</code> and <code>cloudevent</code>. A <code>change</code> with only a topic falls back to the Tier 0
+path: half a notification is not a Tier 1 event.</p>
+<p>Because you control the envelope, this is where ordering lives: if subscribers consume
+your payload instead of reading state back, carry a monotonic token (a domain version,
+sequence number, or <code>eventtime</code> where the clock is authoritative) and have them discard
+anything not newer. Only you know how the entity is versioned.</p>
+<blockquote>
+<p>Do not reach for a <code>state.change.&lt;state_name&gt;</code> topic. The Tier 0 pattern requires the
+category to be a domain noun rather than a state name, and per-key topics contradict the
+platform's cardinality rule. Domain state belongs on the Tier 1 taxonomy, which already
+has topics your subscribers subscribe to.</p>
+</blockquote>
+<h3 id="delivery">Delivery</h3>
+<p>Publication is <strong>at-most-once</strong> and is not atomic with the write. If the write succeeds
+and the publish fails, the event is lost — the API logs it and still reports the write as
+successful, because failing the call would make you repeat a write that already landed.
+Design subscribers to reconcile from state rather than assuming every change produced an
+event.</p>
+<h2 id="subscribing">Subscribing</h2>
+<p><code>Pubsub.Subscribe</code> is server-streaming: one call, many <code>SubscribeResponse</code> messages, one
+gRPC stream per client call regardless of how many topics it names.</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pubsubClient</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">SubscribeRequest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"workmanager.lifecycle"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nf">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">evt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">call</span><span class="p">.</span><span class="n">ResponseStream</span><span class="p">.</span><span class="n">ReadAllAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">))</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">// Subscribe</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Subscribe</span><span class="p">(</span>
-<span class="w">        </span><span class="n">IServerStreamWriter</span><span class="o">&lt;</span><span class="n">TopicEventRequest</span><span class="o">&gt;</span><span class="w"> </span><span class="n">writer</span><span class="p">,</span>
-<span class="w">        </span><span class="n">SubscribeRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1">// Unsubscribe</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">UnsubscribeAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">scope</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">subscriptionId</span><span class="p">)</span>
-
-<span class="w">    </span><span class="c1">// Broadcast methods</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">BroadcastEventAsync</span><span class="p">(</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">service</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">eventType</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">string?</span><span class="w"> </span><span class="n">messageId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
-
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">BroadcastStateChangeAsync</span><span class="p">(</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">service</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">action</span><span class="p">)</span>
-
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">BroadcastToTopicAsync</span><span class="p">(</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">service</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">string?</span><span class="w"> </span><span class="n">messageId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"{evt.Topic}: {evt.Cloudevent.Type}"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="per-service-lifecycle-events">Per-service Lifecycle Events</h2>
-<p>Each service publishes lifecycle events to its own topic. The topic name is defined in that service's <code>Configuration/Topics.cs</code>. The CloudEvent <code>type</code> attribute discriminates the specific event.</p>
-<h3 id="connection-status-events">Connection Status Events</h3>
-<p>Broadcast when Dapr pub/sub subscriptions change state:</p>
-<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nf">BroadcastConnectionStatusAsync</span><span class="p">(</span>
-<span class="w">    </span><span class="n">service</span><span class="p">:</span><span class="w"> </span><span class="s">"workmanager"</span><span class="p">,</span>
-<span class="w">    </span><span class="n">topic</span><span class="p">:</span><span class="w"> </span><span class="n">Topics</span><span class="p">.</span><span class="n">Lifecycle</span><span class="p">,</span><span class="w">           </span><span class="c1">// "workmanager.lifecycle"</span>
-<span class="w">    </span><span class="n">status</span><span class="p">:</span><span class="w"> </span><span class="s">"connected"</span><span class="w">  </span><span class="c1">// or "disconnected", "failed"</span>
-<span class="w">    </span><span class="n">error</span><span class="p">:</span><span class="w"> </span><span class="k">null</span><span class="w">          </span><span class="c1">// error message if failed</span>
-<span class="p">);</span>
-</code></pre></div>
-<h3 id="event-flow">Event Flow</h3>
+<p>Behaviours worth knowing:</p>
+<ul>
+<li><strong>An empty <code>topics</code> list is not "all topics".</strong> It silently defaults to <code>["state.change"]</code>.
+  Name your topics explicitly.</li>
+<li><strong>Duplicate topics in one request produce duplicate delivery</strong> of each event to that caller.</li>
+<li><strong>Each subscriber buffers up to 1024 events.</strong> A consumer that falls further behind
+  than that is treated as stuck and reaped by the health sweeper, so do slow per-event
+  work off the read loop.</li>
+<li><strong>One shared Dapr subscription per topic per process</strong>, reference-counted across callers
+  (<code>TopicDaprSubscriptionRegistry</code>). This is deliberate: a Dapr subscription per caller would
+  make daprd <em>load-balance</em> each event across callers instead of broadcasting it.</li>
+<li><strong>Initial response headers are flushed before any event arrives.</strong> Request-reply clients
+  depend on this to know the subscription is live before they publish; see below.</li>
+<li><strong>Cancelling the call is the teardown.</strong> Disposing the streaming call releases the
+  in-process subscriber and the shared Dapr subscription refcount.</li>
+</ul>
+<h3 id="unsubscribe-do-not-use"><code>Unsubscribe</code> — do not use</h3>
+<p><code>Pubsub.Unsubscribe</code> takes a <code>subscription_id</code>, but subscription ids are minted server-side
+and never sent to the client: <code>SubscribeResponse</code> carries no id field. There is no supported
+way to obtain a valid id, and calling it with a guessed one releases only the in-process
+subscriber while leaving the Dapr subscription and the server-side stream running. Cancel
+the <code>Subscribe</code> call instead.</p>
+<h2 id="request-reply-over-pubsub">Request-reply over pub/sub</h2>
+<p>Request-reply is implemented <strong>entirely in the client libraries</strong>. The API has no awareness
+of correlation ids or reply topics — it is a pure conduit, and the responder is always
+another service.</p>
+<p>The requester stamps two CloudEvent extension attributes before publishing:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>correlationid</code></td>
+<td>opaque id, echoed back by the responder; the sole demux key</td>
+</tr>
+<tr>
+<td><code>replytopic</code></td>
+<td>topic the responder should publish its reply to</td>
+</tr>
+</tbody>
+</table>
+<p>Both are lowercase with no separators, per the CloudEvents extension-naming rule. The
+requester holds <strong>one persistent <code>Subscribe</code> stream per reply topic</strong>, shared across all
+in-flight calls, and matches incoming events on <code>correlationid</code>. It waits for the stream's
+response headers before publishing, so a reply cannot be missed in the gap between
+publishing and subscribing.</p>
+<p>Per-call subscribe/unsubscribe is not an option here: it churns the shared Dapr subscription,
+and daprd's Redis Streams component leaks the underlying blocking <code>XREADGROUP</code> connection on
+unsubscribe until the pool is exhausted.</p>
+<p>Use <code>PublishWithResultAsync</code> (.NET), <code>publish_with_result_async</code> (Python), or
+<code>publishWithResult</code> (TypeScript) rather than reimplementing this.</p>
+<h2 id="cron-triggers">Cron triggers</h2>
+<p><code>Trigger.ScheduleTrigger</code> schedules a recurring job through Dapr's Scheduler. When it fires,
+<code>DaprAppCallbackService</code> publishes an <strong>empty</strong> CloudEvent to the trigger's <code>target_topic</code>
+(<code>type</code> = <code>com.dapr.event.sent</code>, <code>source</code> = <code>urn:apigateway</code>). The trigger carries no payload;
+subscribers react to the fact that it fired.</p>
+<h2 id="configuration">Configuration</h2>
+<p>The Dapr pub/sub component name defaults to <code>"pubsub"</code> and is configurable, in this
+precedence:</p>
 <ol>
-<li><code>DaprStreamingSubscriptionManager</code> calls <code>StartSubscriptionAsync</code></li>
-<li>On success: broadcasts <code>"connected"</code> status</li>
-<li>
-<p>On failure: broadcasts <code>"failed"</code> status with error</p>
-</li>
-<li>
-<p><code>BroadcastReconnectionStatusAsync</code> sends lifecycle events to gRPC subscribers via the per-service topic</p>
-</li>
+<li><code>--pubsub-name</code> (or the <code>PubsubName</code> setting);</li>
+<li><code>pubsub.pubsubName</code> in <code>services.json</code>, which helm renders from <code>.Values.pubsub.name</code>;</li>
+<li>the <code>"pubsub"</code> default.</li>
 </ol>
-<hr />
-<h2 id="event-flow-examples">Event Flow Examples</h2>
-<h3 id="example-1-state-change-event-via-savestate">Example 1: State Change Event via SaveState</h3>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Client
-    participant State as StateService
-    participant SubMgr as EventSubscriptionManager
-    participant Subscribers
+<blockquote>
+<p>It is a <strong>gateway-wide</strong> setting despite living on each service entry.
+<code>PublishEvent</code> and <code>Subscribe</code> take a topic and no service, so there is nothing to
+resolve a per-service component against at call time. Every registered entry must
+therefore agree on the value — helm renders one value into all of them — and the
+gateway fails at startup if they disagree rather than silently picking one.</p>
+</blockquote>
+<p>Subscriptions are created programmatically at runtime via Dapr's streaming-subscription API,
+not declared in YAML. The API's declarative subscription callback therefore returns an empty
+list by design.</p>
+<h2 id="error-handling">Error handling</h2>
+<p>The pubsub path uses two different error channels, and this trips people up:</p>
+<table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>How it surfaces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invalid input (empty topic, bad <code>source</code>)</td>
+<td>thrown <code>RpcException</code> with <code>InvalidArgument</code></td>
+</tr>
+<tr>
+<td>Runtime failure (sidecar down, publish rejected)</td>
+<td>gRPC status <strong>OK</strong>, with <code>status.success == false</code></td>
+</tr>
+</tbody>
+</table>
+<p>A client that only catches <code>RpcException</code> will treat a failed publish as a success. Always
+check <code>response.Status.Success</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">pubsubClient</span><span class="p">.</span><span class="n">PublishEventAsync</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">PublishRequest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Topic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">Cloudevent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ce</span><span class="w"> </span><span class="p">});</span>
 
-    Client-&gt;&gt;State: SaveState(service, key, value)
-    State-&gt;&gt;SubMgr: BroadcastStateChangeAsync()
-    SubMgr-&gt;&gt;SubMgr: Create TopicEventRequest
-    SubMgr-&gt;&gt;SubMgr: GetMatchingScopes()
-    loop For each scope
-        SubMgr-&gt;&gt;Subscribers: Write event to stream
-    end
-    Subscribers--&gt;&gt;Client: TopicEventRequest received</code></pre>
-<h3 id="example-2-dapr-pubsub-event">Example 2: Dapr Pub/Sub Event</h3>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Publisher
-    participant Dapr as Dapr Sidecar
-    participant DaprMgr as DaprStreamingSubMgr
-    participant SubMgr as EventSubscriptionManager
-    participant Client
-
-    Publisher-&gt;&gt;Dapr: publish(topic, cloudevent)
-    Dapr-&gt;&gt;DaprMgr: TopicMessage
-    DaprMgr-&gt;&gt;DaprMgr: Deserialize message
-    DaprMgr-&gt;&gt;SubMgr: BroadcastToTopicAsync()
-    SubMgr-&gt;&gt;Client: TopicEventRequest via gRPC
-    DaprMgr--&gt;&gt;Dapr: TopicResponseAction.Success</code></pre>
-<h3 id="example-3-system-connection-event">Example 3: System Connection Event</h3>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dapr as Dapr Sidecar
-    participant DaprMgr as DaprStreamingSubMgr
-    participant Client
-
-    Dapr-&gt;&gt;DaprMgr: Subscription connected
-    DaprMgr-&gt;&gt;Client: TopicEventRequest via Subscribe (topic: &lt;service&gt;.&lt;category&gt;, e.g. websocketmanager.lifecycle)</code></pre>
-<hr />
-<h2 id="best-practices">Best Practices</h2>
-<h3 id="subscription-management">Subscription Management</h3>
-<ol>
-<li><strong>Use CancellationTokens:</strong> Always pass cancellation tokens to prevent leaks</li>
-<li><strong>Handle Disconnection:</strong> Implement reconnection logic</li>
-<li><strong>Scope Filtering:</strong> Subscribe to specific scopes to reduce traffic</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="c1">// Good: Specific subscription</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SubscribeRequest</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Services</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"workmanager"</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="n">EventTypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"state"</span><span class="w"> </span><span class="p">}</span>
-<span class="p">};</span>
-
-<span class="c1">// Avoids: Global subscription (high traffic)</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SubscribeRequest</span><span class="p">();</span><span class="w"> </span><span class="c1">// Subscribes to everything</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">response</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">InvalidOperationException</span><span class="p">(</span><span class="s">$"Publish failed: {response.Status.Message}"</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="error-handling">Error Handling</h3>
+<p>On the subscribe side, handle stream termination as a normal condition and reconnect with
+backoff:</p>
 <div class="highlight"><pre><span></span><code><span class="k">try</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nf">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">evt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">stream</span><span class="p">.</span><span class="n">ResponseStream</span><span class="p">.</span><span class="n">ReadAllAsync</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nf">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">evt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">call</span><span class="p">.</span><span class="n">ResponseStream</span><span class="p">.</span><span class="n">ReadAllAsync</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
 <span class="w">        </span><span class="n">ProcessEvent</span><span class="p">(</span><span class="n">evt</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RpcException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">StatusCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">StatusCode</span><span class="p">.</span><span class="n">Cancelled</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">// Client disconnected - normal</span>
-<span class="p">}</span>
-<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RpcException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle error, possibly reconnect</span>
+<span class="w">    </span><span class="c1">// Client disconnected — normal shutdown.</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="client-examples">Client examples</h2>
+<p><strong>C#</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ApiClient</span><span class="p">(</span><span class="s">"localhost"</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">ce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CloudEvent</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Guid</span><span class="p">.</span><span class="n">NewGuid</span><span class="p">().</span><span class="n">ToString</span><span class="p">(),</span>
+<span class="w">    </span><span class="n">Source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"urn:virtufin:my-service"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SpecVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"com.virtufin.worker.started"</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TextData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"""{"workerId":"abc123"}"""</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Gateway</span><span class="p">.</span><span class="n">PublishEventAsync</span><span class="p">(</span><span class="s">"workmanager.lifecycle"</span><span class="p">,</span><span class="w"> </span><span class="n">ce</span><span class="p">);</span>
+
+<span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Gateway</span><span class="p">.</span><span class="n">SubscribeToTopic</span><span class="p">(</span><span class="s">"workmanager.lifecycle"</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nf">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">evt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">call</span><span class="p">.</span><span class="n">ResponseStream</span><span class="p">.</span><span class="n">ReadAllAsync</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"{evt.Topic}: {evt.Cloudevent.Type}"</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Python</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">with</span> <span class="n">ApiClient</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">"localhost"</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">ce</span> <span class="o">=</span> <span class="n">cloudevents_pb2</span><span class="o">.</span><span class="n">CloudEvent</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
+        <span class="n">source</span><span class="o">=</span><span class="s2">"urn:virtufin:my-service"</span><span class="p">,</span>
+        <span class="n">spec_version</span><span class="o">=</span><span class="s2">"1.0"</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">"com.virtufin.worker.started"</span><span class="p">,</span>
+        <span class="n">text_data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">"workerId"</span><span class="p">:</span> <span class="s2">"abc123"</span><span class="p">}),</span>
+    <span class="p">)</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">publish_async</span><span class="p">(</span><span class="s2">"workmanager.lifecycle"</span><span class="p">,</span> <span class="n">ce</span><span class="p">)</span>
+
+    <span class="n">call</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">pubsub</span><span class="o">.</span><span class="n">subscribe_async</span><span class="p">(</span><span class="n">topics</span><span class="o">=</span><span class="p">[</span><span class="s2">"workmanager.lifecycle"</span><span class="p">])</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">call</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">cloudevent</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>TypeScript</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ApiClient</span><span class="p">({</span><span class="w"> </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="w"> </span><span class="p">});</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="s2">"workmanager.lifecycle"</span><span class="p">,</span><span class="w"> </span><span class="nx">cloudevent</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">evt</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">subscribeToTopic</span><span class="p">(</span><span class="s2">"workmanager.lifecycle"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">topic</span><span class="p">,</span><span class="w"> </span><span class="nx">evt</span><span class="p">.</span><span class="nx">cloudevent</span><span class="o">?</span><span class="p">.</span><span class="kr">type</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="best-practices">Best practices</h2>
+<ol>
+<li><strong>Name your topics explicitly</strong> on <code>Subscribe</code> — the empty-list default is <code>state.change</code>,
+   which is almost never what you want.</li>
+<li><strong>Check <code>status.success</code></strong> on every publish; the gRPC status is <code>OK</code> even on failure.</li>
+<li><strong>Pass a cancellation token</strong> to <code>Subscribe</code> and cancel it to tear down; that is the only
+   working teardown path.</li>
+<li><strong>Discriminate on <code>cloudevent.type</code></strong>, not on the topic alone — one topic carries a
+   service's whole event taxonomy.</li>
+<li><strong>Leave <code>include_value</code> off</strong> unless the state value is public to the whole platform.</li>
+<li><strong>Use the SDK's request-reply helper</strong> instead of hand-rolling correlation.</li>
+</ol>
 
 
 
@@ -2261,7 +1940,7 @@
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-08T03:18:54Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-10T02:02:12Z</span>
 </div>
 
     </div>

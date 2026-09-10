@@ -21,7 +21,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: StateConfig
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 49
+    startLine: 71
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -56,7 +56,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 51
+    startLine: 73
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -85,7 +85,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: StoreName
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 52
+    startLine: 74
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration

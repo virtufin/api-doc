@@ -140,7 +140,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Virtufin.Api.Client.IAsyncStreamEventHandler",
-      "Summary": "<p sourcefile=\"api/Virtufin.Api.Client.IAsyncStreamEventHandler.yml\" sourcestartlinenumber=\"1\">Async callback interface for receiving stream events. Handlers that\nimplement this interface are awaited by <xref href=\"Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref>,\npreventing slow handlers from causing gRPC stream backpressure.</p>\n"
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Client.IAsyncStreamEventHandler.yml\" sourcestartlinenumber=\"1\">Async callback interface for receiving stream events. Handlers that\nimplement this interface are awaited by <xref href=\"Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Threading.CancellationToken)\" data-throw-if-not-resolved=\"false\"></xref>,\npreventing slow handlers from causing gRPC stream backpressure.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -225,6 +225,20 @@
       "IsMRef": true,
       "Title": "Virtufin.Api.Client",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Virtufin.Api.Configuration.DaprComponentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Virtufin.Api.Configuration.DaprComponentOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Virtufin.Api.Configuration.DaprComponentOptions",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Configuration.DaprComponentOptions.yml\" sourcestartlinenumber=\"1\">The Dapr component names the gateway talks to. Resolved once at startup and injected,\nrather than hard-coded at each call site.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -476,7 +490,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck",
-      "Summary": "<p sourcefile=\"api/Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.yml\" sourcestartlinenumber=\"1\">Health check that reports Dapr circuit breaker state.</p>\n"
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.yml\" sourcestartlinenumber=\"1\">Health check that reports the gateway circuit breaker's state.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -634,17 +648,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Virtufin.Api.Services.DaprConstants.yml",
+      "source_relative_path": "api/Virtufin.Api.Services.DaprSidecarChannel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Virtufin.Api.Services.DaprConstants.html"
+          "relative_path": "api/Virtufin.Api.Services.DaprSidecarChannel.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Virtufin.Api.Services.DaprConstants",
-      "Summary": null
+      "Title": "Virtufin.Api.Services.DaprSidecarChannel",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.DaprSidecarChannel.yml\" sourcestartlinenumber=\"1\">The process-wide gRPC channel to the local Dapr sidecar.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -690,6 +704,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Virtufin.Api.Services.ForwardedHeaders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Virtufin.Api.Services.ForwardedHeaders.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Virtufin.Api.Services.ForwardedHeaders",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.ForwardedHeaders.yml\" sourcestartlinenumber=\"1\">The allow-list of request headers the gateway propagates to a backend on a proxied\ncall, and the filters that apply it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Virtufin.Api.Services.GatewayService.yml",
       "output": {
         ".html": {
@@ -701,34 +729,6 @@
       "IsMRef": true,
       "Title": "Virtufin.Api.Services.GatewayService",
       "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.GatewayService.yml\" sourcestartlinenumber=\"1\">Implementation of the gRPC Gateway service.\nProvides service discovery and method invocation. Event subscription\n(Gateway.Subscribe) was never added to gateway.proto -- Pubsub.Subscribe\n(see PubsubService) is the only subscribe path; this class previously\nheld unused constructor dependencies (DaprPublishSubscribeClient,\nTopicDaprSubscriptionRegistry, GatewaySubscriptionManager) left over\nfrom that never-implemented design.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Virtufin.Api.Services.GatewaySubscription.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Virtufin.Api.Services.GatewaySubscription.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Virtufin.Api.Services.GatewaySubscription",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Virtufin.Api.Services.GatewaySubscriptionManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Virtufin.Api.Services.GatewaySubscriptionManager.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Virtufin.Api.Services.GatewaySubscriptionManager",
-      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.GatewaySubscriptionManager.yml\" sourcestartlinenumber=\"1\">In-process broadcast broker for the <code>Gateway.Subscribe</code> RPC.\nOne broker per topic; multiple gRPC callers on the same topic all\nreceive every message via <xref href=\"Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync(System.String%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.Byte%5b%5d%2cSystem.String%2cSystem.String%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -756,7 +756,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Virtufin.Api.Services.GrpcCallStatusCodes",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.GrpcCallStatusCodes.yml\" sourcestartlinenumber=\"1\">The status vocabulary <code>Gateway.Invoke</code> / <code>InvokeJson</code> report in\n<code>InvokeResponse.status</code>.</p>\n<p>\nEvery status the gateway emits MUST come from here. A downstream\n<xref href=\"Grpc.Core.RpcException\" data-throw-if-not-resolved=\"false\"></xref> used to be reported as\n<code>ex.StatusCode.ToString()</code>, which is the PascalCase enum name\n(<code>\"NotFound\"</code>) — so the same condition reached clients as\n<code>NOT_FOUND</code> when the gateway detected it and <code>NotFound</code> when the\nbackend did. Use <code>GrpcStatusCodeMap.ToGatewayStatus</code> to translate.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -785,6 +785,20 @@
       "IsMRef": true,
       "Title": "Virtufin.Api.Services.GrpcReflectionService",
       "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.GrpcReflectionService.yml\" sourcestartlinenumber=\"1\">Provides gRPC reflection functionality including service discovery, method schema retrieval,\nand dynamic gRPC invocation based on reflection data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Virtufin.Api.Services.GrpcStatusCodeMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Virtufin.Api.Services.GrpcStatusCodeMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Virtufin.Api.Services.GrpcStatusCodeMap",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.GrpcStatusCodeMap.yml\" sourcestartlinenumber=\"1\">Translates <xref href=\"Grpc.Core.StatusCode\" data-throw-if-not-resolved=\"false\"></xref> into the gateway's own\n<xref href=\"Virtufin.Api.Services.GrpcCallStatusCodes\" data-throw-if-not-resolved=\"false\"></xref> vocabulary, so one condition yields one string\nregardless of whether the gateway or the backend produced it.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -911,6 +925,20 @@
       "IsMRef": true,
       "Title": "Virtufin.Api.Services.StateActionConstants",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Virtufin.Api.Services.StateChangeEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Virtufin.Api.Services.StateChangeEvents.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Virtufin.Api.Services.StateChangeEvents",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.StateChangeEvents.yml\" sourcestartlinenumber=\"1\">CloudEvent attributes for the Tier 0 <code>state.change</code> topic.</p>\n"
     },
     {
       "type": "ManagedReference",

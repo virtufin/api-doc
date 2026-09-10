@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/7475cd5faef0358601dba3c7b8914e3135d08933" target="_blank" rel="noopener" class="commit-badge" title="View commit 7475cd5faef0358601dba3c7b8914e3135d08933">
+            <a href="{git_repo_url}/commit/4efb529f69dc92308bd7e17148f461b137039a84" target="_blank" rel="noopener" class="commit-badge" title="View commit 4efb529f69dc92308bd7e17148f461b137039a84">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5faef0358601dba3c7b8914e3135d08933</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529f69dc92308bd7e17148f461b137039a84</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -237,7 +237,10 @@ Class GrpcChannelPool
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of services the pool can actually hold a channel for. Non-dialable entries
+(state-store-name placeholders) are excluded, so the health check's
+channels-per-service ratio stays reachable.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -324,6 +327,50 @@ Class GrpcChannelPool
 
 
 
+
+
+
+
+  <a id="Virtufin_Api_Services_GrpcChannelPool_IsDialable_" data-uid="Virtufin.Api.Services.GrpcChannelPool.IsDialable*"></a>
+
+  <h3 id="Virtufin_Api_Services_GrpcChannelPool_IsDialable_System_String_" data-uid="Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)">
+  IsDialable(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if <code class="paramref">serviceName</code> names a registered, dialable backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDialable(string serviceName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Virtufin_Api_Services_GrpcChannelPool_IsDialable_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Callers check this before touching the descriptor cache. Letting an unregistered
+name reach the cache means the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> is
+swallowed by <code>LoadDescriptorsAsync</code> and stored as <code>LastLoadException</code>,
+so the caller sees UNAVAILABLE (&quot;could not load descriptors&quot;) plus the raw
+&quot;not found in configuration&quot; text, rather than a clean NOT_FOUND.</p>
+</div>
 
 
 

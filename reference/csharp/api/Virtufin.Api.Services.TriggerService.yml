@@ -5,7 +5,7 @@ items:
   id: TriggerService
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.TriggerService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
+  - Virtufin.Api.Services.TriggerService.#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
   - Virtufin.Api.Services.TriggerService.DeleteTrigger(Virtufin.Api.Protos.DeleteTriggerRequest,Grpc.Core.ServerCallContext)
   - Virtufin.Api.Services.TriggerService.GetTrigger(Virtufin.Api.Protos.GetTriggerRequest,Grpc.Core.ServerCallContext)
   - Virtufin.Api.Services.TriggerService.ListTriggers(Virtufin.Api.Protos.ListTriggersRequest,Grpc.Core.ServerCallContext)
@@ -24,7 +24,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: TriggerService
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -42,16 +42,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.TriggerService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
-  commentId: M:Virtufin.Api.Services.TriggerService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})'
+- uid: Virtufin.Api.Services.TriggerService.#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
+  commentId: M:Virtufin.Api.Services.TriggerService.#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
+  id: '#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})'
   parent: Virtufin.Api.Services.TriggerService
   langs:
   - csharp
   - vb
-  name: TriggerService(IConfiguration, PubsubService, ILogger<TriggerService>)
-  nameWithType: TriggerService.TriggerService(IConfiguration, PubsubService, ILogger<TriggerService>)
-  fullName: Virtufin.Api.Services.TriggerService.TriggerService(Microsoft.Extensions.Configuration.IConfiguration, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TriggerService>)
+  name: TriggerService(DaprSidecarChannel, PubsubService, ILogger<TriggerService>)
+  nameWithType: TriggerService.TriggerService(DaprSidecarChannel, PubsubService, ILogger<TriggerService>)
+  fullName: Virtufin.Api.Services.TriggerService.TriggerService(Virtufin.Api.Services.DaprSidecarChannel, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TriggerService>)
   type: Constructor
   source:
     remote:
@@ -60,24 +60,24 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 26
+    startLine: 25
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public TriggerService(IConfiguration configuration, PubsubService pubsubService, ILogger<TriggerService> logger)
+    content: public TriggerService(DaprSidecarChannel daprChannel, PubsubService pubsubService, ILogger<TriggerService> logger)
     parameters:
-    - id: configuration
-      type: Microsoft.Extensions.Configuration.IConfiguration
+    - id: daprChannel
+      type: Virtufin.Api.Services.DaprSidecarChannel
     - id: pubsubService
       type: Virtufin.Api.Services.PubsubService
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService}
-    content.vb: Public Sub New(configuration As IConfiguration, pubsubService As PubsubService, logger As ILogger(Of TriggerService))
+    content.vb: Public Sub New(daprChannel As DaprSidecarChannel, pubsubService As PubsubService, logger As ILogger(Of TriggerService))
   overload: Virtufin.Api.Services.TriggerService.#ctor*
-  nameWithType.vb: TriggerService.New(IConfiguration, PubsubService, ILogger(Of TriggerService))
-  fullName.vb: Virtufin.Api.Services.TriggerService.New(Microsoft.Extensions.Configuration.IConfiguration, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TriggerService))
-  name.vb: New(IConfiguration, PubsubService, ILogger(Of TriggerService))
+  nameWithType.vb: TriggerService.New(DaprSidecarChannel, PubsubService, ILogger(Of TriggerService))
+  fullName.vb: Virtufin.Api.Services.TriggerService.New(Virtufin.Api.Services.DaprSidecarChannel, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TriggerService))
+  name.vb: New(DaprSidecarChannel, PubsubService, ILogger(Of TriggerService))
 - uid: Virtufin.Api.Services.TriggerService.ScheduleTrigger(Virtufin.Api.Protos.ScheduleTriggerRequest,Grpc.Core.ServerCallContext)
   commentId: M:Virtufin.Api.Services.TriggerService.ScheduleTrigger(Virtufin.Api.Protos.ScheduleTriggerRequest,Grpc.Core.ServerCallContext)
   id: ScheduleTrigger(Virtufin.Api.Protos.ScheduleTriggerRequest,Grpc.Core.ServerCallContext)
@@ -96,7 +96,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ScheduleTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -131,7 +131,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 87
+    startLine: 86
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -166,7 +166,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: DeleteTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 138
+    startLine: 137
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -201,7 +201,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ListTriggers
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
-    startLine: 192
+    startLine: 191
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -529,21 +529,20 @@ references:
     name: Protos
 - uid: Virtufin.Api.Services.TriggerService.#ctor*
   commentId: Overload:Virtufin.Api.Services.TriggerService.#ctor
-  href: Virtufin.Api.Services.TriggerService.html#Virtufin_Api_Services_TriggerService__ctor_Microsoft_Extensions_Configuration_IConfiguration_Virtufin_Api_Services_PubsubService_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TriggerService__
+  href: Virtufin.Api.Services.TriggerService.html#Virtufin_Api_Services_TriggerService__ctor_Virtufin_Api_Services_DaprSidecarChannel_Virtufin_Api_Services_PubsubService_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TriggerService__
   name: TriggerService
   nameWithType: TriggerService.TriggerService
   fullName: Virtufin.Api.Services.TriggerService.TriggerService
   nameWithType.vb: TriggerService.New
   fullName.vb: Virtufin.Api.Services.TriggerService.New
   name.vb: New
-- uid: Microsoft.Extensions.Configuration.IConfiguration
-  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
-  parent: Microsoft.Extensions.Configuration
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
-  name: IConfiguration
-  nameWithType: IConfiguration
-  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Virtufin.Api.Services.DaprSidecarChannel
+  commentId: T:Virtufin.Api.Services.DaprSidecarChannel
+  parent: Virtufin.Api.Services
+  href: Virtufin.Api.Services.DaprSidecarChannel.html
+  name: DaprSidecarChannel
+  nameWithType: DaprSidecarChannel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel
 - uid: Virtufin.Api.Services.PubsubService
   commentId: T:Virtufin.Api.Services.PubsubService
   parent: Virtufin.Api.Services
@@ -584,43 +583,6 @@ references:
     name: TriggerService
     href: Virtufin.Api.Services.TriggerService.html
   - name: )
-- uid: Microsoft.Extensions.Configuration
-  commentId: N:Microsoft.Extensions.Configuration
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Configuration
-    name: Configuration
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft
-  - name: .
-  - uid: Microsoft.Extensions
-    name: Extensions
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
-  - name: .
-  - uid: Microsoft.Extensions.Configuration
-    name: Configuration
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
 - uid: Microsoft.Extensions.Logging.ILogger`1
   commentId: T:Microsoft.Extensions.Logging.ILogger`1
   isExternal: true

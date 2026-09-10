@@ -21,7 +21,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ServicesConfigurationLoader
     path: ../../../src/Virtufin.Api/Configuration/ServicesConfigurationLoader.cs
-    startLine: 5
+    startLine: 4
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -56,7 +56,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Configuration/ServicesConfigurationLoader.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -88,10 +88,22 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: LoadAsync
     path: ../../../src/Virtufin.Api/Configuration/ServicesConfigurationLoader.cs
-    startLine: 14
+    startLine: 23
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
+  summary: Loads the service registry. Throws if the file is missing or unreadable.
+  remarks: >-
+    This used to fail open: a missing file logged a <code>Console.WriteLine</code> warning
+
+    and returned an empty registry, so a misconfigured deploy of the platform's central
+
+    mediator started successfully, passed its liveness probe, and then failed every
+
+    state, config, and gateway call. Failing fast at startup surfaces the
+
+    misconfiguration where it can still be caught.
+  example: []
   syntax:
     content: public Task<ServicesConfiguration> LoadAsync()
     return:

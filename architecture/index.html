@@ -205,14 +205,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -372,14 +372,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -799,10 +799,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#eventsubscriptionmanager" class="md-nav__link">
+  <a href="#pubsubservice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        EventSubscriptionManager
+        PubsubService
       
     </span>
   </a>
@@ -810,10 +810,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#daprstreamingsubscriptionmanager" class="md-nav__link">
+  <a href="#topicdaprsubscriptionregistry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DaprStreamingSubscriptionManager
+        TopicDaprSubscriptionRegistry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pubsubsubscriptionmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PubsubSubscriptionManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daprappcallbackservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DaprAppCallbackService
       
     </span>
   </a>
@@ -1514,10 +1536,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#eventsubscriptionmanager" class="md-nav__link">
+  <a href="#pubsubservice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        EventSubscriptionManager
+        PubsubService
       
     </span>
   </a>
@@ -1525,10 +1547,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#daprstreamingsubscriptionmanager" class="md-nav__link">
+  <a href="#topicdaprsubscriptionregistry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DaprStreamingSubscriptionManager
+        TopicDaprSubscriptionRegistry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pubsubsubscriptionmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PubsubSubscriptionManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daprappcallbackservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DaprAppCallbackService
       
     </span>
   </a>
@@ -1656,7 +1700,7 @@
     subgraph ApplicationLayer["Application Layer"]
         Kestrel[Kestrel Server]
         GatewaySvc[GatewayService]
-        EventSubMgr[EventSubscriptionManager]
+        PubsubSvc[PubsubService]
         StateSvc[StateService]
     end
 
@@ -1727,7 +1771,7 @@
         GatewaySvc[GatewayService gRPC]
         ConfigSvc[ConfigService gRPC]
         GrpcReflSvc[GrpcReflectionService gRPC]
-        EventSubMgr[EventSubscriptionManager]
+        PubsubSvc[PubsubService]
         StateSvc[StateService]
     end
 
@@ -1772,7 +1816,7 @@
         GatewaySvc[GatewayService gRPC]
         ConfigSvc[ConfigService gRPC]
         GrpcReflSvc[GrpcReflectionService gRPC]
-        EventSubMgr[EventSubscriptionManager]
+        PubsubSvc[PubsubService]
         StateSvc[StateService]
     end
 
@@ -1836,9 +1880,9 @@
 <h3 id="event-streaming-dapr-grpc">Event Streaming (Dapr → gRPC)</h3>
 <pre class="mermaid"><code>flowchart LR
     Dapr[Dapr Sidecar] --&gt; PubSub[PubSub Event]
-    PubSub --&gt; DaprStreamMgr[DaprStreamingSub Manager]
-    DaprStreamMgr --&gt; EventSubMgr[EventSub Manager]
-    EventSubMgr --&gt; GrpcClient[gRPC Client Subscribe]</code></pre>
+    PubSub --&gt; Registry[TopicDaprSubscriptionRegistry]
+    DaprStreamMgr --&gt; SubMgr[PubsubSubscriptionManager]
+    PubsubSvc --&gt; GrpcClient[gRPC Client Subscribe]</code></pre>
 <h3 id="configuration-architecture">Configuration Architecture</h3>
 <pre class="mermaid"><code>flowchart TB
     ConfigFile[services.json] --&gt; Loader[ServicesConfigurationLoader]
@@ -2012,88 +2056,65 @@
     C --&gt; D[Map result to&lt;br/&gt;InvokeResponse]
     D --&gt; E[Return to client]</code></pre>
 <hr />
-<h3 id="eventsubscriptionmanager">EventSubscriptionManager</h3>
-<p><strong>Location:</strong> <code>Services/EventSubscriptionManager.cs</code></p>
-<p>Manages event subscriptions for the <code>Subscribe</code> gRPC method.</p>
-<p><strong>Scope System:</strong>
-Subscriptions use hierarchical scopes for filtering:</p>
-<pre class="mermaid"><code>graph TD
-    global[global&lt;br/&gt;All events]
-    service[service&lt;br/&gt;All events from service]
-    topic[service/topic&lt;br/&gt;Specific topic]
-    type[type&lt;br/&gt;By event type]
-    typeService[type/service&lt;br/&gt;By type and service]
-
-    global --&gt; service
-    global --&gt; topic
-    global --&gt; type
-    topic --&gt; typeService
-    type --&gt; typeService</code></pre>
-<p><strong>Subscription Flow:</strong></p>
+<h3 id="pubsubservice">PubsubService</h3>
+<p><strong>Location:</strong> <code>Services/PubsubService.cs</code></p>
+<p>Implements the <code>Pubsub</code> gRPC service: <code>PublishEvent</code>, <code>Subscribe</code>, <code>Unsubscribe</code>.
+Subscriptions are filtered by <strong>topic only</strong> — there is no scope hierarchy, no service
+filter, and no event-type filter. A subscriber that needs finer granularity inspects
+<code>cloudevent.type</code> itself.</p>
+<p><code>Subscribe</code> creates one bounded <code>Channel</code> (1024 events) per call, shared across all topics
+named in that call, and multiplexes every topic's events into the single response stream.
+A consumer that falls further behind than the bound is reaped by the health sweeper.</p>
+<blockquote>
+<p>Response headers are flushed before any event is written. Request-reply clients depend
+on this to know the subscription is live before they publish — without it, a client waits
+for metadata that cannot arrive until it publishes, and won't publish until metadata
+arrives.</p>
+</blockquote>
+<h3 id="topicdaprsubscriptionregistry">TopicDaprSubscriptionRegistry</h3>
+<p><strong>Location:</strong> <code>Services/TopicDaprSubscriptionRegistry.cs</code></p>
+<p>Holds <strong>one shared Dapr streaming subscription per topic per process</strong>, reference-counted
+across all gRPC callers subscribed to that topic. A subscription per caller would make
+daprd load-balance each event across callers instead of broadcasting it, so callers share
+one and fan out in-process.</p>
 <pre class="mermaid"><code>sequenceDiagram
     participant Client
-    participant SubMgr as EventSubscriptionManager
-    participant Scope as Scope Dictionary
-
-    Client-&gt;&gt;SubMgr: Subscribe(request)
-    SubMgr-&gt;&gt;SubMgr: Generate subscriptionId
-    SubMgr-&gt;&gt;SubMgr: BuildScope(request)
-    SubMgr-&gt;&gt;Scope: Add subscription
-    SubMgr-&gt;&gt;SubMgr: Start health monitor
-    SubMgr--&gt;&gt;Client: subscriptionId</code></pre>
-<p><strong>Broadcast Flow:</strong></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Source
-    participant SubMgr as EventSubscriptionManager
-    participant Scope as Scopes
-    participant Sub as Subscribers
-
-    Source-&gt;&gt;SubMgr: BroadcastEventAsync()
-    SubMgr-&gt;&gt;SubMgr: Create TopicEventRequest
-    SubMgr-&gt;&gt;SubMgr: GetMatchingScopes()
-    loop For each matching scope
-        SubMgr-&gt;&gt;Scope: Get subscriptions
-        loop For each subscription
-            SubMgr-&gt;&gt;Sub: Write event
-        end
-        SubMgr-&gt;&gt;Scope: Remove dead subscriptions
-    end</code></pre>
-<hr />
-<h3 id="daprstreamingsubscriptionmanager">DaprStreamingSubscriptionManager</h3>
-<p><strong>Location:</strong> <code>Services/DaprStreamingSubscriptionManager.cs</code></p>
-<p>Integrates Dapr pub/sub with Virtufin's event streaming.</p>
-<p><strong>Flow:</strong></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant App as Virtufin.Api
-    participant DaprMgr as DaprStreamingSubMgr
+    participant Pubsub as PubsubService
+    participant Registry as TopicDaprSubscriptionRegistry
+    participant SubMgr as PubsubSubscriptionManager
     participant Dapr as Dapr Sidecar
-    participant SubMgr as EventSubscriptionManager
 
-    App-&gt;&gt;DaprMgr: StartAllSubscriptionsAsync()
-    loop For each subscription
-        DaprMgr-&gt;&gt;Dapr: SubscribeAsync(topic, handler)
-        Dapr--&gt;&gt;DaprMgr: Subscription
-        DaprMgr-&gt;&gt;SubMgr: BroadcastConnectionStatus(connected)
+    Client-&gt;&gt;Pubsub: Subscribe(topics)
+    Pubsub-&gt;&gt;SubMgr: Subscribe(topic, channelWriter)
+    Pubsub-&gt;&gt;Registry: AcquireAsync(topic, onMessage)
+    alt first caller for this topic
+        Registry-&gt;&gt;Dapr: SubscribeAsync(pubsub, topic, handler)
+    else topic already subscribed
+        Registry-&gt;&gt;Registry: AddRef()
     end
+    Pubsub-&gt;&gt;Client: flush response headers
 
-    Note over Dapr,App: Normal operation
-    Dapr-&gt;&gt;DaprMgr: Message received
-    DaprMgr-&gt;&gt;SubMgr: BroadcastToTopicAsync()
-    SubMgr-&gt;&gt;SubMgr: Broadcast to gRPC streams
-    DaprMgr--&gt;&gt;Dapr: TopicResponseAction.Success</code></pre>
-<p><strong>Message Handler:</strong></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dapr as Dapr Sidecar
-    participant DaprMgr as DaprStreamingSubMgr
-    participant SubMgr as EventSubscriptionManager
+    Dapr-&gt;&gt;Registry: TopicMessage
+    Registry-&gt;&gt;SubMgr: BroadcastToTopicAsync(topic, cloudevent)
+    SubMgr-&gt;&gt;Client: SubscribeResponse
 
-    Dapr-&gt;&gt;DaprMgr: TopicMessage
-    DaprMgr-&gt;&gt;DaprMgr: Deserialize JSON
-    DaprMgr-&gt;&gt;SubMgr: BroadcastToTopicAsync()
-    SubMgr-&gt;&gt;SubMgr: Broadcast to gRPC clients
-    DaprMgr--&gt;&gt;Dapr: TopicResponseAction.Success</code></pre>
-<hr />
-<hr />
+    Client-&gt;&gt;Pubsub: cancel call
+    Pubsub-&gt;&gt;SubMgr: UnsubscribeById
+    Pubsub-&gt;&gt;Registry: DisposeAsync (RemoveRef)
+    Registry-&gt;&gt;Dapr: dispose subscription when refcount hits zero</code></pre>
+<h3 id="pubsubsubscriptionmanager">PubsubSubscriptionManager</h3>
+<p><strong>Location:</strong> <code>Services/PubsubSubscriptionManager.cs</code> (base:
+<code>Services/SubscriptionManagerBase.cs</code>)</p>
+<p>In-process fan-out: maps <code>"pubsub/{topic}"</code> to the set of gRPC callers streaming that
+topic, each identified by a GUID subscription id. Writes to a subscriber are bounded by a
+5-second timeout; a failed write is logged and dropped rather than failing the publish.</p>
+<h3 id="daprappcallbackservice">DaprAppCallbackService</h3>
+<p><strong>Location:</strong> <code>Services/DaprAppCallbackService.cs</code></p>
+<p>Receives Dapr Scheduler job callbacks and publishes an empty CloudEvent to the job's
+<code>target_topic</code>. Bound on both Dapr's alpha and stable <code>AppCallback</code> routes —
+<code>DaprStableAppCallbackMethodProvider</code> adds the stable one, which the .NET SDK does not
+generate. Because subscriptions are created programmatically rather than declared, the
+<code>ListTopicSubscriptions</code> callback deliberately returns an empty list.</p>
 <h2 id="data-flow-diagrams">Data Flow Diagrams</h2>
 <h3 id="method-invocation-rest_1">Method Invocation (REST)</h3>
 <pre class="mermaid"><code>sequenceDiagram
@@ -2132,18 +2153,18 @@ Subscriptions use hierarchical scopes for filtering:</p>
     Kestrel--&gt;&gt;Client: gRPC Response</code></pre>
 <h3 id="event-streaming-dapr-grpc_1">Event Streaming (Dapr → gRPC)</h3>
 <pre class="mermaid"><code>flowchart LR
-    Dapr[Dapr Sidecar] --&gt;|Pub/Sub| DaprMgr[DaprStreamingSub Manager]
-    DaprMgr --&gt;|event| EventSubMgr[EventSub Manager]
-    EventSubMgr --&gt; GrpcClient[gRPC Client Subscribe]</code></pre>
+    Dapr[Dapr Sidecar] --&gt;|Pub/Sub| Registry[TopicDaprSubscriptionRegistry]
+    Registry --&gt;|event| SubMgr[PubsubSubscriptionManager]
+    SubMgr --&gt; GrpcClient[gRPC Client Subscribe]</code></pre>
 <hr />
 <h2 id="configuration-architecture_1">Configuration Architecture</h2>
 <pre class="mermaid"><code>flowchart TB
     ConfigFile[services.json] --&gt; Loader[ServicesConfigurationLoader]
     Loader --&gt; ServicesConfig[ServicesConfiguration]
     ServicesConfig --&gt; ChannelPool[GrpcChannelPool]
-    ServicesConfig --&gt; Reflection[GrpcReflectionService]
-    ServicesConfig --&gt; DaprMgr[DaprStreamingSubscriptionManager]
-    ServicesConfig --&gt; State[StateService]
+    ServicesConfig --&gt; Gateway[GatewayService]
+    ServicesConfig --&gt; Reflection[AggregatedReflectionService]
+    ServicesConfig --&gt; State["StateService&lt;br/&gt;(store name only)"]
     ServicesConfig --&gt; Config[ConfigService]</code></pre>
 <hr />
 <h2 id="health-checks">Health Checks</h2>
@@ -2151,24 +2172,35 @@ Subscriptions use hierarchical scopes for filtering:</p>
 <thead>
 <tr>
 <th>Check</th>
-<th>Component</th>
-<th>Status When</th>
+<th>Name</th>
+<th>Healthy when</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>DaprHealthCheck</code></td>
-<td>DaprClient</td>
+<td><code>dapr</code></td>
 <td>Dapr sidecar is reachable</td>
 </tr>
 <tr>
 <td><code>GrpcChannelPoolHealthCheck</code></td>
-<td>GrpcChannelPool</td>
-<td>Channel pool is initialized</td>
+<td><code>grpc-channel-pool</code></td>
+<td>Channel pool has channels for the configured services</td>
+</tr>
+<tr>
+<td><code>GatewayCircuitBreakerHealthCheck</code></td>
+<td><code>dapr-circuit-breaker</code></td>
+<td>The gateway circuit breaker is not open</td>
+</tr>
+<tr>
+<td><code>ApiAuthHealthCheck</code></td>
+<td><code>api-auth</code></td>
+<td>API-key auth is configured as expected</td>
 </tr>
 </tbody>
 </table>
-<p>Both checks run on <code>/health</code> endpoint.</p>
+<p>All four run on <code>/health</code> and <code>/healthz</code>. A gRPC health service is also mapped at
+<code>grpc.health.v1.Health</code>, which the API-key interceptor exempts from authentication.</p>
 
 
 
@@ -2200,7 +2232,7 @@ Subscriptions use hierarchical scopes for filtering:</p>
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-08T03:18:54Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-10T02:02:12Z</span>
 </div>
 
     </div>

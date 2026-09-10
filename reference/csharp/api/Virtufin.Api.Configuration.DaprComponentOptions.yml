@@ -1,0 +1,543 @@
+### YamlMime:ManagedReference
+items:
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  id: DaprComponentOptions
+  parent: Virtufin.Api.Configuration
+  children:
+  - Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)
+  - Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  - Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  - Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  - Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  langs:
+  - csharp
+  - vb
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions
+  type: Class
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: DaprComponentOptions
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 23
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  summary: >-
+    The Dapr component names the gateway talks to. Resolved once at startup and injected,
+
+    rather than hard-coded at each call site.
+  remarks: >-
+    <p>
+
+    Two knobs for the pub/sub component name existed and neither was read: the
+
+    <code>--pubsub-name</code> / <code>PubsubName</code> setting, and the per-service
+
+    <code>pubsub.pubsubName</code> field in services.json (which helm emits from
+
+    <code>.Values.pubsub.name</code>). Publishing and subscribing used the literal
+
+    <code>"pubsub"</code>, so renaming the component in helm produced a deployment that
+
+    looked configured and could not publish.
+
+    </p>
+
+    <p>
+
+    The per-service field cannot be honoured per service: <code>Pubsub.PublishEvent</code> and
+
+    <code>Pubsub.Subscribe</code> take a topic and no service, so there is nothing to resolve
+
+    against at call time. It is therefore treated as a gateway-wide setting that every
+
+    entry must agree on — which is how it is actually produced, since helm renders one
+
+    value into every entry.
+
+    </p>
+  example: []
+  syntax:
+    content: public sealed class DaprComponentOptions
+    content.vb: Public NotInheritable Class DaprComponentOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  commentId: F:Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  id: PubsubNameKey
+  parent: Virtufin.Api.Configuration.DaprComponentOptions
+  langs:
+  - csharp
+  - vb
+  name: PubsubNameKey
+  nameWithType: DaprComponentOptions.PubsubNameKey
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: PubsubNameKey
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 26
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  summary: Configuration key backing <code>--pubsub-name</code>.
+  example: []
+  syntax:
+    content: public const string PubsubNameKey = "PubsubName"
+    return:
+      type: System.String
+    content.vb: Public Const PubsubNameKey As String = "PubsubName"
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  commentId: F:Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  id: DefaultPubsubName
+  parent: Virtufin.Api.Configuration.DaprComponentOptions
+  langs:
+  - csharp
+  - vb
+  name: DefaultPubsubName
+  nameWithType: DaprComponentOptions.DefaultPubsubName
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: DefaultPubsubName
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 29
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  summary: Component name used when nothing is configured.
+  example: []
+  syntax:
+    content: public const string DefaultPubsubName = "pubsub"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultPubsubName As String = "pubsub"
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  commentId: P:Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  id: PubsubName
+  parent: Virtufin.Api.Configuration.DaprComponentOptions
+  langs:
+  - csharp
+  - vb
+  name: PubsubName
+  nameWithType: DaprComponentOptions.PubsubName
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  type: Property
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: PubsubName
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 31
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  syntax:
+    content: public string PubsubName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PubsubName As String
+  overload: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName*
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)
+  commentId: M:Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Virtufin.Api.Configuration.DaprComponentOptions
+  langs:
+  - csharp
+  - vb
+  name: DaprComponentOptions(string)
+  nameWithType: DaprComponentOptions.DaprComponentOptions(string)
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DaprComponentOptions(string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: .ctor
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 33
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  syntax:
+    content: public DaprComponentOptions(string pubsubName)
+    parameters:
+    - id: pubsubName
+      type: System.String
+    content.vb: Public Sub New(pubsubName As String)
+  overload: Virtufin.Api.Configuration.DaprComponentOptions.#ctor*
+  nameWithType.vb: DaprComponentOptions.New(String)
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.New(String)
+  name.vb: New(String)
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  commentId: M:Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  id: Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  parent: Virtufin.Api.Configuration.DaprComponentOptions
+  langs:
+  - csharp
+  - vb
+  name: Resolve(string?, ServicesConfiguration)
+  nameWithType: DaprComponentOptions.Resolve(string?, ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(string?, Virtufin.Api.Configuration.ServicesConfiguration)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Resolve
+    path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
+    startLine: 44
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  summary: >-
+    Resolves the pub/sub component name. Precedence: the explicit
+
+    <code>PubsubName</code> setting, then the value services.json agrees on, then the default.
+  example: []
+  syntax:
+    content: public static DaprComponentOptions Resolve(string? explicitName, ServicesConfiguration config)
+    parameters:
+    - id: explicitName
+      type: System.String
+    - id: config
+      type: Virtufin.Api.Configuration.ServicesConfiguration
+    return:
+      type: Virtufin.Api.Configuration.DaprComponentOptions
+    content.vb: Public Shared Function Resolve(explicitName As String, config As ServicesConfiguration) As DaprComponentOptions
+  overload: Virtufin.Api.Configuration.DaprComponentOptions.Resolve*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: >-
+      Thrown when registered services declare different <code>pubsub.pubsubName</code> values.
+
+      Only one can be honoured, and silently picking one would reintroduce exactly the
+
+      "configured but ignored" behaviour this replaces.
+  nameWithType.vb: DaprComponentOptions.Resolve(String, ServicesConfiguration)
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(String, Virtufin.Api.Configuration.ServicesConfiguration)
+  name.vb: Resolve(String, ServicesConfiguration)
+references:
+- uid: Virtufin.Api.Configuration
+  commentId: N:Virtufin.Api.Configuration
+  href: Virtufin.html
+  name: Virtufin.Api.Configuration
+  nameWithType: Virtufin.Api.Configuration
+  fullName: Virtufin.Api.Configuration
+  spec.csharp:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
+  spec.vb:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName*
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_PubsubName
+  name: PubsubName
+  nameWithType: DaprComponentOptions.PubsubName
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.#ctor*
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.#ctor
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions__ctor_System_String_
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions.DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DaprComponentOptions
+  nameWithType.vb: DaprComponentOptions.New
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.New
+  name.vb: New
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.Resolve*
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.Resolve
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_Resolve_System_String_Virtufin_Api_Configuration_ServicesConfiguration_
+  name: Resolve
+  nameWithType: DaprComponentOptions.Resolve
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.Resolve
+- uid: Virtufin.Api.Configuration.ServicesConfiguration
+  commentId: T:Virtufin.Api.Configuration.ServicesConfiguration
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.ServicesConfiguration.html
+  name: ServicesConfiguration
+  nameWithType: ServicesConfiguration
+  fullName: Virtufin.Api.Configuration.ServicesConfiguration
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions

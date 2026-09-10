@@ -23,7 +23,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: PubsubSubscription
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -58,7 +58,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Writer
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 67
+    startLine: 70
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -87,7 +87,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Topic
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -116,7 +116,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: AddedAt
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 69
+    startLine: 72
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -145,7 +145,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 71
+    startLine: 74
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

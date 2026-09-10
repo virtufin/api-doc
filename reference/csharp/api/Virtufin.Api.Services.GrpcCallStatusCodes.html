@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class GrpcCallStatusCodes | Virtufin API - C# Reference ">
       
-      
+      <meta name="description" content="The status vocabulary Gateway.Invoke / InvokeJson report in InvokeResponse.status.  Every status the gateway emits MUST come from here. A downstream  used to be reported as ex.StatusCode.ToString(), which is the PascalCase enum name (&quot;NotFound&quot;) — so the same condition reached clients as NOT_FOUND when the gateway detected it and NotFound when the backend did. Use GrpcStatusCodeMap.ToGatewayStatus to translate.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/7475cd5faef0358601dba3c7b8914e3135d08933" target="_blank" rel="noopener" class="commit-badge" title="View commit 7475cd5faef0358601dba3c7b8914e3135d08933">
+            <a href="{git_repo_url}/commit/4efb529f69dc92308bd7e17148f461b137039a84" target="_blank" rel="noopener" class="commit-badge" title="View commit 4efb529f69dc92308bd7e17148f461b137039a84">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5faef0358601dba3c7b8914e3135d08933</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529f69dc92308bd7e17148f461b137039a84</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +101,17 @@ Class GrpcCallStatusCodes
   <dl><dt>Assembly</dt><dd>Virtufin.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The status vocabulary <code>Gateway.Invoke</code> / <code>InvokeJson</code> report in
+<code>InvokeResponse.status</code>.</p>
+<p>
+Every status the gateway emits MUST come from here. A downstream
+<a class="xref" href="https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Core.Api/RpcException.cs">RpcException</a> used to be reported as
+<code>ex.StatusCode.ToString()</code>, which is the PascalCase enum name
+(<code>"NotFound"</code>) — so the same condition reached clients as
+<code>NOT_FOUND</code> when the gateway detected it and <code>NotFound</code> when the
+backend did. Use <code>GrpcStatusCodeMap.ToGatewayStatus</code> to translate.
+</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -157,6 +167,156 @@ Class GrpcCallStatusCodes
 
 
 
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_Aborted" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.Aborted">
+  Aborted
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Aborted = &quot;ABORTED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_AlreadyExists" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists">
+  AlreadyExists
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AlreadyExists = &quot;ALREADY_EXISTS&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_Cancelled" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled">
+  Cancelled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Cancelled = &quot;CANCELLED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_DeadlineExceeded" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded">
+  DeadlineExceeded
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DeadlineExceeded = &quot;DEADLINE_EXCEEDED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_FailedPrecondition" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition">
+  FailedPrecondition
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FailedPrecondition = &quot;FAILED_PRECONDITION&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_Internal" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.Internal">
   Internal
   
@@ -187,16 +347,17 @@ Class GrpcCallStatusCodes
 
 
 
-  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_InvalidRequest" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest">
-  InvalidRequest
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_InvalidArgument" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument">
+  InvalidArgument
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>gRPC's own name for this condition is INVALID_ARGUMENT.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string InvalidRequest = &quot;INVALID_REQUEST&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string InvalidArgument = &quot;INVALID_ARGUMENT&quot;</code></pre>
   </div>
 
 
@@ -227,6 +388,126 @@ Class GrpcCallStatusCodes
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const string NotFound = &quot;NOT_FOUND&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_Ok" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.Ok">
+  Ok
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Ok = &quot;OK&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_PermissionDenied" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied">
+  PermissionDenied
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PermissionDenied = &quot;PERMISSION_DENIED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_ResourceExhausted" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted">
+  ResourceExhausted
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ResourceExhausted = &quot;RESOURCE_EXHAUSTED&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_Unauthenticated" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated">
+  Unauthenticated
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Unauthenticated = &quot;UNAUTHENTICATED&quot;</code></pre>
   </div>
 
 
@@ -327,6 +608,50 @@ Class GrpcCallStatusCodes
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Virtufin_Api_Services_GrpcCallStatusCodes_IndicatesBackendFault_" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault*"></a>
+
+  <h3 id="Virtufin_Api_Services_GrpcCallStatusCodes_IndicatesBackendFault_System_String_" data-uid="Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)">
+  IndicatesBackendFault(string?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Statuses that indicate the <b>backend or the transport</b> is unhealthy, as
+opposed to the caller having asked for something wrong. Only these should
+count towards opening the gateway circuit breaker — a client looping on a
+bad method name must not break the circuit for everyone else.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IndicatesBackendFault(string? status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
 
 
 

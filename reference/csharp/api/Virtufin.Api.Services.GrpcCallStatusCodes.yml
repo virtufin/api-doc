@@ -5,9 +5,19 @@ items:
   id: GrpcCallStatusCodes
   parent: Virtufin.Api.Services
   children:
+  - Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  - Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  - Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  - Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  - Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  - Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)
   - Virtufin.Api.Services.GrpcCallStatusCodes.Internal
-  - Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
+  - Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
   - Virtufin.Api.Services.GrpcCallStatusCodes.NotFound
+  - Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  - Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  - Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  - Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
   - Virtufin.Api.Services.GrpcCallStatusCodes.Unavailable
   - Virtufin.Api.Services.GrpcCallStatusCodes.Unknown
   - Virtufin.Api.Services.GrpcCallStatusCodes.Unsupported
@@ -25,10 +35,32 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcCallStatusCodes
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 21
+    startLine: 30
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: >-
+    The status vocabulary <code>Gateway.Invoke</code> / <code>InvokeJson</code> report in
+
+    <code>InvokeResponse.status</code>.
+
+
+    <p>
+
+    Every status the gateway emits MUST come from here. A downstream
+
+    <xref href="Grpc.Core.RpcException" data-throw-if-not-resolved="false"></xref> used to be reported as
+
+    <code>ex.StatusCode.ToString()</code>, which is the PascalCase enum name
+
+    (<code>"NotFound"</code>) — so the same condition reached clients as
+
+    <code>NOT_FOUND</code> when the gateway detected it and <code>NotFound</code> when the
+
+    backend did. Use <code>GrpcStatusCodeMap.ToGatewayStatus</code> to translate.
+
+    </p>
+  example: []
   syntax:
     content: public static class GrpcCallStatusCodes
     content.vb: Public Module GrpcCallStatusCodes
@@ -42,6 +74,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  id: Ok
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: GrpcCallStatusCodes.Ok
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Ok
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 32
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string Ok = "OK"
+    return:
+      type: System.String
+    content.vb: Public Const Ok As String = "OK"
 - uid: Virtufin.Api.Services.GrpcCallStatusCodes.Unknown
   commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Unknown
   id: Unknown
@@ -60,7 +119,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Unknown
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 23
+    startLine: 33
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -87,7 +146,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: NotFound
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 24
+    startLine: 34
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -114,7 +173,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Unsupported
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 25
+    startLine: 35
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -141,7 +200,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Internal
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 26
+    startLine: 36
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -150,33 +209,35 @@ items:
     return:
       type: System.String
     content.vb: Public Const Internal As String = "INTERNAL"
-- uid: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
-  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
-  id: InvalidRequest
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
+  id: InvalidArgument
   parent: Virtufin.Api.Services.GrpcCallStatusCodes
   langs:
   - csharp
   - vb
-  name: InvalidRequest
-  nameWithType: GrpcCallStatusCodes.InvalidRequest
-  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
+  name: InvalidArgument
+  nameWithType: GrpcCallStatusCodes.InvalidArgument
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
   type: Field
   source:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: InvalidRequest
+    id: InvalidArgument
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 27
+    startLine: 38
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: gRPC's own name for this condition is INVALID_ARGUMENT.
+  example: []
   syntax:
-    content: public const string InvalidRequest = "INVALID_REQUEST"
+    content: public const string InvalidArgument = "INVALID_ARGUMENT"
     return:
       type: System.String
-    content.vb: Public Const InvalidRequest As String = "INVALID_REQUEST"
+    content.vb: Public Const InvalidArgument As String = "INVALID_ARGUMENT"
 - uid: Virtufin.Api.Services.GrpcCallStatusCodes.Unavailable
   commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Unavailable
   id: Unavailable
@@ -195,7 +256,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Unavailable
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 28
+    startLine: 39
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -204,7 +265,273 @@ items:
     return:
       type: System.String
     content.vb: Public Const Unavailable As String = "UNAVAILABLE"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  id: DeadlineExceeded
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: DeadlineExceeded
+  nameWithType: GrpcCallStatusCodes.DeadlineExceeded
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: DeadlineExceeded
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 40
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string DeadlineExceeded = "DEADLINE_EXCEEDED"
+    return:
+      type: System.String
+    content.vb: Public Const DeadlineExceeded As String = "DEADLINE_EXCEEDED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  id: PermissionDenied
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: PermissionDenied
+  nameWithType: GrpcCallStatusCodes.PermissionDenied
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: PermissionDenied
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 41
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string PermissionDenied = "PERMISSION_DENIED"
+    return:
+      type: System.String
+    content.vb: Public Const PermissionDenied As String = "PERMISSION_DENIED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  id: Unauthenticated
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: Unauthenticated
+  nameWithType: GrpcCallStatusCodes.Unauthenticated
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Unauthenticated
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 42
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string Unauthenticated = "UNAUTHENTICATED"
+    return:
+      type: System.String
+    content.vb: Public Const Unauthenticated As String = "UNAUTHENTICATED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  id: ResourceExhausted
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: ResourceExhausted
+  nameWithType: GrpcCallStatusCodes.ResourceExhausted
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: ResourceExhausted
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 43
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string ResourceExhausted = "RESOURCE_EXHAUSTED"
+    return:
+      type: System.String
+    content.vb: Public Const ResourceExhausted As String = "RESOURCE_EXHAUSTED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  id: FailedPrecondition
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: FailedPrecondition
+  nameWithType: GrpcCallStatusCodes.FailedPrecondition
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: FailedPrecondition
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 44
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string FailedPrecondition = "FAILED_PRECONDITION"
+    return:
+      type: System.String
+    content.vb: Public Const FailedPrecondition As String = "FAILED_PRECONDITION"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  id: Aborted
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: Aborted
+  nameWithType: GrpcCallStatusCodes.Aborted
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Aborted
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 45
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string Aborted = "ABORTED"
+    return:
+      type: System.String
+    content.vb: Public Const Aborted As String = "ABORTED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  id: AlreadyExists
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: AlreadyExists
+  nameWithType: GrpcCallStatusCodes.AlreadyExists
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: AlreadyExists
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 46
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string AlreadyExists = "ALREADY_EXISTS"
+    return:
+      type: System.String
+    content.vb: Public Const AlreadyExists As String = "ALREADY_EXISTS"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  id: Cancelled
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: GrpcCallStatusCodes.Cancelled
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Cancelled
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 47
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string Cancelled = "CANCELLED"
+    return:
+      type: System.String
+    content.vb: Public Const Cancelled As String = "CANCELLED"
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)
+  commentId: M:Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)
+  id: IndicatesBackendFault(System.String)
+  parent: Virtufin.Api.Services.GrpcCallStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: IndicatesBackendFault(string?)
+  nameWithType: GrpcCallStatusCodes.IndicatesBackendFault(string?)
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(string?)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/Constants.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: IndicatesBackendFault
+    path: ../../../src/Virtufin.Api/Services/Constants.cs
+    startLine: 55
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: >-
+    Statuses that indicate the <b>backend or the transport</b> is unhealthy, as
+
+    opposed to the caller having asked for something wrong. Only these should
+
+    count towards opening the gateway circuit breaker — a client looping on a
+
+    bad method name must not break the circuit for everyone else.
+  example: []
+  syntax:
+    content: public static bool IndicatesBackendFault(string? status)
+    parameters:
+    - id: status
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IndicatesBackendFault(status As String) As Boolean
+  overload: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault*
+  nameWithType.vb: GrpcCallStatusCodes.IndicatesBackendFault(String)
+  fullName.vb: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(String)
+  name.vb: IndicatesBackendFault(String)
 references:
+- uid: Grpc.Core.RpcException
+  commentId: T:Grpc.Core.RpcException
+  isExternal: true
+  href: https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Core.Api/RpcException.cs
+  name: RpcException
+  nameWithType: RpcException
+  fullName: Grpc.Core.RpcException
 - uid: Virtufin.Api.Services
   commentId: N:Virtufin.Api.Services
   href: Virtufin.html
@@ -483,3 +810,20 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault*
+  commentId: Overload:Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault
+  href: Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_IndicatesBackendFault_System_String_
+  name: IndicatesBackendFault
+  nameWithType: GrpcCallStatusCodes.IndicatesBackendFault
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

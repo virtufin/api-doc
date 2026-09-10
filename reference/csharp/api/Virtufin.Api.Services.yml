@@ -11,17 +11,17 @@ items:
   - Virtufin.Api.Services.CloudEventExtensions
   - Virtufin.Api.Services.ConfigService
   - Virtufin.Api.Services.DaprAppCallbackService
-  - Virtufin.Api.Services.DaprConstants
+  - Virtufin.Api.Services.DaprSidecarChannel
   - Virtufin.Api.Services.DaprStableAppCallbackMethodProvider
   - Virtufin.Api.Services.DateTimeFormatConstants
   - Virtufin.Api.Services.FieldSchema
+  - Virtufin.Api.Services.ForwardedHeaders
   - Virtufin.Api.Services.GatewayService
-  - Virtufin.Api.Services.GatewaySubscription
-  - Virtufin.Api.Services.GatewaySubscriptionManager
   - Virtufin.Api.Services.GrpcCallResult
   - Virtufin.Api.Services.GrpcCallStatusCodes
   - Virtufin.Api.Services.GrpcChannelPool
   - Virtufin.Api.Services.GrpcReflectionService
+  - Virtufin.Api.Services.GrpcStatusCodeMap
   - Virtufin.Api.Services.MethodSchema
   - Virtufin.Api.Services.OneofCaseSchema
   - Virtufin.Api.Services.PubSubTopics
@@ -31,6 +31,7 @@ items:
   - Virtufin.Api.Services.ReflectionAnswer
   - Virtufin.Api.Services.ServiceMethodInfo
   - Virtufin.Api.Services.StateActionConstants
+  - Virtufin.Api.Services.StateChangeEvents
   - Virtufin.Api.Services.StateService
   - Virtufin.Api.Services.StatusStrings
   - Virtufin.Api.Services.SubscriptionHealthSweeperHostedService
@@ -86,12 +87,13 @@ references:
   name: DaprAppCallbackService
   nameWithType: DaprAppCallbackService
   fullName: Virtufin.Api.Services.DaprAppCallbackService
-- uid: Virtufin.Api.Services.DaprConstants
-  commentId: T:Virtufin.Api.Services.DaprConstants
-  href: Virtufin.Api.Services.DaprConstants.html
-  name: DaprConstants
-  nameWithType: DaprConstants
-  fullName: Virtufin.Api.Services.DaprConstants
+- uid: Virtufin.Api.Services.DaprSidecarChannel
+  commentId: T:Virtufin.Api.Services.DaprSidecarChannel
+  parent: Virtufin.Api.Services
+  href: Virtufin.Api.Services.DaprSidecarChannel.html
+  name: DaprSidecarChannel
+  nameWithType: DaprSidecarChannel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel
 - uid: Virtufin.Api.Services.DaprStableAppCallbackMethodProvider
   commentId: T:Virtufin.Api.Services.DaprStableAppCallbackMethodProvider
   href: Virtufin.Api.Services.DaprStableAppCallbackMethodProvider.html
@@ -110,25 +112,18 @@ references:
   name: FieldSchema
   nameWithType: FieldSchema
   fullName: Virtufin.Api.Services.FieldSchema
+- uid: Virtufin.Api.Services.ForwardedHeaders
+  commentId: T:Virtufin.Api.Services.ForwardedHeaders
+  href: Virtufin.Api.Services.ForwardedHeaders.html
+  name: ForwardedHeaders
+  nameWithType: ForwardedHeaders
+  fullName: Virtufin.Api.Services.ForwardedHeaders
 - uid: Virtufin.Api.Services.GatewayService
   commentId: T:Virtufin.Api.Services.GatewayService
   href: Virtufin.Api.Services.GatewayService.html
   name: GatewayService
   nameWithType: GatewayService
   fullName: Virtufin.Api.Services.GatewayService
-- uid: Virtufin.Api.Services.GatewaySubscription
-  commentId: T:Virtufin.Api.Services.GatewaySubscription
-  parent: Virtufin.Api.Services
-  href: Virtufin.Api.Services.GatewaySubscription.html
-  name: GatewaySubscription
-  nameWithType: GatewaySubscription
-  fullName: Virtufin.Api.Services.GatewaySubscription
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager
-  commentId: T:Virtufin.Api.Services.GatewaySubscriptionManager
-  href: Virtufin.Api.Services.GatewaySubscriptionManager.html
-  name: GatewaySubscriptionManager
-  nameWithType: GatewaySubscriptionManager
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager
 - uid: Virtufin.Api.Services.GrpcCallResult
   commentId: T:Virtufin.Api.Services.GrpcCallResult
   href: Virtufin.Api.Services.GrpcCallResult.html
@@ -155,6 +150,12 @@ references:
   name: GrpcReflectionService
   nameWithType: GrpcReflectionService
   fullName: Virtufin.Api.Services.GrpcReflectionService
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap
+  commentId: T:Virtufin.Api.Services.GrpcStatusCodeMap
+  href: Virtufin.Api.Services.GrpcStatusCodeMap.html
+  name: GrpcStatusCodeMap
+  nameWithType: GrpcStatusCodeMap
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap
 - uid: Virtufin.Api.Services.MethodSchema
   commentId: T:Virtufin.Api.Services.MethodSchema
   href: Virtufin.Api.Services.MethodSchema.html
@@ -213,6 +214,12 @@ references:
   name: StateActionConstants
   nameWithType: StateActionConstants
   fullName: Virtufin.Api.Services.StateActionConstants
+- uid: Virtufin.Api.Services.StateChangeEvents
+  commentId: T:Virtufin.Api.Services.StateChangeEvents
+  href: Virtufin.Api.Services.StateChangeEvents.html
+  name: StateChangeEvents
+  nameWithType: StateChangeEvents
+  fullName: Virtufin.Api.Services.StateChangeEvents
 - uid: Virtufin.Api.Services.StateService
   commentId: T:Virtufin.Api.Services.StateService
   href: Virtufin.Api.Services.StateService.html

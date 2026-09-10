@@ -114,7 +114,7 @@ items:
   summary: Retrieves all methods for a given service using gRPC reflection.
   example: []
   syntax:
-    content: public Task<List<ServiceMethodInfo>> GetMethodsAsync(string serviceName, CancellationToken cancellationToken = default)
+    content: public Task<IReadOnlyList<ServiceMethodInfo>> GetMethodsAsync(string serviceName, CancellationToken cancellationToken = default)
     parameters:
     - id: serviceName
       type: System.String
@@ -123,9 +123,9 @@ items:
       type: System.Threading.CancellationToken
       description: A cancellation token.
     return:
-      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Virtufin.Api.Services.ServiceMethodInfo}}
-      description: A list of ServiceMethodInfo describing each method.
-    content.vb: Public Function GetMethodsAsync(serviceName As String, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of ServiceMethodInfo))
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{Virtufin.Api.Services.ServiceMethodInfo}}
+      description: A snapshot of the service's methods.
+    content.vb: Public Function GetMethodsAsync(serviceName As String, cancellationToken As CancellationToken = Nothing) As Task(Of IReadOnlyList(Of ServiceMethodInfo))
   overload: Virtufin.Api.Services.GrpcReflectionService.GetMethodsAsync*
   nameWithType.vb: GrpcReflectionService.GetMethodsAsync(String, CancellationToken)
   fullName.vb: Virtufin.Api.Services.GrpcReflectionService.GetMethodsAsync(String, System.Threading.CancellationToken)
@@ -148,7 +148,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetMethodSchemaAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 59
+    startLine: 101
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -195,7 +195,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ExecuteCallAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 81
+    startLine: 125
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -245,7 +245,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ExecuteCallAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 151
+    startLine: 229
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -295,7 +295,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetFileDescriptorProtosAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 218
+    startLine: 330
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -336,7 +336,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetOrderedFileDescriptorProtosAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 234
+    startLine: 346
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -384,7 +384,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetServiceFullNamesAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 247
+    startLine: 359
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -427,7 +427,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ContainsSymbolAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 261
+    startLine: 373
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -473,7 +473,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ContainsFileAsync
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 274
+    startLine: 386
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -516,7 +516,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: InvalidateCache
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 291
+    startLine: 403
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -554,7 +554,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: InvalidateAllCaches
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 302
+    startLine: 414
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -1016,27 +1016,27 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: System.Threading.CancellationToken
-- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Virtufin.Api.Services.ServiceMethodInfo}}
-  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Virtufin.Api.Services.ServiceMethodInfo}}
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{Virtufin.Api.Services.ServiceMethodInfo}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{Virtufin.Api.Services.ServiceMethodInfo}}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<List<ServiceMethodInfo>>
-  nameWithType: Task<List<ServiceMethodInfo>>
-  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Virtufin.Api.Services.ServiceMethodInfo>>
-  nameWithType.vb: Task(Of List(Of ServiceMethodInfo))
-  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Virtufin.Api.Services.ServiceMethodInfo))
-  name.vb: Task(Of List(Of ServiceMethodInfo))
+  name: Task<IReadOnlyList<ServiceMethodInfo>>
+  nameWithType: Task<IReadOnlyList<ServiceMethodInfo>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<Virtufin.Api.Services.ServiceMethodInfo>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of ServiceMethodInfo))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of Virtufin.Api.Services.ServiceMethodInfo))
+  name.vb: Task(Of IReadOnlyList(Of ServiceMethodInfo))
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
   - name: <
   - uid: Virtufin.Api.Services.ServiceMethodInfo
     name: ServiceMethodInfo
@@ -1051,10 +1051,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
   - name: (
   - name: Of
   - name: " "

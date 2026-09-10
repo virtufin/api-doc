@@ -10,6 +10,7 @@ items:
   - Virtufin.Api.Services.GrpcChannelPool.ConfiguredServiceCount
   - Virtufin.Api.Services.GrpcChannelPool.Dispose
   - Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync(System.String)
+  - Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)
   langs:
   - csharp
   - vb
@@ -24,7 +25,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcChannelPool
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -61,7 +62,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -95,7 +96,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ChannelCount
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -124,10 +125,17 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ConfiguredServiceCount
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 23
+    startLine: 29
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: >-
+    Number of services the pool can actually hold a channel for. Non-dialable entries
+
+    (state-store-name placeholders) are excluded, so the health check's
+
+    channels-per-service ratio stays reachable.
+  example: []
   syntax:
     content: public int ConfiguredServiceCount { get; }
     parameters: []
@@ -135,6 +143,52 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property ConfiguredServiceCount As Integer
   overload: Virtufin.Api.Services.GrpcChannelPool.ConfiguredServiceCount*
+- uid: Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)
+  commentId: M:Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)
+  id: IsDialable(System.String)
+  parent: Virtufin.Api.Services.GrpcChannelPool
+  langs:
+  - csharp
+  - vb
+  name: IsDialable(string)
+  nameWithType: GrpcChannelPool.IsDialable(string)
+  fullName: Virtufin.Api.Services.GrpcChannelPool.IsDialable(string)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/GrpcChannelPool.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: IsDialable
+    path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
+    startLine: 41
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: True if <code class="paramref">serviceName</code> names a registered, dialable backend.
+  remarks: >-
+    Callers check this before touching the descriptor cache. Letting an unregistered
+
+    name reach the cache means the resulting <xref href="System.ArgumentException" data-throw-if-not-resolved="false"></xref> is
+
+    swallowed by <code>LoadDescriptorsAsync</code> and stored as <code>LastLoadException</code>,
+
+    so the caller sees UNAVAILABLE ("could not load descriptors") plus the raw
+
+    "not found in configuration" text, rather than a clean NOT_FOUND.
+  example: []
+  syntax:
+    content: public bool IsDialable(string serviceName)
+    parameters:
+    - id: serviceName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsDialable(serviceName As String) As Boolean
+  overload: Virtufin.Api.Services.GrpcChannelPool.IsDialable*
+  nameWithType.vb: GrpcChannelPool.IsDialable(String)
+  fullName.vb: Virtufin.Api.Services.GrpcChannelPool.IsDialable(String)
+  name.vb: IsDialable(String)
 - uid: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync(System.String)
   commentId: M:Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync(System.String)
   id: GetChannelAsync(System.String)
@@ -153,7 +207,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetChannelAsync
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 25
+    startLine: 44
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -187,7 +241,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Dispose
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
-    startLine: 47
+    startLine: 66
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -642,12 +696,19 @@ references:
   name: ConfiguredServiceCount
   nameWithType: GrpcChannelPool.ConfiguredServiceCount
   fullName: Virtufin.Api.Services.GrpcChannelPool.ConfiguredServiceCount
-- uid: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync*
-  commentId: Overload:Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync
-  href: Virtufin.Api.Services.GrpcChannelPool.html#Virtufin_Api_Services_GrpcChannelPool_GetChannelAsync_System_String_
-  name: GetChannelAsync
-  nameWithType: GrpcChannelPool.GetChannelAsync
-  fullName: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Virtufin.Api.Services.GrpcChannelPool.IsDialable*
+  commentId: Overload:Virtufin.Api.Services.GrpcChannelPool.IsDialable
+  href: Virtufin.Api.Services.GrpcChannelPool.html#Virtufin_Api_Services_GrpcChannelPool_IsDialable_System_String_
+  name: IsDialable
+  nameWithType: GrpcChannelPool.IsDialable
+  fullName: Virtufin.Api.Services.GrpcChannelPool.IsDialable
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -659,6 +720,23 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync*
+  commentId: Overload:Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync
+  href: Virtufin.Api.Services.GrpcChannelPool.html#Virtufin_Api_Services_GrpcChannelPool_GetChannelAsync_System_String_
+  name: GetChannelAsync
+  nameWithType: GrpcChannelPool.GetChannelAsync
+  fullName: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync
 - uid: System.Threading.Tasks.Task{Grpc.Net.Client.GrpcChannel}
   commentId: T:System.Threading.Tasks.Task{Grpc.Net.Client.GrpcChannel}
   parent: System.Threading.Tasks

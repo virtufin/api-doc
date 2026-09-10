@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/7475cd5faef0358601dba3c7b8914e3135d08933" target="_blank" rel="noopener" class="commit-badge" title="View commit 7475cd5faef0358601dba3c7b8914e3135d08933">
+            <a href="{git_repo_url}/commit/4efb529f69dc92308bd7e17148f461b137039a84" target="_blank" rel="noopener" class="commit-badge" title="View commit 4efb529f69dc92308bd7e17148f461b137039a84">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5faef0358601dba3c7b8914e3135d08933</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529f69dc92308bd7e17148f461b137039a84</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -490,7 +490,7 @@ fully-qualified symbol (service, message, or enum name).</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;ServiceMethodInfo&gt;&gt; GetMethodsAsync(string serviceName, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;ServiceMethodInfo&gt;&gt; GetMethodsAsync(string serviceName, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -505,8 +505,8 @@ fully-qualified symbol (service, message, or enum name).</p>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Virtufin.Api.Services.ServiceMethodInfo.html">ServiceMethodInfo</a>&gt;&gt;</dt>
-    <dd><p>A list of ServiceMethodInfo describing each method.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Virtufin.Api.Services.ServiceMethodInfo.html">ServiceMethodInfo</a>&gt;&gt;</dt>
+    <dd><p>A snapshot of the service's methods.</p>
 </dd>
   </dl>
 

@@ -12,7 +12,6 @@ items:
   - Virtufin.Api.Services.TimeoutConstants.MessageHandlingTimeoutSeconds
   - Virtufin.Api.Services.TimeoutConstants.ReflectionProbeTimeoutSeconds
   - Virtufin.Api.Services.TimeoutConstants.SendEventTimeoutSeconds
-  - Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
   - Virtufin.Api.Services.TimeoutConstants.SubscriptionWriterDrainTimeoutSeconds
   langs:
   - csharp
@@ -28,7 +27,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: TimeoutConstants
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 31
+    startLine: 89
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -63,7 +62,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: SendEventTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 33
+    startLine: 91
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -90,7 +89,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: MessageHandlingTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 34
+    startLine: 92
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -99,33 +98,6 @@ items:
     return:
       type: System.Int32
     content.vb: Public Const MessageHandlingTimeoutSeconds As Integer = 30
-- uid: Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  commentId: F:Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  id: SubscriptionIdleTimeoutMinutes
-  parent: Virtufin.Api.Services.TimeoutConstants
-  langs:
-  - csharp
-  - vb
-  name: SubscriptionIdleTimeoutMinutes
-  nameWithType: TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  fullName: Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  type: Field
-  source:
-    remote:
-      path: src/Virtufin.Api/Services/Constants.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: SubscriptionIdleTimeoutMinutes
-    path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 35
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.Services
-  syntax:
-    content: public const int SubscriptionIdleTimeoutMinutes = 5
-    return:
-      type: System.Int32
-    content.vb: Public Const SubscriptionIdleTimeoutMinutes As Integer = 5
 - uid: Virtufin.Api.Services.TimeoutConstants.GrpcGatewayTimeoutSeconds
   commentId: F:Virtufin.Api.Services.TimeoutConstants.GrpcGatewayTimeoutSeconds
   id: GrpcGatewayTimeoutSeconds
@@ -144,7 +116,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcGatewayTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 36
+    startLine: 93
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -171,7 +143,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcKeepAlivePingDelaySeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 37
+    startLine: 94
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -198,7 +170,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcKeepAlivePingTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 38
+    startLine: 95
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -225,7 +197,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ReflectionProbeTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 39
+    startLine: 96
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -252,7 +224,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcReflectionCacheTtlMinutes
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 40
+    startLine: 97
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -279,7 +251,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: SubscriptionWriterDrainTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 41
+    startLine: 98
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

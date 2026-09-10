@@ -5,7 +5,7 @@ items:
   id: PubsubService
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
+  - Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
   - Virtufin.Api.Services.PubsubService.PublishEvent(Virtufin.Api.Protos.PublishRequest,Grpc.Core.ServerCallContext)
   - Virtufin.Api.Services.PubsubService.Subscribe(Virtufin.Api.Protos.SubscribeRequest,Grpc.Core.IServerStreamWriter{Virtufin.Api.Protos.SubscribeResponse},Grpc.Core.ServerCallContext)
   - Virtufin.Api.Services.PubsubService.Unsubscribe(Virtufin.Api.Protos.UnsubscribeRequest,Grpc.Core.ServerCallContext)
@@ -46,16 +46,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
-  commentId: M:Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
-  id: '#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})'
+- uid: Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
+  commentId: M:Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
+  id: '#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})'
   parent: Virtufin.Api.Services.PubsubService
   langs:
   - csharp
   - vb
-  name: PubsubService(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
-  nameWithType: PubsubService.PubsubService(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
-  fullName: Virtufin.Api.Services.PubsubService.PubsubService(Dapr.Client.DaprClient, System.IServiceProvider, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.PubsubService>)
+  name: PubsubService(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
+  nameWithType: PubsubService.PubsubService(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
+  fullName: Virtufin.Api.Services.PubsubService.PubsubService(Dapr.Client.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.PubsubService>)
   type: Constructor
   source:
     remote:
@@ -64,28 +64,28 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
-    startLine: 22
+    startLine: 29
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public PubsubService(DaprClient daprClient, IServiceProvider serviceProvider, PubsubSubscriptionManager subscriptionManager, TopicDaprSubscriptionRegistry registry, ILogger<PubsubService> logger)
+    content: public PubsubService(DaprClient daprClient, DaprComponentOptions components, PubsubSubscriptionManager subscriptionManager, TopicDaprSubscriptionRegistry registry, ILogger<PubsubService> logger)
     parameters:
     - id: daprClient
       type: Dapr.Client.DaprClient
-    - id: serviceProvider
-      type: System.IServiceProvider
+    - id: components
+      type: Virtufin.Api.Configuration.DaprComponentOptions
     - id: subscriptionManager
       type: Virtufin.Api.Services.PubsubSubscriptionManager
     - id: registry
       type: Virtufin.Api.Services.TopicDaprSubscriptionRegistry
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService}
-    content.vb: Public Sub New(daprClient As DaprClient, serviceProvider As IServiceProvider, subscriptionManager As PubsubSubscriptionManager, registry As TopicDaprSubscriptionRegistry, logger As ILogger(Of PubsubService))
+    content.vb: Public Sub New(daprClient As DaprClient, components As DaprComponentOptions, subscriptionManager As PubsubSubscriptionManager, registry As TopicDaprSubscriptionRegistry, logger As ILogger(Of PubsubService))
   overload: Virtufin.Api.Services.PubsubService.#ctor*
-  nameWithType.vb: PubsubService.New(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
-  fullName.vb: Virtufin.Api.Services.PubsubService.New(Dapr.Client.DaprClient, System.IServiceProvider, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.PubsubService))
-  name.vb: New(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
+  nameWithType.vb: PubsubService.New(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
+  fullName.vb: Virtufin.Api.Services.PubsubService.New(Dapr.Client.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.PubsubService))
+  name.vb: New(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
 - uid: Virtufin.Api.Services.PubsubService.PublishEvent(Virtufin.Api.Protos.PublishRequest,Grpc.Core.ServerCallContext)
   commentId: M:Virtufin.Api.Services.PubsubService.PublishEvent(Virtufin.Api.Protos.PublishRequest,Grpc.Core.ServerCallContext)
   id: PublishEvent(Virtufin.Api.Protos.PublishRequest,Grpc.Core.ServerCallContext)
@@ -104,7 +104,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: PublishEvent
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
-    startLine: 36
+    startLine: 43
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -139,7 +139,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Subscribe
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
-    startLine: 91
+    startLine: 98
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -183,10 +183,37 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Unsubscribe
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
-    startLine: 209
+    startLine: 252
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: Removes an in-process subscriber by id.
+  remarks: >-
+    <p>
+
+    <b>Cancelling the Subscribe call is the supported teardown, not this RPC.</b>
+
+    Subscription ids are minted server-side and never sent to the client --
+
+    <code>SubscribeResponse</code> has no id field -- so there is no way for a caller to
+
+    obtain a valid one. This RPC also only drops the in-process subscriber: it does
+
+    not release the shared Dapr subscription's refcount and does not end the
+
+    server-side stream, which keeps running against a channel nothing feeds.
+
+    </p>
+
+    <p>
+
+    It previously reported success for any string, including ids that matched
+
+    nothing, which made a no-op indistinguishable from a real unsubscribe. It now
+
+    says which happened.
+
+    </p>
   example: []
   syntax:
     content: public override Task<UnsubscribeResponse> Unsubscribe(UnsubscribeRequest request, ServerCallContext context)
@@ -511,7 +538,7 @@ references:
     name: Protos
 - uid: Virtufin.Api.Services.PubsubService.#ctor*
   commentId: Overload:Virtufin.Api.Services.PubsubService.#ctor
-  href: Virtufin.Api.Services.PubsubService.html#Virtufin_Api_Services_PubsubService__ctor_Dapr_Client_DaprClient_System_IServiceProvider_Virtufin_Api_Services_PubsubSubscriptionManager_Virtufin_Api_Services_TopicDaprSubscriptionRegistry_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_PubsubService__
+  href: Virtufin.Api.Services.PubsubService.html#Virtufin_Api_Services_PubsubService__ctor_Dapr_Client_DaprClient_Virtufin_Api_Configuration_DaprComponentOptions_Virtufin_Api_Services_PubsubSubscriptionManager_Virtufin_Api_Services_TopicDaprSubscriptionRegistry_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_PubsubService__
   name: PubsubService
   nameWithType: PubsubService.PubsubService
   fullName: Virtufin.Api.Services.PubsubService.PubsubService
@@ -525,14 +552,13 @@ references:
   name: DaprClient
   nameWithType: DaprClient
   fullName: Dapr.Client.DaprClient
-- uid: System.IServiceProvider
-  commentId: T:System.IServiceProvider
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.iserviceprovider
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: System.IServiceProvider
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions
 - uid: Virtufin.Api.Services.PubsubSubscriptionManager
   commentId: T:Virtufin.Api.Services.PubsubSubscriptionManager
   parent: Virtufin.Api.Services
@@ -602,6 +628,36 @@ references:
   - uid: Dapr.Client
     name: Client
     isExternal: true
+- uid: Virtufin.Api.Configuration
+  commentId: N:Virtufin.Api.Configuration
+  href: Virtufin.html
+  name: Virtufin.Api.Configuration
+  nameWithType: Virtufin.Api.Configuration
+  fullName: Virtufin.Api.Configuration
+  spec.csharp:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
+  spec.vb:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
 - uid: Microsoft.Extensions.Logging.ILogger`1
   commentId: T:Microsoft.Extensions.Logging.ILogger`1
   isExternal: true

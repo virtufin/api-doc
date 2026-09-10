@@ -21,7 +21,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: PubSubTopics
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 8
+    startLine: 4
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -56,7 +56,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: StateChange
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 10
+    startLine: 6
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -83,7 +83,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: SubscriptionKeyPrefix
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 11
+    startLine: 7
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

@@ -203,14 +203,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -370,14 +370,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/7475cd5faef0358601dba3c7b8914e3135d08933"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 7475cd5">
+       title="View commit 4efb529">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
       </svg>
     </a>
 </div>
@@ -1166,6 +1166,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reading-another-services-keys-succeeds-unexpectedly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading another service's keys succeeds unexpectedly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querystate-fails-for-every-query-including" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QueryState fails for every query, including {}
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1375,6 +1397,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#reading-another-services-keys-succeeds-unexpectedly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading another service's keys succeeds unexpectedly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querystate-fails-for-every-query-including" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QueryState fails for every query, including {}
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1535,31 +1579,44 @@ worker code module).</p>
 operation.</p>
 <h2 id="state-store-failures">State store failures</h2>
 <h3 id="state-changes-not-persisting">State changes not persisting</h3>
-<p><strong>Symptom:</strong> <code>SaveState</code> returns success but the next <code>GetState</code> returns
-the old value, or <code>GetAllState</code> returns no values.</p>
-<p><strong>Likely cause:</strong> The state-store key is not in the registered-keys set.
-<code>GetAllState</code> only returns values for keys that have been registered via
-<code>RegisterKeys</code> or previously used via <code>SaveState</code>/<code>GetState</code>. Keys created by
-external tools (e.g., <code>redis-cli SET</code>) are not in the tracking table.</p>
-<p><strong>Fix:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># List registered keys for a service</span>
-curl<span class="w"> </span>http://localhost:5001/v1/state/&lt;service-name&gt;
-
-<span class="c1"># Manually register a key</span>
-curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:5001/v1/state/register-keys<span class="w"> </span><span class="se">\</span>
+<p><strong>Symptom:</strong> <code>SaveState</code> returns success but the next <code>GetState</code> returns the old value.</p>
+<p><strong>Likely cause:</strong> <code>SaveState</code> reports failures <strong>in-band</strong> — the gRPC status is <code>OK</code> even
+when the write failed. A client that only catches <code>RpcException</code> reads a failed save as a
+success.</p>
+<p><strong>Fix:</strong> check <code>response.status.success</code> on every write:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>http://localhost:5001/v1/state/save-state<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"service":"&lt;service-name&gt;","keys":["&lt;key-name&gt;"]}'</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"service":"workmanager","key":"workmanager.worker.abc","value":"{\"n\":1}"}'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.status
 </code></pre></div>
+<p>If <code>success</code> is <code>false</code>, the <code>message</code> is deliberately generic
+("An internal error occurred") — the real cause is in the API's server logs.</p>
+<h3 id="reading-another-services-keys-succeeds-unexpectedly">Reading another service's keys succeeds unexpectedly</h3>
+<p><strong>Symptom:</strong> <code>GetState(service: "workmanager", key: "websocketmanager.connection.x")</code>
+returns data instead of failing.</p>
+<p><strong>Cause:</strong> This is expected. <code>service</code> selects the Dapr state store; it is not a namespace
+check. Keys are not scoped to the calling service. See
+<a href="../security/#state-namespacing-is-not-an-access-boundary">security.md</a>.</p>
+<h3 id="querystate-fails-for-every-query-including">QueryState fails for every query, including <code>{}</code></h3>
+<p><strong>Symptom:</strong> All <code>QueryState</code> calls return <code>Internal</code>, even Dapr's match-everything query.</p>
+<p><strong>Likely cause:</strong> The configured store's Dapr component does not implement the Query API.
+For Redis/Valkey this needs the RediSearch module loaded <strong>and</strong> <code>queryIndexes</code> metadata
+declared on the component.</p>
+<p><strong>Fix:</strong> add the metadata and RediSearch module, or use <code>GetBulkState</code> against known keys.</p>
 <h2 id="pubsub-failures">Pub/Sub failures</h2>
 <h3 id="subscriptions-stop-receiving-events">Subscriptions stop receiving events</h3>
 <p><strong>Symptom:</strong> A client subscribed via the <code>Pubsub.Subscribe</code> RPC stops receiving
 events after a few minutes.</p>
-<p><strong>Likely cause:</strong> Subscription is being reaped by the
-<code>SubscriptionHealthSweeperHostedService</code>. The sweeper runs every 5 minutes and
-removes subscriptions that haven't sent any traffic in 5 minutes. Empty-Data
-heartbeats (added in D10) should keep the subscription alive, but a network
-glitch that causes the sweeper to mark a healthy subscription as dead is the
-most common cause.</p>
+<p><strong>Likely cause:</strong> either a dropped stream or a consumer that fell behind.</p>
+<p><code>SubscriptionHealthSweeperHostedService</code> runs every minute and writes an
+empty-Data heartbeat to each subscriber's channel, reaping any whose channel
+cannot accept a write within 3 seconds. Each subscriber buffers up to 1024
+events, so this only fires for a consumer that has genuinely stopped keeping up.
+If yours does slow work per event, move it off the read loop.</p>
+<p>Otherwise check the client side: a dropped gRPC stream (idle timeout on an
+intermediary, pod restart, <code>CancellationToken</code> fired) ends the <code>Subscribe</code> call,
+and the server's <code>finally</code> releases both the in-process subscriber and the
+shared Dapr subscription. The stream does not resume itself — the client must
+reconnect.</p>
 <p><strong>Diagnose:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Check the sweeper logs</span>
 kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>virtufin<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>virtufin-api<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">"sweeper\|heartbeat"</span>
@@ -1627,7 +1684,7 @@ Gitea issue:</p>
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-08T03:18:54Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-10T02:02:12Z</span>
 </div>
 
     </div>

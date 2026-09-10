@@ -5,7 +5,7 @@ items:
   id: TopicDaprSubscriptionRegistry
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
+  - Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
   - Virtufin.Api.Services.TopicDaprSubscriptionRegistry.AcquireAsync(System.String,System.Func{Dapr.Messaging.PublishSubscribe.TopicMessage,System.Threading.CancellationToken,System.Threading.Tasks.Task{Dapr.Messaging.PublishSubscribe.TopicResponseAction}},System.Action,System.Threading.CancellationToken)
   - Virtufin.Api.Services.TopicDaprSubscriptionRegistry.DisposeAsync
   langs:
@@ -22,7 +22,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: TopicDaprSubscriptionRegistry
     path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -54,16 +54,16 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
-  commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
-  id: '#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})'
+- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
+  commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
+  id: '#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})'
   parent: Virtufin.Api.Services.TopicDaprSubscriptionRegistry
   langs:
   - csharp
   - vb
-  name: TopicDaprSubscriptionRegistry(IServiceProvider, ILogger<TopicDaprSubscriptionRegistry>)
-  nameWithType: TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(IServiceProvider, ILogger<TopicDaprSubscriptionRegistry>)
-  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(System.IServiceProvider, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TopicDaprSubscriptionRegistry>)
+  name: TopicDaprSubscriptionRegistry(IServiceProvider, DaprComponentOptions, ILogger<TopicDaprSubscriptionRegistry>)
+  nameWithType: TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(IServiceProvider, DaprComponentOptions, ILogger<TopicDaprSubscriptionRegistry>)
+  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(System.IServiceProvider, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TopicDaprSubscriptionRegistry>)
   type: Constructor
   source:
     remote:
@@ -72,22 +72,24 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public TopicDaprSubscriptionRegistry(IServiceProvider serviceProvider, ILogger<TopicDaprSubscriptionRegistry> logger)
+    content: public TopicDaprSubscriptionRegistry(IServiceProvider serviceProvider, DaprComponentOptions components, ILogger<TopicDaprSubscriptionRegistry> logger)
     parameters:
     - id: serviceProvider
       type: System.IServiceProvider
+    - id: components
+      type: Virtufin.Api.Configuration.DaprComponentOptions
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry}
-    content.vb: Public Sub New(serviceProvider As IServiceProvider, logger As ILogger(Of TopicDaprSubscriptionRegistry))
+    content.vb: Public Sub New(serviceProvider As IServiceProvider, components As DaprComponentOptions, logger As ILogger(Of TopicDaprSubscriptionRegistry))
   overload: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor*
-  nameWithType.vb: TopicDaprSubscriptionRegistry.New(IServiceProvider, ILogger(Of TopicDaprSubscriptionRegistry))
-  fullName.vb: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.New(System.IServiceProvider, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TopicDaprSubscriptionRegistry))
-  name.vb: New(IServiceProvider, ILogger(Of TopicDaprSubscriptionRegistry))
+  nameWithType.vb: TopicDaprSubscriptionRegistry.New(IServiceProvider, DaprComponentOptions, ILogger(Of TopicDaprSubscriptionRegistry))
+  fullName.vb: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.New(System.IServiceProvider, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TopicDaprSubscriptionRegistry))
+  name.vb: New(IServiceProvider, DaprComponentOptions, ILogger(Of TopicDaprSubscriptionRegistry))
 - uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.AcquireAsync(System.String,System.Func{Dapr.Messaging.PublishSubscribe.TopicMessage,System.Threading.CancellationToken,System.Threading.Tasks.Task{Dapr.Messaging.PublishSubscribe.TopicResponseAction}},System.Action,System.Threading.CancellationToken)
   commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.AcquireAsync(System.String,System.Func{Dapr.Messaging.PublishSubscribe.TopicMessage,System.Threading.CancellationToken,System.Threading.Tasks.Task{Dapr.Messaging.PublishSubscribe.TopicResponseAction}},System.Action,System.Threading.CancellationToken)
   id: AcquireAsync(System.String,System.Func{Dapr.Messaging.PublishSubscribe.TopicMessage,System.Threading.CancellationToken,System.Threading.Tasks.Task{Dapr.Messaging.PublishSubscribe.TopicResponseAction}},System.Action,System.Threading.CancellationToken)
@@ -106,7 +108,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: AcquireAsync
     path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 36
+    startLine: 41
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -155,7 +157,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: DisposeAsync
     path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 195
+    startLine: 209
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -427,7 +429,7 @@ references:
   fullName: System
 - uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor*
   commentId: Overload:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor
-  href: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry__ctor_System_IServiceProvider_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TopicDaprSubscriptionRegistry__
+  href: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry__ctor_System_IServiceProvider_Virtufin_Api_Configuration_DaprComponentOptions_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TopicDaprSubscriptionRegistry__
   name: TopicDaprSubscriptionRegistry
   nameWithType: TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry
   fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry
@@ -442,6 +444,13 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: System.IServiceProvider
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions
 - uid: Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry}
   commentId: T:Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry}
   parent: Microsoft.Extensions.Logging
@@ -475,6 +484,36 @@ references:
     name: TopicDaprSubscriptionRegistry
     href: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html
   - name: )
+- uid: Virtufin.Api.Configuration
+  commentId: N:Virtufin.Api.Configuration
+  href: Virtufin.html
+  name: Virtufin.Api.Configuration
+  nameWithType: Virtufin.Api.Configuration
+  fullName: Virtufin.Api.Configuration
+  spec.csharp:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
+  spec.vb:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Configuration
+    name: Configuration
+    href: Virtufin.Api.Configuration.html
 - uid: Microsoft.Extensions.Logging.ILogger`1
   commentId: T:Microsoft.Extensions.Logging.ILogger`1
   isExternal: true

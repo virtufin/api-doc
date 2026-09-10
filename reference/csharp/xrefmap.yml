@@ -304,6 +304,22 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.ApiClient.CloseAsync
   nameWithType: ApiClient.CloseAsync
+- uid: Virtufin.Api.Client.ApiClient.DeleteTriggerAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteTriggerAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_DeleteTriggerAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.DeleteTriggerAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteTriggerAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.DeleteTriggerAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.ApiClient.DeleteTriggerAsync(String, System.Threading.CancellationToken)
+  nameWithType: ApiClient.DeleteTriggerAsync(string, CancellationToken)
+  nameWithType.vb: ApiClient.DeleteTriggerAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.DeleteTriggerAsync*
+  name: DeleteTriggerAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_DeleteTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.DeleteTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.DeleteTriggerAsync
+  nameWithType: ApiClient.DeleteTriggerAsync
 - uid: Virtufin.Api.Client.ApiClient.Dispose
   name: Dispose()
   href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_Dispose
@@ -343,6 +359,38 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.ApiClient.Gateway
   nameWithType: ApiClient.Gateway
+- uid: Virtufin.Api.Client.ApiClient.GetConfigServiceAsync(System.String,System.Threading.CancellationToken)
+  name: GetConfigServiceAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_GetConfigServiceAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.GetConfigServiceAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetConfigServiceAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.GetConfigServiceAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.ApiClient.GetConfigServiceAsync(String, System.Threading.CancellationToken)
+  nameWithType: ApiClient.GetConfigServiceAsync(string, CancellationToken)
+  nameWithType.vb: ApiClient.GetConfigServiceAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.GetConfigServiceAsync*
+  name: GetConfigServiceAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_GetConfigServiceAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.GetConfigServiceAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.GetConfigServiceAsync
+  nameWithType: ApiClient.GetConfigServiceAsync
+- uid: Virtufin.Api.Client.ApiClient.GetTriggerAsync(System.String,System.Threading.CancellationToken)
+  name: GetTriggerAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_GetTriggerAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.GetTriggerAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetTriggerAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.GetTriggerAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.ApiClient.GetTriggerAsync(String, System.Threading.CancellationToken)
+  nameWithType: ApiClient.GetTriggerAsync(string, CancellationToken)
+  nameWithType.vb: ApiClient.GetTriggerAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.GetTriggerAsync*
+  name: GetTriggerAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_GetTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.GetTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.GetTriggerAsync
+  nameWithType: ApiClient.GetTriggerAsync
 - uid: Virtufin.Api.Client.ApiClient.Host
   name: Host
   href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_Host
@@ -385,6 +433,19 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.ApiClient.InvokeAsync
   nameWithType: ApiClient.InvokeAsync
+- uid: Virtufin.Api.Client.ApiClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  name: ListConfigServicesAsync(CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ListConfigServicesAsync_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  nameWithType: ApiClient.ListConfigServicesAsync(CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.ListConfigServicesAsync*
+  name: ListConfigServicesAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ListConfigServicesAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.ListConfigServicesAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.ListConfigServicesAsync
+  nameWithType: ApiClient.ListConfigServicesAsync
 - uid: Virtufin.Api.Client.ApiClient.ListMethodsAsync(System.String)
   name: ListMethodsAsync(string)
   href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ListMethodsAsync_System_String_
@@ -414,6 +475,35 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.ApiClient.ListServicesAsync
   nameWithType: ApiClient.ListServicesAsync
+- uid: Virtufin.Api.Client.ApiClient.ListTriggersAsync(System.Threading.CancellationToken)
+  name: ListTriggersAsync(CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ListTriggersAsync_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.ListTriggersAsync(System.Threading.CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.ListTriggersAsync(System.Threading.CancellationToken)
+  nameWithType: ApiClient.ListTriggersAsync(CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.ListTriggersAsync*
+  name: ListTriggersAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ListTriggersAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.ListTriggersAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.ListTriggersAsync
+  nameWithType: ApiClient.ListTriggersAsync
+- uid: Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name: ScheduleTriggerAsync(string, string, string?, string?, int, string?, CancellationToken)
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ScheduleTriggerAsync_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name.vb: ScheduleTriggerAsync(String, String, String, String, Integer, String, CancellationToken)
+  fullName: Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync(string, string, string?, string?, int, string?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync(String, String, String, String, Integer, String, System.Threading.CancellationToken)
+  nameWithType: ApiClient.ScheduleTriggerAsync(string, string, string?, string?, int, string?, CancellationToken)
+  nameWithType.vb: ApiClient.ScheduleTriggerAsync(String, String, String, String, Integer, String, CancellationToken)
+- uid: Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync*
+  name: ScheduleTriggerAsync
+  href: api/Virtufin.Api.Client.ApiClient.html#Virtufin_Api_Client_ApiClient_ScheduleTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync
+  nameWithType: ApiClient.ScheduleTriggerAsync
 - uid: Virtufin.Api.Client.ApiEndpoint
   name: ApiEndpoint
   href: api/Virtufin.Api.Client.ApiEndpoint.html
@@ -551,15 +641,15 @@ references:
   fullName.vb: Virtufin.Api.Client.GatewayClient.New
   nameWithType: GatewayClient.GatewayClient
   nameWithType.vb: GatewayClient.New
-- uid: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
-  name: DeleteBulkStateAsync(string, IEnumerable<string>, bool, CancellationToken)
-  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteBulkStateAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)
-  name.vb: DeleteBulkStateAsync(String, IEnumerable(Of String), Boolean, CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(string, System.Collections.Generic.IEnumerable<string>, bool, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(String, System.Collections.Generic.IEnumerable(Of String), Boolean, System.Threading.CancellationToken)
-  nameWithType: GatewayClient.DeleteBulkStateAsync(string, IEnumerable<string>, bool, CancellationToken)
-  nameWithType.vb: GatewayClient.DeleteBulkStateAsync(String, IEnumerable(Of String), Boolean, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name: DeleteBulkStateAsync(string, IEnumerable<string>, bool, ChangeNotification?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteBulkStateAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_Virtufin_Api_Protos_ChangeNotification_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name.vb: DeleteBulkStateAsync(String, IEnumerable(Of String), Boolean, ChangeNotification, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(string, System.Collections.Generic.IEnumerable<string>, bool, Virtufin.Api.Protos.ChangeNotification?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync(String, System.Collections.Generic.IEnumerable(Of String), Boolean, Virtufin.Api.Protos.ChangeNotification, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.DeleteBulkStateAsync(string, IEnumerable<string>, bool, ChangeNotification?, CancellationToken)
+  nameWithType.vb: GatewayClient.DeleteBulkStateAsync(String, IEnumerable(Of String), Boolean, ChangeNotification, CancellationToken)
 - uid: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync*
   name: DeleteBulkStateAsync
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteBulkStateAsync_
@@ -567,15 +657,15 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.DeleteBulkStateAsync
   nameWithType: GatewayClient.DeleteBulkStateAsync
-- uid: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)
-  name: DeleteStateAsync(string, string, bool, bool, CancellationToken)
-  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteStateAsync_System_String_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Client.GatewayClient.DeleteStateAsync(System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)
-  name.vb: DeleteStateAsync(String, String, Boolean, Boolean, CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(string, string, bool, bool, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(String, String, Boolean, Boolean, System.Threading.CancellationToken)
-  nameWithType: GatewayClient.DeleteStateAsync(string, string, bool, bool, CancellationToken)
-  nameWithType.vb: GatewayClient.DeleteStateAsync(String, String, Boolean, Boolean, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(System.String,System.String,System.Boolean,System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name: DeleteStateAsync(string, string, bool, bool, ChangeNotification?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteStateAsync_System_String_System_String_System_Boolean_System_Boolean_Virtufin_Api_Protos_ChangeNotification_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.DeleteStateAsync(System.String,System.String,System.Boolean,System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name.vb: DeleteStateAsync(String, String, Boolean, Boolean, ChangeNotification, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(string, string, bool, bool, Virtufin.Api.Protos.ChangeNotification?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.DeleteStateAsync(String, String, Boolean, Boolean, Virtufin.Api.Protos.ChangeNotification, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.DeleteStateAsync(string, string, bool, bool, ChangeNotification?, CancellationToken)
+  nameWithType.vb: GatewayClient.DeleteStateAsync(String, String, Boolean, Boolean, ChangeNotification, CancellationToken)
 - uid: Virtufin.Api.Client.GatewayClient.DeleteStateAsync*
   name: DeleteStateAsync
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteStateAsync_
@@ -583,6 +673,22 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.DeleteStateAsync
   nameWithType: GatewayClient.DeleteStateAsync
+- uid: Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteTriggerAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteTriggerAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteTriggerAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync(String, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.DeleteTriggerAsync(string, CancellationToken)
+  nameWithType.vb: GatewayClient.DeleteTriggerAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync*
+  name: DeleteTriggerAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_DeleteTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.DeleteTriggerAsync
+  nameWithType: GatewayClient.DeleteTriggerAsync
 - uid: Virtufin.Api.Client.GatewayClient.GetBulkStateAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
   name: GetBulkStateAsync(string, IEnumerable<string>, CancellationToken)
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetBulkStateAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
@@ -599,6 +705,22 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.GetBulkStateAsync
   nameWithType: GatewayClient.GetBulkStateAsync
+- uid: Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync(System.String,System.Threading.CancellationToken)
+  name: GetConfigServiceAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetConfigServiceAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetConfigServiceAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync(String, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.GetConfigServiceAsync(string, CancellationToken)
+  nameWithType.vb: GatewayClient.GetConfigServiceAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync*
+  name: GetConfigServiceAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetConfigServiceAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.GetConfigServiceAsync
+  nameWithType: GatewayClient.GetConfigServiceAsync
 - uid: Virtufin.Api.Client.GatewayClient.GetService(System.String)
   name: GetService(string)
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetService_System_String_
@@ -631,6 +753,22 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.GetStateAsync
   nameWithType: GatewayClient.GetStateAsync
+- uid: Virtufin.Api.Client.GatewayClient.GetTriggerAsync(System.String,System.Threading.CancellationToken)
+  name: GetTriggerAsync(string, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetTriggerAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.GetTriggerAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetTriggerAsync(String, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.GetTriggerAsync(string, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.GetTriggerAsync(String, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.GetTriggerAsync(string, CancellationToken)
+  nameWithType.vb: GatewayClient.GetTriggerAsync(String, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.GetTriggerAsync*
+  name: GetTriggerAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_GetTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.GetTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.GetTriggerAsync
+  nameWithType: GatewayClient.GetTriggerAsync
 - uid: Virtufin.Api.Client.GatewayClient.InvokeAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
   name: InvokeAsync(string, string, Dictionary<string, object?>?)
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_InvokeAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
@@ -647,6 +785,19 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.InvokeAsync
   nameWithType: GatewayClient.InvokeAsync
+- uid: Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  name: ListConfigServicesAsync(CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ListConfigServicesAsync_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync(System.Threading.CancellationToken)
+  nameWithType: GatewayClient.ListConfigServicesAsync(CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync*
+  name: ListConfigServicesAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ListConfigServicesAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.ListConfigServicesAsync
+  nameWithType: GatewayClient.ListConfigServicesAsync
 - uid: Virtufin.Api.Client.GatewayClient.ListMethodsAsync(System.String)
   name: ListMethodsAsync(string)
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ListMethodsAsync_System_String_
@@ -676,6 +827,19 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.ListServicesAsync
   nameWithType: GatewayClient.ListServicesAsync
+- uid: Virtufin.Api.Client.GatewayClient.ListTriggersAsync(System.Threading.CancellationToken)
+  name: ListTriggersAsync(CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ListTriggersAsync_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.ListTriggersAsync(System.Threading.CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.ListTriggersAsync(System.Threading.CancellationToken)
+  nameWithType: GatewayClient.ListTriggersAsync(CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.ListTriggersAsync*
+  name: ListTriggersAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ListTriggersAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.ListTriggersAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.ListTriggersAsync
+  nameWithType: GatewayClient.ListTriggersAsync
 - uid: Virtufin.Api.Client.GatewayClient.PublishEventAsync(System.String,CloudNative.CloudEvents.V1.CloudEvent,System.Threading.CancellationToken)
   name: PublishEventAsync(string, CloudEvent, CancellationToken)
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_PublishEventAsync_System_String_CloudNative_CloudEvents_V1_CloudEvent_System_Threading_CancellationToken_
@@ -724,15 +888,15 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.QueryStateAsync
   nameWithType: GatewayClient.QueryStateAsync
-- uid: Virtufin.Api.Client.GatewayClient.SaveStateAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)
-  name: SaveStateAsync(string, string, string, string?, bool, bool, CancellationToken)
-  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SaveStateAsync_System_String_System_String_System_String_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Client.GatewayClient.SaveStateAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)
-  name.vb: SaveStateAsync(String, String, String, String, Boolean, Boolean, CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.SaveStateAsync(string, string, string, string?, bool, bool, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.SaveStateAsync(String, String, String, String, Boolean, Boolean, System.Threading.CancellationToken)
-  nameWithType: GatewayClient.SaveStateAsync(string, string, string, string?, bool, bool, CancellationToken)
-  nameWithType.vb: GatewayClient.SaveStateAsync(String, String, String, String, Boolean, Boolean, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.SaveStateAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name: SaveStateAsync(string, string, string, string?, bool, bool, ChangeNotification?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SaveStateAsync_System_String_System_String_System_String_System_String_System_Boolean_System_Boolean_Virtufin_Api_Protos_ChangeNotification_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.SaveStateAsync(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,Virtufin.Api.Protos.ChangeNotification,System.Threading.CancellationToken)
+  name.vb: SaveStateAsync(String, String, String, String, Boolean, Boolean, ChangeNotification, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.SaveStateAsync(string, string, string, string?, bool, bool, Virtufin.Api.Protos.ChangeNotification?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.SaveStateAsync(String, String, String, String, Boolean, Boolean, Virtufin.Api.Protos.ChangeNotification, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.SaveStateAsync(string, string, string, string?, bool, bool, ChangeNotification?, CancellationToken)
+  nameWithType.vb: GatewayClient.SaveStateAsync(String, String, String, String, Boolean, Boolean, ChangeNotification, CancellationToken)
 - uid: Virtufin.Api.Client.GatewayClient.SaveStateAsync*
   name: SaveStateAsync
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SaveStateAsync_
@@ -740,15 +904,31 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.SaveStateAsync
   nameWithType: GatewayClient.SaveStateAsync
-- uid: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name: Subscribe(IEnumerable<string>?, IEnumerable<string>?, IEnumerable<string>?, CancellationToken)
-  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_Subscribe_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name.vb: Subscribe(IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable<string>?, System.Collections.Generic.IEnumerable<string>?, System.Collections.Generic.IEnumerable<string>?, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
-  nameWithType: GatewayClient.Subscribe(IEnumerable<string>?, IEnumerable<string>?, IEnumerable<string>?, CancellationToken)
-  nameWithType.vb: GatewayClient.Subscribe(IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name: ScheduleTriggerAsync(string, string, string?, string?, int, string?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ScheduleTriggerAsync_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)
+  name.vb: ScheduleTriggerAsync(String, String, String, String, Integer, String, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync(string, string, string?, string?, int, string?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync(String, String, String, String, Integer, String, System.Threading.CancellationToken)
+  nameWithType: GatewayClient.ScheduleTriggerAsync(string, string, string?, string?, int, string?, CancellationToken)
+  nameWithType.vb: GatewayClient.ScheduleTriggerAsync(String, String, String, String, Integer, String, CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync*
+  name: ScheduleTriggerAsync
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_ScheduleTriggerAsync_
+  commentId: Overload:Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync
+  isSpec: "True"
+  fullName: Virtufin.Api.Client.GatewayClient.ScheduleTriggerAsync
+  nameWithType: GatewayClient.ScheduleTriggerAsync
+- uid: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: Subscribe(IEnumerable<string>?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_Subscribe_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: Subscribe(IEnumerable(Of String), CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable<string>?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.Subscribe(System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  nameWithType: GatewayClient.Subscribe(IEnumerable<string>?, CancellationToken)
+  nameWithType.vb: GatewayClient.Subscribe(IEnumerable(Of String), CancellationToken)
 - uid: Virtufin.Api.Client.GatewayClient.Subscribe*
   name: Subscribe
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_Subscribe_
@@ -756,15 +936,15 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Client.GatewayClient.Subscribe
   nameWithType: GatewayClient.Subscribe
-- uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name: SubscribeAsync(IStreamEventHandler, IEnumerable<string>?, IEnumerable<string>?, IEnumerable<string>?, CancellationToken)
-  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  name.vb: SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable<string>?, System.Collections.Generic.IEnumerable<string>?, System.Collections.Generic.IEnumerable<string>?, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
-  nameWithType: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable<string>?, IEnumerable<string>?, IEnumerable<string>?, CancellationToken)
-  nameWithType.vb: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: SubscribeAsync(IStreamEventHandler, IEnumerable<string>?, CancellationToken)
+  href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable<string>?, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  nameWithType: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable<string>?, CancellationToken)
+  nameWithType.vb: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), CancellationToken)
 - uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync*
   name: SubscribeAsync
   href: api/Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_
@@ -1092,6 +1272,72 @@ references:
   commentId: N:Virtufin.Api.Configuration
   fullName: Virtufin.Api.Configuration
   nameWithType: Virtufin.Api.Configuration
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  name: DaprComponentOptions
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions
+  nameWithType: DaprComponentOptions
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)
+  name: DaprComponentOptions(string)
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions__ctor_System_String_
+  commentId: M:Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DaprComponentOptions(string)
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.New(String)
+  nameWithType: DaprComponentOptions.DaprComponentOptions(string)
+  nameWithType.vb: DaprComponentOptions.New(String)
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.#ctor*
+  name: DaprComponentOptions
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions__ctor_
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DaprComponentOptions
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.New
+  nameWithType: DaprComponentOptions.DaprComponentOptions
+  nameWithType.vb: DaprComponentOptions.New
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  name: DefaultPubsubName
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_DefaultPubsubName
+  commentId: F:Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName
+  nameWithType: DaprComponentOptions.DefaultPubsubName
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  name: PubsubName
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_PubsubName
+  commentId: P:Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  nameWithType: DaprComponentOptions.PubsubName
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName*
+  name: PubsubName
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_PubsubName_
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  isSpec: "True"
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubName
+  nameWithType: DaprComponentOptions.PubsubName
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  name: PubsubNameKey
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_PubsubNameKey
+  commentId: F:Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey
+  nameWithType: DaprComponentOptions.PubsubNameKey
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  name: Resolve(string?, ServicesConfiguration)
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_Resolve_System_String_Virtufin_Api_Configuration_ServicesConfiguration_
+  commentId: M:Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)
+  name.vb: Resolve(String, ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(string?, Virtufin.Api.Configuration.ServicesConfiguration)
+  fullName.vb: Virtufin.Api.Configuration.DaprComponentOptions.Resolve(String, Virtufin.Api.Configuration.ServicesConfiguration)
+  nameWithType: DaprComponentOptions.Resolve(string?, ServicesConfiguration)
+  nameWithType.vb: DaprComponentOptions.Resolve(String, ServicesConfiguration)
+- uid: Virtufin.Api.Configuration.DaprComponentOptions.Resolve*
+  name: Resolve
+  href: api/Virtufin.Api.Configuration.DaprComponentOptions.html#Virtufin_Api_Configuration_DaprComponentOptions_Resolve_
+  commentId: Overload:Virtufin.Api.Configuration.DaprComponentOptions.Resolve
+  isSpec: "True"
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions.Resolve
+  nameWithType: DaprComponentOptions.Resolve
 - uid: Virtufin.Api.Configuration.GatewayResilienceOptions
   name: GatewayResilienceOptions
   href: api/Virtufin.Api.Configuration.GatewayResilienceOptions.html
@@ -1451,6 +1697,19 @@ references:
   fullName.vb: Virtufin.Api.Configuration.ServiceConfig.New
   nameWithType: ServiceConfig.ServiceConfig
   nameWithType.vb: ServiceConfig.New
+- uid: Virtufin.Api.Configuration.ServiceConfig.Dialable
+  name: Dialable
+  href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Dialable
+  commentId: P:Virtufin.Api.Configuration.ServiceConfig.Dialable
+  fullName: Virtufin.Api.Configuration.ServiceConfig.Dialable
+  nameWithType: ServiceConfig.Dialable
+- uid: Virtufin.Api.Configuration.ServiceConfig.Dialable*
+  name: Dialable
+  href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Dialable_
+  commentId: Overload:Virtufin.Api.Configuration.ServiceConfig.Dialable
+  isSpec: "True"
+  fullName: Virtufin.Api.Configuration.ServiceConfig.Dialable
+  nameWithType: ServiceConfig.Dialable
 - uid: Virtufin.Api.Configuration.ServiceConfig.Grpc
   name: Grpc
   href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Grpc
@@ -1477,19 +1736,6 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Configuration.ServiceConfig.Name
   nameWithType: ServiceConfig.Name
-- uid: Virtufin.Api.Configuration.ServiceConfig.Protocol
-  name: Protocol
-  href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Protocol
-  commentId: P:Virtufin.Api.Configuration.ServiceConfig.Protocol
-  fullName: Virtufin.Api.Configuration.ServiceConfig.Protocol
-  nameWithType: ServiceConfig.Protocol
-- uid: Virtufin.Api.Configuration.ServiceConfig.Protocol*
-  name: Protocol
-  href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Protocol_
-  commentId: Overload:Virtufin.Api.Configuration.ServiceConfig.Protocol
-  isSpec: "True"
-  fullName: Virtufin.Api.Configuration.ServiceConfig.Protocol
-  nameWithType: ServiceConfig.Protocol
 - uid: Virtufin.Api.Configuration.ServiceConfig.Pubsub
   name: Pubsub
   href: api/Virtufin.Api.Configuration.ServiceConfig.html#Virtufin_Api_Configuration_ServiceConfig_Pubsub
@@ -1560,6 +1806,19 @@ references:
   commentId: T:Virtufin.Api.Configuration.ServicesConfigurationExtensions
   fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions
   nameWithType: ServicesConfigurationExtensions
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  name: DialableServices(ServicesConfiguration)
+  href: api/Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  nameWithType: ServicesConfigurationExtensions.DialableServices(ServicesConfiguration)
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices*
+  name: DialableServices
+  href: api/Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_
+  commentId: Overload:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
+  isSpec: "True"
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
+  nameWithType: ServicesConfigurationExtensions.DialableServices
 - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   name: GetServiceConfig(ServicesConfiguration, string)
   href: api/Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_GetServiceConfig_Virtufin_Api_Configuration_ServicesConfiguration_System_String_
@@ -2105,15 +2364,15 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.CircuitBroken
   nameWithType: GatewayResiliencePipeline.CircuitBroken
-- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  name: ExecuteAsync(Func<CancellationToken, Task>, CancellationToken)
-  href: api/Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task__System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  name.vb: ExecuteAsync(Func(Of CancellationToken, Task), CancellationToken)
-  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task), System.Threading.CancellationToken)
-  nameWithType: GatewayResiliencePipeline.ExecuteAsync(Func<CancellationToken, Task>, CancellationToken)
-  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Func(Of CancellationToken, Task), CancellationToken)
+- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
+  name: ExecuteAsync(Func<CancellationToken, Task<GrpcCallResult>>, CancellationToken)
+  href: api/Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task_Virtufin_Api_Services_GrpcCallResult___System_Threading_CancellationToken_
+  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
+  name.vb: ExecuteAsync(Func(Of CancellationToken, Task(Of GrpcCallResult)), CancellationToken)
+  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Virtufin.Api.Services.GrpcCallResult>>, System.Threading.CancellationToken)
+  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Virtufin.Api.Services.GrpcCallResult)), System.Threading.CancellationToken)
+  nameWithType: GatewayResiliencePipeline.ExecuteAsync(Func<CancellationToken, Task<GrpcCallResult>>, CancellationToken)
+  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Func(Of CancellationToken, Task(Of GrpcCallResult)), CancellationToken)
 - uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync*
   name: ExecuteAsync
   href: api/Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync_
@@ -2121,15 +2380,6 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync
   nameWithType: GatewayResiliencePipeline.ExecuteAsync
-- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  name: ExecuteAsync<T>(Func<CancellationToken, Task<T>>, CancellationToken)
-  href: api/Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  name.vb: ExecuteAsync(Of T)(Func(Of CancellationToken, Task(Of T)), CancellationToken)
-  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync<T>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
-  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(Of T)(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of T)), System.Threading.CancellationToken)
-  nameWithType: GatewayResiliencePipeline.ExecuteAsync<T>(Func<CancellationToken, Task<T>>, CancellationToken)
-  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Of T)(Func(Of CancellationToken, Task(Of T)), CancellationToken)
 - uid: Virtufin.Api.HealthChecks.GrpcChannelPoolHealthCheck
   name: GrpcChannelPoolHealthCheck
   href: api/Virtufin.Api.HealthChecks.GrpcChannelPoolHealthCheck.html
@@ -2639,24 +2889,57 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.DaprAppCallbackService.OnJobEventAlpha1
   nameWithType: DaprAppCallbackService.OnJobEventAlpha1
-- uid: Virtufin.Api.Services.DaprConstants
-  name: DaprConstants
-  href: api/Virtufin.Api.Services.DaprConstants.html
-  commentId: T:Virtufin.Api.Services.DaprConstants
-  fullName: Virtufin.Api.Services.DaprConstants
-  nameWithType: DaprConstants
-- uid: Virtufin.Api.Services.DaprConstants.PubsubName
-  name: PubsubName
-  href: api/Virtufin.Api.Services.DaprConstants.html#Virtufin_Api_Services_DaprConstants_PubsubName
-  commentId: F:Virtufin.Api.Services.DaprConstants.PubsubName
-  fullName: Virtufin.Api.Services.DaprConstants.PubsubName
-  nameWithType: DaprConstants.PubsubName
-- uid: Virtufin.Api.Services.DaprConstants.StateStoreName
-  name: StateStoreName
-  href: api/Virtufin.Api.Services.DaprConstants.html#Virtufin_Api_Services_DaprConstants_StateStoreName
-  commentId: F:Virtufin.Api.Services.DaprConstants.StateStoreName
-  fullName: Virtufin.Api.Services.DaprConstants.StateStoreName
-  nameWithType: DaprConstants.StateStoreName
+- uid: Virtufin.Api.Services.DaprSidecarChannel
+  name: DaprSidecarChannel
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html
+  commentId: T:Virtufin.Api.Services.DaprSidecarChannel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel
+  nameWithType: DaprSidecarChannel
+- uid: Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)
+  name: DaprSidecarChannel(GrpcChannel)
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel__ctor_Grpc_Net_Client_GrpcChannel_
+  commentId: M:Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)
+  name.vb: New(GrpcChannel)
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.DaprSidecarChannel(Grpc.Net.Client.GrpcChannel)
+  fullName.vb: Virtufin.Api.Services.DaprSidecarChannel.New(Grpc.Net.Client.GrpcChannel)
+  nameWithType: DaprSidecarChannel.DaprSidecarChannel(GrpcChannel)
+  nameWithType.vb: DaprSidecarChannel.New(GrpcChannel)
+- uid: Virtufin.Api.Services.DaprSidecarChannel.#ctor*
+  name: DaprSidecarChannel
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel__ctor_
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.DaprSidecarChannel
+  fullName.vb: Virtufin.Api.Services.DaprSidecarChannel.New
+  nameWithType: DaprSidecarChannel.DaprSidecarChannel
+  nameWithType.vb: DaprSidecarChannel.New
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Channel
+  name: Channel
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Channel
+  commentId: P:Virtufin.Api.Services.DaprSidecarChannel.Channel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Channel
+  nameWithType: DaprSidecarChannel.Channel
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Channel*
+  name: Channel
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Channel_
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.Channel
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Channel
+  nameWithType: DaprSidecarChannel.Channel
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  name: Dispose()
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Dispose
+  commentId: M:Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Dispose()
+  nameWithType: DaprSidecarChannel.Dispose()
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Dispose*
+  name: Dispose
+  href: api/Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Dispose_
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  nameWithType: DaprSidecarChannel.Dispose
 - uid: Virtufin.Api.Services.DaprStableAppCallbackMethodProvider
   name: DaprStableAppCallbackMethodProvider
   href: api/Virtufin.Api.Services.DaprStableAppCallbackMethodProvider.html
@@ -2788,6 +3071,50 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.FieldSchema.TypeName
   nameWithType: FieldSchema.TypeName
+- uid: Virtufin.Api.Services.ForwardedHeaders
+  name: ForwardedHeaders
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html
+  commentId: T:Virtufin.Api.Services.ForwardedHeaders
+  fullName: Virtufin.Api.Services.ForwardedHeaders
+  nameWithType: ForwardedHeaders
+- uid: Virtufin.Api.Services.ForwardedHeaders.From(Grpc.Core.Metadata)
+  name: From(Metadata)
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html#Virtufin_Api_Services_ForwardedHeaders_From_Grpc_Core_Metadata_
+  commentId: M:Virtufin.Api.Services.ForwardedHeaders.From(Grpc.Core.Metadata)
+  fullName: Virtufin.Api.Services.ForwardedHeaders.From(Grpc.Core.Metadata)
+  nameWithType: ForwardedHeaders.From(Metadata)
+- uid: Virtufin.Api.Services.ForwardedHeaders.From(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})
+  name: From(IReadOnlyDictionary<string, string>?)
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html#Virtufin_Api_Services_ForwardedHeaders_From_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__
+  commentId: M:Virtufin.Api.Services.ForwardedHeaders.From(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})
+  name.vb: From(IReadOnlyDictionary(Of String, String))
+  fullName: Virtufin.Api.Services.ForwardedHeaders.From(System.Collections.Generic.IReadOnlyDictionary<string, string>?)
+  fullName.vb: Virtufin.Api.Services.ForwardedHeaders.From(System.Collections.Generic.IReadOnlyDictionary(Of String, String))
+  nameWithType: ForwardedHeaders.From(IReadOnlyDictionary<string, string>?)
+  nameWithType.vb: ForwardedHeaders.From(IReadOnlyDictionary(Of String, String))
+- uid: Virtufin.Api.Services.ForwardedHeaders.From*
+  name: From
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html#Virtufin_Api_Services_ForwardedHeaders_From_
+  commentId: Overload:Virtufin.Api.Services.ForwardedHeaders.From
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.ForwardedHeaders.From
+  nameWithType: ForwardedHeaders.From
+- uid: Virtufin.Api.Services.ForwardedHeaders.IsAllowed(System.String)
+  name: IsAllowed(string)
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html#Virtufin_Api_Services_ForwardedHeaders_IsAllowed_System_String_
+  commentId: M:Virtufin.Api.Services.ForwardedHeaders.IsAllowed(System.String)
+  name.vb: IsAllowed(String)
+  fullName: Virtufin.Api.Services.ForwardedHeaders.IsAllowed(string)
+  fullName.vb: Virtufin.Api.Services.ForwardedHeaders.IsAllowed(String)
+  nameWithType: ForwardedHeaders.IsAllowed(string)
+  nameWithType.vb: ForwardedHeaders.IsAllowed(String)
+- uid: Virtufin.Api.Services.ForwardedHeaders.IsAllowed*
+  name: IsAllowed
+  href: api/Virtufin.Api.Services.ForwardedHeaders.html#Virtufin_Api_Services_ForwardedHeaders_IsAllowed_
+  commentId: Overload:Virtufin.Api.Services.ForwardedHeaders.IsAllowed
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.ForwardedHeaders.IsAllowed
+  nameWithType: ForwardedHeaders.IsAllowed
 - uid: Virtufin.Api.Services.GatewayService
   name: GatewayService
   href: api/Virtufin.Api.Services.GatewayService.html
@@ -2878,182 +3205,6 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.GatewayService.ListServices
   nameWithType: GatewayService.ListServices
-- uid: Virtufin.Api.Services.GatewaySubscription
-  name: GatewaySubscription
-  href: api/Virtufin.Api.Services.GatewaySubscription.html
-  commentId: T:Virtufin.Api.Services.GatewaySubscription
-  fullName: Virtufin.Api.Services.GatewaySubscription
-  nameWithType: GatewaySubscription
-- uid: Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  name: GatewaySubscription(string, ChannelWriter<SubscribeResponse>)
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription__ctor_System_String_System_Threading_Channels_ChannelWriter_Virtufin_Api_Protos_SubscribeResponse__
-  commentId: M:Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  name.vb: New(String, ChannelWriter(Of SubscribeResponse))
-  fullName: Virtufin.Api.Services.GatewaySubscription.GatewaySubscription(string, System.Threading.Channels.ChannelWriter<Virtufin.Api.Protos.SubscribeResponse>)
-  fullName.vb: Virtufin.Api.Services.GatewaySubscription.New(String, System.Threading.Channels.ChannelWriter(Of Virtufin.Api.Protos.SubscribeResponse))
-  nameWithType: GatewaySubscription.GatewaySubscription(string, ChannelWriter<SubscribeResponse>)
-  nameWithType.vb: GatewaySubscription.New(String, ChannelWriter(Of SubscribeResponse))
-- uid: Virtufin.Api.Services.GatewaySubscription.#ctor*
-  name: GatewaySubscription
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription__ctor_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Virtufin.Api.Services.GatewaySubscription.GatewaySubscription
-  fullName.vb: Virtufin.Api.Services.GatewaySubscription.New
-  nameWithType: GatewaySubscription.GatewaySubscription
-  nameWithType.vb: GatewaySubscription.New
-- uid: Virtufin.Api.Services.GatewaySubscription.AddedAt
-  name: AddedAt
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_AddedAt
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.AddedAt
-  fullName: Virtufin.Api.Services.GatewaySubscription.AddedAt
-  nameWithType: GatewaySubscription.AddedAt
-- uid: Virtufin.Api.Services.GatewaySubscription.AddedAt*
-  name: AddedAt
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_AddedAt_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.AddedAt
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscription.AddedAt
-  nameWithType: GatewaySubscription.AddedAt
-- uid: Virtufin.Api.Services.GatewaySubscription.Topic
-  name: Topic
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Topic
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.Topic
-  fullName: Virtufin.Api.Services.GatewaySubscription.Topic
-  nameWithType: GatewaySubscription.Topic
-- uid: Virtufin.Api.Services.GatewaySubscription.Topic*
-  name: Topic
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Topic_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.Topic
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscription.Topic
-  nameWithType: GatewaySubscription.Topic
-- uid: Virtufin.Api.Services.GatewaySubscription.Writer
-  name: Writer
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Writer
-  commentId: P:Virtufin.Api.Services.GatewaySubscription.Writer
-  fullName: Virtufin.Api.Services.GatewaySubscription.Writer
-  nameWithType: GatewaySubscription.Writer
-- uid: Virtufin.Api.Services.GatewaySubscription.Writer*
-  name: Writer
-  href: api/Virtufin.Api.Services.GatewaySubscription.html#Virtufin_Api_Services_GatewaySubscription_Writer_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscription.Writer
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscription.Writer
-  nameWithType: GatewaySubscription.Writer
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager
-  name: GatewaySubscriptionManager
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html
-  commentId: T:Virtufin.Api.Services.GatewaySubscriptionManager
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager
-  nameWithType: GatewaySubscriptionManager
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.#ctor(Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.GatewaySubscriptionManager})
-  name: GatewaySubscriptionManager(ILogger<GatewaySubscriptionManager>)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager__ctor_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_GatewaySubscriptionManager__
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.#ctor(Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.GatewaySubscriptionManager})
-  name.vb: New(ILogger(Of GatewaySubscriptionManager))
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GatewaySubscriptionManager(Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.GatewaySubscriptionManager>)
-  fullName.vb: Virtufin.Api.Services.GatewaySubscriptionManager.New(Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.GatewaySubscriptionManager))
-  nameWithType: GatewaySubscriptionManager.GatewaySubscriptionManager(ILogger<GatewaySubscriptionManager>)
-  nameWithType.vb: GatewaySubscriptionManager.New(ILogger(Of GatewaySubscriptionManager))
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.#ctor*
-  name: GatewaySubscriptionManager
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager__ctor_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GatewaySubscriptionManager
-  fullName.vb: Virtufin.Api.Services.GatewaySubscriptionManager.New
-  nameWithType: GatewaySubscriptionManager.GatewaySubscriptionManager
-  nameWithType.vb: GatewaySubscriptionManager.New
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Byte[],System.String,System.String,System.String)
-  name: BroadcastToTopicAsync(string, string, string, string, string, string, byte[], string, string, string)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_BroadcastToTopicAsync_System_String_System_String_System_String_System_String_System_String_System_String_System_Byte___System_String_System_String_System_String_
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Byte[],System.String,System.String,System.String)
-  name.vb: BroadcastToTopicAsync(String, String, String, String, String, String, Byte(), String, String, String)
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync(string, string, string, string, string, string, byte[], string, string, string)
-  fullName.vb: Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync(String, String, String, String, String, String, Byte(), String, String, String)
-  nameWithType: GatewaySubscriptionManager.BroadcastToTopicAsync(string, string, string, string, string, string, byte[], string, string, string)
-  nameWithType.vb: GatewaySubscriptionManager.BroadcastToTopicAsync(String, String, String, String, String, String, Byte(), String, String, String)
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync*
-  name: BroadcastToTopicAsync
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_BroadcastToTopicAsync_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.BroadcastToTopicAsync
-  nameWithType: GatewaySubscriptionManager.BroadcastToTopicAsync
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.GatewaySubscription)
-  name: GetIdleTimeout(GatewaySubscription)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_GetIdleTimeout_Virtufin_Api_Services_GatewaySubscription_
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.GatewaySubscription)
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.GatewaySubscription)
-  nameWithType: GatewaySubscriptionManager.GetIdleTimeout(GatewaySubscription)
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout*
-  name: GetIdleTimeout
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_GetIdleTimeout_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GetIdleTimeout
-  nameWithType: GatewaySubscriptionManager.GetIdleTimeout
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey(Virtufin.Api.Services.GatewaySubscription)
-  name: GetSubscriptionKey(GatewaySubscription)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_GetSubscriptionKey_Virtufin_Api_Services_GatewaySubscription_
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey(Virtufin.Api.Services.GatewaySubscription)
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey(Virtufin.Api.Services.GatewaySubscription)
-  nameWithType: GatewaySubscriptionManager.GetSubscriptionKey(GatewaySubscription)
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey*
-  name: GetSubscriptionKey
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_GetSubscriptionKey_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.GetSubscriptionKey
-  nameWithType: GatewaySubscriptionManager.GetSubscriptionKey
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync(Virtufin.Api.Services.GatewaySubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
-  name: SendEventAsync(GatewaySubscription, SubscribeResponse, CancellationToken)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_SendEventAsync_Virtufin_Api_Services_GatewaySubscription_Virtufin_Api_Protos_SubscribeResponse_System_Threading_CancellationToken_
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync(Virtufin.Api.Services.GatewaySubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync(Virtufin.Api.Services.GatewaySubscription, Virtufin.Api.Protos.SubscribeResponse, System.Threading.CancellationToken)
-  nameWithType: GatewaySubscriptionManager.SendEventAsync(GatewaySubscription, SubscribeResponse, CancellationToken)
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync*
-  name: SendEventAsync
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_SendEventAsync_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.SendEventAsync
-  nameWithType: GatewaySubscriptionManager.SendEventAsync
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  name: Subscribe(string, ChannelWriter<SubscribeResponse>)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_Subscribe_System_String_System_Threading_Channels_ChannelWriter_Virtufin_Api_Protos_SubscribeResponse__
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
-  name.vb: Subscribe(String, ChannelWriter(Of SubscribeResponse))
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe(string, System.Threading.Channels.ChannelWriter<Virtufin.Api.Protos.SubscribeResponse>)
-  fullName.vb: Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe(String, System.Threading.Channels.ChannelWriter(Of Virtufin.Api.Protos.SubscribeResponse))
-  nameWithType: GatewaySubscriptionManager.Subscribe(string, ChannelWriter<SubscribeResponse>)
-  nameWithType.vb: GatewaySubscriptionManager.Subscribe(String, ChannelWriter(Of SubscribeResponse))
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe*
-  name: Subscribe
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_Subscribe_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.Subscribe
-  nameWithType: GatewaySubscriptionManager.Subscribe
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById(System.String)
-  name: UnsubscribeById(string)
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_UnsubscribeById_System_String_
-  commentId: M:Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById(System.String)
-  name.vb: UnsubscribeById(String)
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById(string)
-  fullName.vb: Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById(String)
-  nameWithType: GatewaySubscriptionManager.UnsubscribeById(string)
-  nameWithType.vb: GatewaySubscriptionManager.UnsubscribeById(String)
-- uid: Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById*
-  name: UnsubscribeById
-  href: api/Virtufin.Api.Services.GatewaySubscriptionManager.html#Virtufin_Api_Services_GatewaySubscriptionManager_UnsubscribeById_
-  commentId: Overload:Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.GatewaySubscriptionManager.UnsubscribeById
-  nameWithType: GatewaySubscriptionManager.UnsubscribeById
 - uid: Virtufin.Api.Services.GrpcCallResult
   name: GrpcCallResult
   href: api/Virtufin.Api.Services.GrpcCallResult.html
@@ -3073,6 +3224,19 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.GrpcCallResult.Data
   nameWithType: GrpcCallResult.Data
+- uid: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  name: FailedBeforeDispatch
+  href: api/Virtufin.Api.Services.GrpcCallResult.html#Virtufin_Api_Services_GrpcCallResult_FailedBeforeDispatch
+  commentId: P:Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  fullName: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  nameWithType: GrpcCallResult.FailedBeforeDispatch
+- uid: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch*
+  name: FailedBeforeDispatch
+  href: api/Virtufin.Api.Services.GrpcCallResult.html#Virtufin_Api_Services_GrpcCallResult_FailedBeforeDispatch_
+  commentId: Overload:Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  nameWithType: GrpcCallResult.FailedBeforeDispatch
 - uid: Virtufin.Api.Services.GrpcCallResult.Message
   name: Message
   href: api/Virtufin.Api.Services.GrpcCallResult.html#Virtufin_Api_Services_GrpcCallResult_Message
@@ -3131,24 +3295,94 @@ references:
   commentId: T:Virtufin.Api.Services.GrpcCallStatusCodes
   fullName: Virtufin.Api.Services.GrpcCallStatusCodes
   nameWithType: GrpcCallStatusCodes
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  name: Aborted
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Aborted
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Aborted
+  nameWithType: GrpcCallStatusCodes.Aborted
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  name: AlreadyExists
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_AlreadyExists
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.AlreadyExists
+  nameWithType: GrpcCallStatusCodes.AlreadyExists
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  name: Cancelled
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Cancelled
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Cancelled
+  nameWithType: GrpcCallStatusCodes.Cancelled
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  name: DeadlineExceeded
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_DeadlineExceeded
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.DeadlineExceeded
+  nameWithType: GrpcCallStatusCodes.DeadlineExceeded
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  name: FailedPrecondition
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_FailedPrecondition
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.FailedPrecondition
+  nameWithType: GrpcCallStatusCodes.FailedPrecondition
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)
+  name: IndicatesBackendFault(string?)
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_IndicatesBackendFault_System_String_
+  commentId: M:Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(System.String)
+  name.vb: IndicatesBackendFault(String)
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(string?)
+  fullName.vb: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault(String)
+  nameWithType: GrpcCallStatusCodes.IndicatesBackendFault(string?)
+  nameWithType.vb: GrpcCallStatusCodes.IndicatesBackendFault(String)
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault*
+  name: IndicatesBackendFault
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_IndicatesBackendFault_
+  commentId: Overload:Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.IndicatesBackendFault
+  nameWithType: GrpcCallStatusCodes.IndicatesBackendFault
 - uid: Virtufin.Api.Services.GrpcCallStatusCodes.Internal
   name: Internal
   href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Internal
   commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Internal
   fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Internal
   nameWithType: GrpcCallStatusCodes.Internal
-- uid: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
-  name: InvalidRequest
-  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_InvalidRequest
-  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
-  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidRequest
-  nameWithType: GrpcCallStatusCodes.InvalidRequest
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
+  name: InvalidArgument
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_InvalidArgument
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.InvalidArgument
+  nameWithType: GrpcCallStatusCodes.InvalidArgument
 - uid: Virtufin.Api.Services.GrpcCallStatusCodes.NotFound
   name: NotFound
   href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_NotFound
   commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.NotFound
   fullName: Virtufin.Api.Services.GrpcCallStatusCodes.NotFound
   nameWithType: GrpcCallStatusCodes.NotFound
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  name: Ok
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Ok
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Ok
+  nameWithType: GrpcCallStatusCodes.Ok
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  name: PermissionDenied
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_PermissionDenied
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.PermissionDenied
+  nameWithType: GrpcCallStatusCodes.PermissionDenied
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  name: ResourceExhausted
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_ResourceExhausted
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.ResourceExhausted
+  nameWithType: GrpcCallStatusCodes.ResourceExhausted
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  name: Unauthenticated
+  href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Unauthenticated
+  commentId: F:Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes.Unauthenticated
+  nameWithType: GrpcCallStatusCodes.Unauthenticated
 - uid: Virtufin.Api.Services.GrpcCallStatusCodes.Unavailable
   name: Unavailable
   href: api/Virtufin.Api.Services.GrpcCallStatusCodes.html#Virtufin_Api_Services_GrpcCallStatusCodes_Unavailable
@@ -3247,6 +3481,22 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.GrpcChannelPool.GetChannelAsync
   nameWithType: GrpcChannelPool.GetChannelAsync
+- uid: Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)
+  name: IsDialable(string)
+  href: api/Virtufin.Api.Services.GrpcChannelPool.html#Virtufin_Api_Services_GrpcChannelPool_IsDialable_System_String_
+  commentId: M:Virtufin.Api.Services.GrpcChannelPool.IsDialable(System.String)
+  name.vb: IsDialable(String)
+  fullName: Virtufin.Api.Services.GrpcChannelPool.IsDialable(string)
+  fullName.vb: Virtufin.Api.Services.GrpcChannelPool.IsDialable(String)
+  nameWithType: GrpcChannelPool.IsDialable(string)
+  nameWithType.vb: GrpcChannelPool.IsDialable(String)
+- uid: Virtufin.Api.Services.GrpcChannelPool.IsDialable*
+  name: IsDialable
+  href: api/Virtufin.Api.Services.GrpcChannelPool.html#Virtufin_Api_Services_GrpcChannelPool_IsDialable_
+  commentId: Overload:Virtufin.Api.Services.GrpcChannelPool.IsDialable
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.GrpcChannelPool.IsDialable
+  nameWithType: GrpcChannelPool.IsDialable
 - uid: Virtufin.Api.Services.GrpcReflectionService
   name: GrpcReflectionService
   href: api/Virtufin.Api.Services.GrpcReflectionService.html
@@ -3438,6 +3688,25 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.GrpcReflectionService.InvalidateCache
   nameWithType: GrpcReflectionService.InvalidateCache
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap
+  name: GrpcStatusCodeMap
+  href: api/Virtufin.Api.Services.GrpcStatusCodeMap.html
+  commentId: T:Virtufin.Api.Services.GrpcStatusCodeMap
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap
+  nameWithType: GrpcStatusCodeMap
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  name: ToGatewayStatus(StatusCode)
+  href: api/Virtufin.Api.Services.GrpcStatusCodeMap.html#Virtufin_Api_Services_GrpcStatusCodeMap_ToGatewayStatus_Grpc_Core_StatusCode_
+  commentId: M:Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  nameWithType: GrpcStatusCodeMap.ToGatewayStatus(StatusCode)
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus*
+  name: ToGatewayStatus
+  href: api/Virtufin.Api.Services.GrpcStatusCodeMap.html#Virtufin_Api_Services_GrpcStatusCodeMap_ToGatewayStatus_
+  commentId: Overload:Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus
+  nameWithType: GrpcStatusCodeMap.ToGatewayStatus
 - uid: Virtufin.Api.Services.MethodSchema
   name: MethodSchema
   href: api/Virtufin.Api.Services.MethodSchema.html
@@ -3578,15 +3847,15 @@ references:
   commentId: T:Virtufin.Api.Services.PubsubService
   fullName: Virtufin.Api.Services.PubsubService
   nameWithType: PubsubService
-- uid: Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
-  name: PubsubService(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
-  href: api/Virtufin.Api.Services.PubsubService.html#Virtufin_Api_Services_PubsubService__ctor_Dapr_Client_DaprClient_System_IServiceProvider_Virtufin_Api_Services_PubsubSubscriptionManager_Virtufin_Api_Services_TopicDaprSubscriptionRegistry_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_PubsubService__
-  commentId: M:Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,System.IServiceProvider,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
-  name.vb: New(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
-  fullName: Virtufin.Api.Services.PubsubService.PubsubService(Dapr.Client.DaprClient, System.IServiceProvider, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.PubsubService>)
-  fullName.vb: Virtufin.Api.Services.PubsubService.New(Dapr.Client.DaprClient, System.IServiceProvider, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.PubsubService))
-  nameWithType: PubsubService.PubsubService(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
-  nameWithType.vb: PubsubService.New(DaprClient, IServiceProvider, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
+- uid: Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
+  name: PubsubService(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
+  href: api/Virtufin.Api.Services.PubsubService.html#Virtufin_Api_Services_PubsubService__ctor_Dapr_Client_DaprClient_Virtufin_Api_Configuration_DaprComponentOptions_Virtufin_Api_Services_PubsubSubscriptionManager_Virtufin_Api_Services_TopicDaprSubscriptionRegistry_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_PubsubService__
+  commentId: M:Virtufin.Api.Services.PubsubService.#ctor(Dapr.Client.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Virtufin.Api.Services.PubsubSubscriptionManager,Virtufin.Api.Services.TopicDaprSubscriptionRegistry,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubService})
+  name.vb: New(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
+  fullName: Virtufin.Api.Services.PubsubService.PubsubService(Dapr.Client.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.PubsubService>)
+  fullName.vb: Virtufin.Api.Services.PubsubService.New(Dapr.Client.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Virtufin.Api.Services.PubsubSubscriptionManager, Virtufin.Api.Services.TopicDaprSubscriptionRegistry, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.PubsubService))
+  nameWithType: PubsubService.PubsubService(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger<PubsubService>)
+  nameWithType.vb: PubsubService.New(DaprClient, DaprComponentOptions, PubsubSubscriptionManager, TopicDaprSubscriptionRegistry, ILogger(Of PubsubService))
 - uid: Virtufin.Api.Services.PubsubService.#ctor*
   name: PubsubService
   href: api/Virtufin.Api.Services.PubsubService.html#Virtufin_Api_Services_PubsubService__ctor_
@@ -3757,19 +4026,6 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetAllSubscriptions
   nameWithType: PubsubSubscriptionManager.GetAllSubscriptions
-- uid: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  name: GetIdleTimeout(PubsubSubscription)
-  href: api/Virtufin.Api.Services.PubsubSubscriptionManager.html#Virtufin_Api_Services_PubsubSubscriptionManager_GetIdleTimeout_Virtufin_Api_Services_PubsubSubscription_
-  commentId: M:Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  nameWithType: PubsubSubscriptionManager.GetIdleTimeout(PubsubSubscription)
-- uid: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout*
-  name: GetIdleTimeout
-  href: api/Virtufin.Api.Services.PubsubSubscriptionManager.html#Virtufin_Api_Services_PubsubSubscriptionManager_GetIdleTimeout_
-  commentId: Overload:Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout
-  nameWithType: PubsubSubscriptionManager.GetIdleTimeout
 - uid: Virtufin.Api.Services.PubsubSubscriptionManager.GetSubscriptionKey(Virtufin.Api.Services.PubsubSubscription)
   name: GetSubscriptionKey(PubsubSubscription)
   href: api/Virtufin.Api.Services.PubsubSubscriptionManager.html#Virtufin_Api_Services_PubsubSubscriptionManager_GetSubscriptionKey_Virtufin_Api_Services_PubsubSubscription_
@@ -4001,21 +4257,61 @@ references:
   commentId: F:Virtufin.Api.Services.StateActionConstants.Save
   fullName: Virtufin.Api.Services.StateActionConstants.Save
   nameWithType: StateActionConstants.Save
+- uid: Virtufin.Api.Services.StateChangeEvents
+  name: StateChangeEvents
+  href: api/Virtufin.Api.Services.StateChangeEvents.html
+  commentId: T:Virtufin.Api.Services.StateChangeEvents
+  fullName: Virtufin.Api.Services.StateChangeEvents
+  nameWithType: StateChangeEvents
+- uid: Virtufin.Api.Services.StateChangeEvents.Source
+  name: Source
+  href: api/Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_Source
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.Source
+  fullName: Virtufin.Api.Services.StateChangeEvents.Source
+  nameWithType: StateChangeEvents.Source
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  name: TypeDeleted
+  href: api/Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_TypeDeleted
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeDeleted
+  nameWithType: StateChangeEvents.TypeDeleted
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
+  name: TypeForAction(string)
+  href: api/Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_TypeForAction_System_String_
+  commentId: M:Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
+  name.vb: TypeForAction(String)
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeForAction(string)
+  fullName.vb: Virtufin.Api.Services.StateChangeEvents.TypeForAction(String)
+  nameWithType: StateChangeEvents.TypeForAction(string)
+  nameWithType.vb: StateChangeEvents.TypeForAction(String)
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeForAction*
+  name: TypeForAction
+  href: api/Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_TypeForAction_
+  commentId: Overload:Virtufin.Api.Services.StateChangeEvents.TypeForAction
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeForAction
+  nameWithType: StateChangeEvents.TypeForAction
+- uid: Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  name: TypeSaved
+  href: api/Virtufin.Api.Services.StateChangeEvents.html#Virtufin_Api_Services_StateChangeEvents_TypeSaved
+  commentId: F:Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  fullName: Virtufin.Api.Services.StateChangeEvents.TypeSaved
+  nameWithType: StateChangeEvents.TypeSaved
 - uid: Virtufin.Api.Services.StateService
   name: StateService
   href: api/Virtufin.Api.Services.StateService.html
   commentId: T:Virtufin.Api.Services.StateService
   fullName: Virtufin.Api.Services.StateService
   nameWithType: StateService
-- uid: Virtufin.Api.Services.StateService.#ctor(Virtufin.Api.Configuration.ServicesConfiguration,Dapr.Client.DaprClient,Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.StateService})
-  name: StateService(ServicesConfiguration, DaprClient, DaprClient, ILogger<StateService>)
-  href: api/Virtufin.Api.Services.StateService.html#Virtufin_Api_Services_StateService__ctor_Virtufin_Api_Configuration_ServicesConfiguration_Dapr_Client_DaprClient_Dapr_Client_Autogen_Grpc_v1_Dapr_DaprClient_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_StateService__
-  commentId: M:Virtufin.Api.Services.StateService.#ctor(Virtufin.Api.Configuration.ServicesConfiguration,Dapr.Client.DaprClient,Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.StateService})
-  name.vb: New(ServicesConfiguration, DaprClient, DaprClient, ILogger(Of StateService))
-  fullName: Virtufin.Api.Services.StateService.StateService(Virtufin.Api.Configuration.ServicesConfiguration, Dapr.Client.DaprClient, Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.StateService>)
-  fullName.vb: Virtufin.Api.Services.StateService.New(Virtufin.Api.Configuration.ServicesConfiguration, Dapr.Client.DaprClient, Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.StateService))
-  nameWithType: StateService.StateService(ServicesConfiguration, DaprClient, Dapr.DaprClient, ILogger<StateService>)
-  nameWithType.vb: StateService.New(ServicesConfiguration, DaprClient, Dapr.DaprClient, ILogger(Of StateService))
+- uid: Virtufin.Api.Services.StateService.#ctor(Virtufin.Api.Configuration.ServicesConfiguration,Dapr.Client.DaprClient,Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.StateService})
+  name: StateService(ServicesConfiguration, DaprClient, DaprClient, DaprComponentOptions, ILogger<StateService>)
+  href: api/Virtufin.Api.Services.StateService.html#Virtufin_Api_Services_StateService__ctor_Virtufin_Api_Configuration_ServicesConfiguration_Dapr_Client_DaprClient_Dapr_Client_Autogen_Grpc_v1_Dapr_DaprClient_Virtufin_Api_Configuration_DaprComponentOptions_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_StateService__
+  commentId: M:Virtufin.Api.Services.StateService.#ctor(Virtufin.Api.Configuration.ServicesConfiguration,Dapr.Client.DaprClient,Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.StateService})
+  name.vb: New(ServicesConfiguration, DaprClient, DaprClient, DaprComponentOptions, ILogger(Of StateService))
+  fullName: Virtufin.Api.Services.StateService.StateService(Virtufin.Api.Configuration.ServicesConfiguration, Dapr.Client.DaprClient, Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.StateService>)
+  fullName.vb: Virtufin.Api.Services.StateService.New(Virtufin.Api.Configuration.ServicesConfiguration, Dapr.Client.DaprClient, Dapr.Client.Autogen.Grpc.v1.Dapr.DaprClient, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.StateService))
+  nameWithType: StateService.StateService(ServicesConfiguration, DaprClient, Dapr.DaprClient, DaprComponentOptions, ILogger<StateService>)
+  nameWithType.vb: StateService.New(ServicesConfiguration, DaprClient, Dapr.DaprClient, DaprComponentOptions, ILogger(Of StateService))
 - uid: Virtufin.Api.Services.StateService.#ctor*
   name: StateService
   href: api/Virtufin.Api.Services.StateService.html#Virtufin_Api_Services_StateService__ctor_
@@ -4212,23 +4508,6 @@ references:
   fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).BroadcastAsync
   nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.BroadcastAsync
   nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).BroadcastAsync
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-  name: GetIdleTimeout(TSubscription)
-  href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout(TSubscription)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout(TSubscription)
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout(TSubscription)
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout(TSubscription)
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout*
-  name: GetIdleTimeout
-  href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout_
-  commentId: Overload:Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout
 - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetSubscriptionCount(System.String)
   name: GetSubscriptionCount(string)
   href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetSubscriptionCount_System_String_
@@ -4315,24 +4594,6 @@ references:
   fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).Subscribe
   nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.Subscribe
   nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).Subscribe
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-  name: Unsubscribe(string, string)
-  href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-  name.vb: Unsubscribe(String, String)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe(string, string)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe(String, String)
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe(string, string)
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe(String, String)
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe*
-  name: Unsubscribe
-  href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_
-  commentId: Overload:Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe
-  isSpec: "True"
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe
 - uid: Virtufin.Api.Services.SubscriptionManagerBase`2._logger
   name: _logger
   href: api/Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2__logger
@@ -4397,12 +4658,6 @@ references:
   commentId: F:Virtufin.Api.Services.TimeoutConstants.SendEventTimeoutSeconds
   fullName: Virtufin.Api.Services.TimeoutConstants.SendEventTimeoutSeconds
   nameWithType: TimeoutConstants.SendEventTimeoutSeconds
-- uid: Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  name: SubscriptionIdleTimeoutMinutes
-  href: api/Virtufin.Api.Services.TimeoutConstants.html#Virtufin_Api_Services_TimeoutConstants_SubscriptionIdleTimeoutMinutes
-  commentId: F:Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  fullName: Virtufin.Api.Services.TimeoutConstants.SubscriptionIdleTimeoutMinutes
-  nameWithType: TimeoutConstants.SubscriptionIdleTimeoutMinutes
 - uid: Virtufin.Api.Services.TimeoutConstants.SubscriptionWriterDrainTimeoutSeconds
   name: SubscriptionWriterDrainTimeoutSeconds
   href: api/Virtufin.Api.Services.TimeoutConstants.html#Virtufin_Api_Services_TimeoutConstants_SubscriptionWriterDrainTimeoutSeconds
@@ -4415,15 +4670,15 @@ references:
   commentId: T:Virtufin.Api.Services.TopicDaprSubscriptionRegistry
   fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry
   nameWithType: TopicDaprSubscriptionRegistry
-- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
-  name: TopicDaprSubscriptionRegistry(IServiceProvider, ILogger<TopicDaprSubscriptionRegistry>)
-  href: api/Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry__ctor_System_IServiceProvider_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TopicDaprSubscriptionRegistry__
-  commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
-  name.vb: New(IServiceProvider, ILogger(Of TopicDaprSubscriptionRegistry))
-  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(System.IServiceProvider, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TopicDaprSubscriptionRegistry>)
-  fullName.vb: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.New(System.IServiceProvider, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TopicDaprSubscriptionRegistry))
-  nameWithType: TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(IServiceProvider, ILogger<TopicDaprSubscriptionRegistry>)
-  nameWithType.vb: TopicDaprSubscriptionRegistry.New(IServiceProvider, ILogger(Of TopicDaprSubscriptionRegistry))
+- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
+  name: TopicDaprSubscriptionRegistry(IServiceProvider, DaprComponentOptions, ILogger<TopicDaprSubscriptionRegistry>)
+  href: api/Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry__ctor_System_IServiceProvider_Virtufin_Api_Configuration_DaprComponentOptions_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TopicDaprSubscriptionRegistry__
+  commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor(System.IServiceProvider,Virtufin.Api.Configuration.DaprComponentOptions,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TopicDaprSubscriptionRegistry})
+  name.vb: New(IServiceProvider, DaprComponentOptions, ILogger(Of TopicDaprSubscriptionRegistry))
+  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(System.IServiceProvider, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TopicDaprSubscriptionRegistry>)
+  fullName.vb: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.New(System.IServiceProvider, Virtufin.Api.Configuration.DaprComponentOptions, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TopicDaprSubscriptionRegistry))
+  nameWithType: TopicDaprSubscriptionRegistry.TopicDaprSubscriptionRegistry(IServiceProvider, DaprComponentOptions, ILogger<TopicDaprSubscriptionRegistry>)
+  nameWithType.vb: TopicDaprSubscriptionRegistry.New(IServiceProvider, DaprComponentOptions, ILogger(Of TopicDaprSubscriptionRegistry))
 - uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.#ctor*
   name: TopicDaprSubscriptionRegistry
   href: api/Virtufin.Api.Services.TopicDaprSubscriptionRegistry.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry__ctor_
@@ -4488,15 +4743,15 @@ references:
   commentId: T:Virtufin.Api.Services.TriggerService
   fullName: Virtufin.Api.Services.TriggerService
   nameWithType: TriggerService
-- uid: Virtufin.Api.Services.TriggerService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
-  name: TriggerService(IConfiguration, PubsubService, ILogger<TriggerService>)
-  href: api/Virtufin.Api.Services.TriggerService.html#Virtufin_Api_Services_TriggerService__ctor_Microsoft_Extensions_Configuration_IConfiguration_Virtufin_Api_Services_PubsubService_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TriggerService__
-  commentId: M:Virtufin.Api.Services.TriggerService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
-  name.vb: New(IConfiguration, PubsubService, ILogger(Of TriggerService))
-  fullName: Virtufin.Api.Services.TriggerService.TriggerService(Microsoft.Extensions.Configuration.IConfiguration, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TriggerService>)
-  fullName.vb: Virtufin.Api.Services.TriggerService.New(Microsoft.Extensions.Configuration.IConfiguration, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TriggerService))
-  nameWithType: TriggerService.TriggerService(IConfiguration, PubsubService, ILogger<TriggerService>)
-  nameWithType.vb: TriggerService.New(IConfiguration, PubsubService, ILogger(Of TriggerService))
+- uid: Virtufin.Api.Services.TriggerService.#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
+  name: TriggerService(DaprSidecarChannel, PubsubService, ILogger<TriggerService>)
+  href: api/Virtufin.Api.Services.TriggerService.html#Virtufin_Api_Services_TriggerService__ctor_Virtufin_Api_Services_DaprSidecarChannel_Virtufin_Api_Services_PubsubService_Microsoft_Extensions_Logging_ILogger_Virtufin_Api_Services_TriggerService__
+  commentId: M:Virtufin.Api.Services.TriggerService.#ctor(Virtufin.Api.Services.DaprSidecarChannel,Virtufin.Api.Services.PubsubService,Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.TriggerService})
+  name.vb: New(DaprSidecarChannel, PubsubService, ILogger(Of TriggerService))
+  fullName: Virtufin.Api.Services.TriggerService.TriggerService(Virtufin.Api.Services.DaprSidecarChannel, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger<Virtufin.Api.Services.TriggerService>)
+  fullName.vb: Virtufin.Api.Services.TriggerService.New(Virtufin.Api.Services.DaprSidecarChannel, Virtufin.Api.Services.PubsubService, Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.Services.TriggerService))
+  nameWithType: TriggerService.TriggerService(DaprSidecarChannel, PubsubService, ILogger<TriggerService>)
+  nameWithType.vb: TriggerService.New(DaprSidecarChannel, PubsubService, ILogger(Of TriggerService))
 - uid: Virtufin.Api.Services.TriggerService.#ctor*
   name: TriggerService
   href: api/Virtufin.Api.Services.TriggerService.html#Virtufin_Api_Services_TriggerService__ctor_

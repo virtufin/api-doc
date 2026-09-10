@@ -8,7 +8,6 @@ items:
   - Virtufin.Api.Services.PubsubSubscriptionManager.#ctor(Microsoft.Extensions.Logging.ILogger{Virtufin.Api.Services.PubsubSubscriptionManager})
   - Virtufin.Api.Services.PubsubSubscriptionManager.BroadcastToTopicAsync(System.String,Virtufin.Api.Protos.SubscribeResponse)
   - Virtufin.Api.Services.PubsubSubscriptionManager.GetAllSubscriptions
-  - Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
   - Virtufin.Api.Services.PubsubSubscriptionManager.GetSubscriptionKey(Virtufin.Api.Services.PubsubSubscription)
   - Virtufin.Api.Services.PubsubSubscriptionManager.SendEventAsync(Virtufin.Api.Services.PubsubSubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   - Virtufin.Api.Services.PubsubSubscriptionManager.Subscribe(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})
@@ -41,10 +40,8 @@ items:
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}._subscriptions
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}._logger
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetSubscriptionKey(Virtufin.Api.Services.PubsubSubscription)
-  - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.SendEventAsync(Virtufin.Api.Services.PubsubSubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Subscribe(Virtufin.Api.Services.PubsubSubscription)
-  - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Unsubscribe(System.String,System.String)
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.BroadcastAsync(System.String,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetSubscriptionCount(System.String)
   - Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetTotalSubscriptionCount
@@ -141,16 +138,25 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: UnsubscribeById
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 23
+    startLine: 28
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: >-
+    Removes a subscriber by id. Returns <code>true</code> if a subscriber was found and
+
+    removed, <code>false</code> if the id matched nothing -- callers need to be able to
+
+    tell those apart, otherwise Unsubscribe reports success for any string.
+  example: []
   syntax:
-    content: public void UnsubscribeById(string subscriptionId)
+    content: public bool UnsubscribeById(string subscriptionId)
     parameters:
     - id: subscriptionId
       type: System.String
-    content.vb: Public Sub UnsubscribeById(subscriptionId As String)
+    return:
+      type: System.Boolean
+    content.vb: Public Function UnsubscribeById(subscriptionId As String) As Boolean
   overload: Virtufin.Api.Services.PubsubSubscriptionManager.UnsubscribeById*
   nameWithType.vb: PubsubSubscriptionManager.UnsubscribeById(String)
   fullName.vb: Virtufin.Api.Services.PubsubSubscriptionManager.UnsubscribeById(String)
@@ -173,7 +179,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: BroadcastToTopicAsync
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 35
+    startLine: 41
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -209,7 +215,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetAllSubscriptions
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 40
+    startLine: 46
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -237,7 +243,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: SendEventAsync
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 45
+    startLine: 51
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -278,7 +284,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetSubscriptionKey
     path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 58
+    startLine: 64
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -296,42 +302,6 @@ items:
     content.vb: Protected Overrides Function GetSubscriptionKey(subscription As PubsubSubscription) As String
   overridden: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetSubscriptionKey(Virtufin.Api.Services.PubsubSubscription)
   overload: Virtufin.Api.Services.PubsubSubscriptionManager.GetSubscriptionKey*
-- uid: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  commentId: M:Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  id: GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  parent: Virtufin.Api.Services.PubsubSubscriptionManager
-  langs:
-  - csharp
-  - vb
-  name: GetIdleTimeout(PubsubSubscription)
-  nameWithType: PubsubSubscriptionManager.GetIdleTimeout(PubsubSubscription)
-  fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  type: Method
-  source:
-    remote:
-      path: src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: GetIdleTimeout
-    path: ../../../src/Virtufin.Api/Services/PubsubSubscriptionManager.cs
-    startLine: 61
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.Services
-  summary: Gets the idle timeout for a subscription.
-  example: []
-  syntax:
-    content: protected override TimeSpan GetIdleTimeout(PubsubSubscription subscription)
-    parameters:
-    - id: subscription
-      type: Virtufin.Api.Services.PubsubSubscription
-      description: The subscription to get the timeout for.
-    return:
-      type: System.TimeSpan
-      description: The idle timeout duration.
-    content.vb: Protected Overrides Function GetIdleTimeout(subscription As PubsubSubscription) As TimeSpan
-  overridden: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  overload: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout*
 references:
 - uid: Virtufin.Api.Services
   commentId: N:Virtufin.Api.Services
@@ -461,34 +431,6 @@ references:
     name: PubsubSubscription
     href: Virtufin.Api.Services.PubsubSubscription.html
   - name: )
-- uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  parent: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}
-  definition: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-  href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  name: GetIdleTimeout(PubsubSubscription)
-  nameWithType: SubscriptionManagerBase<SubscribeResponse, PubsubSubscription>.GetIdleTimeout(PubsubSubscription)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<Virtufin.Api.Protos.SubscribeResponse, Virtufin.Api.Services.PubsubSubscription>.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  nameWithType.vb: SubscriptionManagerBase(Of SubscribeResponse, PubsubSubscription).GetIdleTimeout(PubsubSubscription)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of Virtufin.Api.Protos.SubscribeResponse, Virtufin.Api.Services.PubsubSubscription).GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-  spec.csharp:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-    name: GetIdleTimeout
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  - name: (
-  - uid: Virtufin.Api.Services.PubsubSubscription
-    name: PubsubSubscription
-    href: Virtufin.Api.Services.PubsubSubscription.html
-  - name: )
-  spec.vb:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.GetIdleTimeout(Virtufin.Api.Services.PubsubSubscription)
-    name: GetIdleTimeout
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  - name: (
-  - uid: Virtufin.Api.Services.PubsubSubscription
-    name: PubsubSubscription
-    href: Virtufin.Api.Services.PubsubSubscription.html
-  - name: )
 - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.SendEventAsync(Virtufin.Api.Services.PubsubSubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   commentId: M:Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.SendEventAsync(Virtufin.Api.Services.PubsubSubscription,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   parent: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}
@@ -564,49 +506,6 @@ references:
   - uid: Virtufin.Api.Services.PubsubSubscription
     name: PubsubSubscription
     href: Virtufin.Api.Services.PubsubSubscription.html
-  - name: )
-- uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Unsubscribe(System.String,System.String)
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Unsubscribe(System.String,System.String)
-  parent: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}
-  definition: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-  href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  name: Unsubscribe(string, string)
-  nameWithType: SubscriptionManagerBase<SubscribeResponse, PubsubSubscription>.Unsubscribe(string, string)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<Virtufin.Api.Protos.SubscribeResponse, Virtufin.Api.Services.PubsubSubscription>.Unsubscribe(string, string)
-  nameWithType.vb: SubscriptionManagerBase(Of SubscribeResponse, PubsubSubscription).Unsubscribe(String, String)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of Virtufin.Api.Protos.SubscribeResponse, Virtufin.Api.Services.PubsubSubscription).Unsubscribe(String, String)
-  name.vb: Unsubscribe(String, String)
-  spec.csharp:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Unsubscribe(System.String,System.String)
-    name: Unsubscribe
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.Unsubscribe(System.String,System.String)
-    name: Unsubscribe
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.BroadcastAsync(System.String,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
   commentId: M:Virtufin.Api.Services.SubscriptionManagerBase{Virtufin.Api.Protos.SubscribeResponse,Virtufin.Api.Services.PubsubSubscription}.BroadcastAsync(System.String,Virtufin.Api.Protos.SubscribeResponse,System.Threading.CancellationToken)
@@ -1007,28 +906,6 @@ references:
   - name: (
   - name: TSubscription
   - name: )
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-  href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  name: GetIdleTimeout(TSubscription)
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout(TSubscription)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.GetIdleTimeout(TSubscription)
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout(TSubscription)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).GetIdleTimeout(TSubscription)
-  spec.csharp:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-    name: GetIdleTimeout
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  - name: (
-  - name: TSubscription
-  - name: )
-  spec.vb:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.GetIdleTimeout(`1)
-    name: GetIdleTimeout
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_GetIdleTimeout__1_
-  - name: (
-  - name: TSubscription
-  - name: )
 - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.SendEventAsync(`1,`0,System.Threading.CancellationToken)
   commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.SendEventAsync(`1,`0,System.Threading.CancellationToken)
   isExternal: true
@@ -1091,48 +968,6 @@ references:
     href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Subscribe__1_
   - name: (
   - name: TSubscription
-  - name: )
-- uid: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-  commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-  isExternal: true
-  href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  name: Unsubscribe(string, string)
-  nameWithType: SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe(string, string)
-  fullName: Virtufin.Api.Services.SubscriptionManagerBase<TEvent, TSubscription>.Unsubscribe(string, string)
-  nameWithType.vb: SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe(String, String)
-  fullName.vb: Virtufin.Api.Services.SubscriptionManagerBase(Of TEvent, TSubscription).Unsubscribe(String, String)
-  name.vb: Unsubscribe(String, String)
-  spec.csharp:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-    name: Unsubscribe
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.Unsubscribe(System.String,System.String)
-    name: Unsubscribe
-    href: Virtufin.Api.Services.SubscriptionManagerBase-2.html#Virtufin_Api_Services_SubscriptionManagerBase_2_Unsubscribe_System_String_System_String_
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: Virtufin.Api.Services.SubscriptionManagerBase`2.BroadcastAsync(System.String,`0,System.Threading.CancellationToken)
   commentId: M:Virtufin.Api.Services.SubscriptionManagerBase`2.BroadcastAsync(System.String,`0,System.Threading.CancellationToken)
@@ -1458,6 +1293,17 @@ references:
   name: UnsubscribeById
   nameWithType: PubsubSubscriptionManager.UnsubscribeById
   fullName: Virtufin.Api.Services.PubsubSubscriptionManager.UnsubscribeById
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: Virtufin.Api.Services.PubsubSubscriptionManager.BroadcastToTopicAsync*
   commentId: Overload:Virtufin.Api.Services.PubsubSubscriptionManager.BroadcastToTopicAsync
   href: Virtufin.Api.Services.PubsubSubscriptionManager.html#Virtufin_Api_Services_PubsubSubscriptionManager_BroadcastToTopicAsync_System_String_Virtufin_Api_Protos_SubscribeResponse_
@@ -1748,17 +1594,3 @@ references:
   name: GetSubscriptionKey
   nameWithType: PubsubSubscriptionManager.GetSubscriptionKey
   fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetSubscriptionKey
-- uid: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout*
-  commentId: Overload:Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout
-  href: Virtufin.Api.Services.PubsubSubscriptionManager.html#Virtufin_Api_Services_PubsubSubscriptionManager_GetIdleTimeout_Virtufin_Api_Services_PubsubSubscription_
-  name: GetIdleTimeout
-  nameWithType: PubsubSubscriptionManager.GetIdleTimeout
-  fullName: Virtufin.Api.Services.PubsubSubscriptionManager.GetIdleTimeout
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.timespan
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: System.TimeSpan

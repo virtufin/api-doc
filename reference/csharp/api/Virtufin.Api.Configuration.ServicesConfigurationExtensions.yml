@@ -5,6 +5,7 @@ items:
   id: ServicesConfigurationExtensions
   parent: Virtufin.Api.Configuration
   children:
+  - Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
   - Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   langs:
   - csharp
@@ -37,6 +38,43 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  id: DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  isExtensionMethod: true
+  parent: Virtufin.Api.Configuration.ServicesConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: DialableServices(ServicesConfiguration)
+  nameWithType: ServicesConfigurationExtensions.DialableServices(ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Configuration/Models.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: DialableServices
+    path: ../../../src/Virtufin.Api/Configuration/Models.cs
+    startLine: 8
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Configuration
+  summary: >-
+    The registered services the gateway can dial -- what <code>Gateway.ListServices</code>,
+
+    the channel pool, and reflection discovery should all iterate.
+  example: []
+  syntax:
+    content: public static IEnumerable<ServiceConfig> DialableServices(this ServicesConfiguration config)
+    parameters:
+    - id: config
+      type: Virtufin.Api.Configuration.ServicesConfiguration
+    return:
+      type: System.Collections.Generic.IEnumerable{Virtufin.Api.Configuration.ServiceConfig}
+    content.vb: Public Shared Function DialableServices(config As ServicesConfiguration) As IEnumerable(Of ServiceConfig)
+  overload: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices*
 - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   id: GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
@@ -56,7 +94,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GetServiceConfig
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 4
+    startLine: 11
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -342,12 +380,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig*
-  commentId: Overload:Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig
-  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_GetServiceConfig_Virtufin_Api_Configuration_ServicesConfiguration_System_String_
-  name: GetServiceConfig
-  nameWithType: ServicesConfigurationExtensions.GetServiceConfig
-  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices*
+  commentId: Overload:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
+  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  name: DialableServices
+  nameWithType: ServicesConfigurationExtensions.DialableServices
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
 - uid: Virtufin.Api.Configuration.ServicesConfiguration
   commentId: T:Virtufin.Api.Configuration.ServicesConfiguration
   parent: Virtufin.Api.Configuration
@@ -355,6 +393,110 @@ references:
   name: ServicesConfiguration
   nameWithType: ServicesConfiguration
   fullName: Virtufin.Api.Configuration.ServicesConfiguration
+- uid: System.Collections.Generic.IEnumerable{Virtufin.Api.Configuration.ServiceConfig}
+  commentId: T:System.Collections.Generic.IEnumerable{Virtufin.Api.Configuration.ServiceConfig}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ServiceConfig>
+  nameWithType: IEnumerable<ServiceConfig>
+  fullName: System.Collections.Generic.IEnumerable<Virtufin.Api.Configuration.ServiceConfig>
+  nameWithType.vb: IEnumerable(Of ServiceConfig)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Virtufin.Api.Configuration.ServiceConfig)
+  name.vb: IEnumerable(Of ServiceConfig)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Virtufin.Api.Configuration.ServiceConfig
+    name: ServiceConfig
+    href: Virtufin.Api.Configuration.ServiceConfig.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Virtufin.Api.Configuration.ServiceConfig
+    name: ServiceConfig
+    href: Virtufin.Api.Configuration.ServiceConfig.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig*
+  commentId: Overload:Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig
+  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_GetServiceConfig_Virtufin_Api_Configuration_ServicesConfiguration_System_String_
+  name: GetServiceConfig
+  nameWithType: ServicesConfigurationExtensions.GetServiceConfig
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig
 - uid: System.String
   commentId: T:System.String
   parent: System

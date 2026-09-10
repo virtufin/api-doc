@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class StatusStrings | Virtufin API - C# Reference </title>
+      <title>Class ForwardedHeaders | Virtufin API - C# Reference </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class StatusStrings | Virtufin API - C# Reference ">
+      <meta name="title" content="Class ForwardedHeaders | Virtufin API - C# Reference ">
       
-      
+      <meta name="description" content="The allow-list of request headers the gateway propagates to a backend on a proxied call, and the filters that apply it.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,12 +88,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Virtufin.Api.Services.StatusStrings">
+        <article data-uid="Virtufin.Api.Services.ForwardedHeaders">
 
 
 
-  <h1 id="Virtufin_Api_Services_StatusStrings" data-uid="Virtufin.Api.Services.StatusStrings" class="text-break">
-Class StatusStrings  
+  <h1 id="Virtufin_Api_Services_ForwardedHeaders" data-uid="Virtufin.Api.Services.ForwardedHeaders" class="text-break">
+Class ForwardedHeaders  
   </h1>
 
   <div class="facts text-secondary">
@@ -101,11 +101,13 @@ Class StatusStrings
   <dl><dt>Assembly</dt><dd>Virtufin.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>The allow-list of request headers the gateway propagates to a backend on a proxied
+call, and the filters that apply it.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class StatusStrings</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ForwardedHeaders</code></pre>
   </div>
 
 
@@ -115,7 +117,7 @@ Class StatusStrings
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">StatusStrings</span></div>
+      <div><span class="xref">ForwardedHeaders</span></div>
     </dd>
   </dl>
 
@@ -150,31 +152,50 @@ Class StatusStrings
 
 
 
+  <h2 id="Virtufin_Api_Services_ForwardedHeaders_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+An allow-list on purpose. <code>Gateway.Invoke</code>/<code>InvokeJson</code> used to snapshot
+every inbound header and replay it downstream, which handed the gateway's own
+<code>x-api-key</code> — the credential guarding the ingress — to every backend on every
+proxied call, crossing the trust boundary that key exists to defend. Backends
+authenticate to the gateway with their own key and must never receive the caller's.
+</p>
+<p>
+Shared by the gRPC and HTTP entry points so the two cannot drift: the gRPC path
+forwarded everything while its <code>POST /v1/grpc/call</code> twin forwarded nothing at all,
+silently ignoring the <code>metadata</code> field callers were passing it.
+</p>
+</div>
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
+  <a id="Virtufin_Api_Services_ForwardedHeaders_From_" data-uid="Virtufin.Api.Services.ForwardedHeaders.From*"></a>
 
-  <h3 id="Virtufin_Api_Services_StatusStrings_Conflict" data-uid="Virtufin.Api.Services.StatusStrings.Conflict">
-  Conflict
+  <h3 id="Virtufin_Api_Services_ForwardedHeaders_From_Grpc_Core_Metadata_" data-uid="Virtufin.Api.Services.ForwardedHeaders.From(Grpc.Core.Metadata)">
+  From(Metadata)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Projects inbound gRPC request headers to the subset safe to forward.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string Conflict = &quot;CONFLICT&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, string&gt; From(Metadata headers)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>headers</code> <a class="xref" href="https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Core.Api/Metadata.cs">Metadata</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -184,27 +205,42 @@ Class StatusStrings
 
 
 
+  <h4 class="section" id="Virtufin_Api_Services_ForwardedHeaders_From_Grpc_Core_Metadata__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Binary (<code>-bin</code>) entries are skipped rather than read: <a class="xref" href="https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Core.Api/Metadata.cs">Value</a>
+throws <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> on a binary entry, and
+<code>Metadata.Add(key, string)</code> throws <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a> for a
+<code>-bin</code> key. Reading them unconditionally meant any client sending one got an
+opaque INTERNAL error and could never use Invoke at all.</p>
+</div>
 
 
 
-  <h3 id="Virtufin_Api_Services_StatusStrings_Error" data-uid="Virtufin.Api.Services.StatusStrings.Error">
-  Error
+
+  <a id="Virtufin_Api_Services_ForwardedHeaders_From_" data-uid="Virtufin.Api.Services.ForwardedHeaders.From*"></a>
+
+  <h3 id="Virtufin_Api_Services_ForwardedHeaders_From_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="Virtufin.Api.Services.ForwardedHeaders.From(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+  From(IReadOnlyDictionary&lt;string, string&gt;?)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Projects a caller-supplied metadata map (the HTTP <code>POST /v1/grpc/call</code> body's
+<code>metadata</code> field) to the subset safe to forward.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string Error = &quot;ERROR&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, string&gt;? From(IReadOnlyDictionary&lt;string, string&gt;? metadata)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>metadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -214,29 +250,45 @@ Class StatusStrings
 
 
 
+  <h4 class="section" id="Virtufin_Api_Services_ForwardedHeaders_From_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values come from a request body rather than transport metadata, so a caller
+can set any of them freely. That is acceptable for exactly this allow-list —
+tracing and correlation identifiers, which a REST caller has no other way to
+propagate, and which carry no authority. Do not widen it to anything a backend
+would trust for authentication or authorization.</p>
+</div>
 
 
 
-  <h3 id="Virtufin_Api_Services_StatusStrings_Ok" data-uid="Virtufin.Api.Services.StatusStrings.Ok">
-  Ok
+
+  <a id="Virtufin_Api_Services_ForwardedHeaders_IsAllowed_" data-uid="Virtufin.Api.Services.ForwardedHeaders.IsAllowed*"></a>
+
+  <h3 id="Virtufin_Api_Services_ForwardedHeaders_IsAllowed_System_String_" data-uid="Virtufin.Api.Services.ForwardedHeaders.IsAllowed(System.String)">
+  IsAllowed(string)
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>True if <code class="paramref">header</code> may be forwarded downstream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string Ok = &quot;OK&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsAllowed(string header)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>header</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
 
 
 

@@ -5,6 +5,7 @@ items:
   id: Configuration
   parent: Virtufin.Api
   children:
+  - Virtufin.Api.Configuration.DaprComponentOptions
   - Virtufin.Api.Configuration.GatewayResilienceOptions
   - Virtufin.Api.Configuration.GrpcConfig
   - Virtufin.Api.Configuration.GrpcEndpoint
@@ -25,6 +26,13 @@ items:
   assemblies:
   - Virtufin.Api
 references:
+- uid: Virtufin.Api.Configuration.DaprComponentOptions
+  commentId: T:Virtufin.Api.Configuration.DaprComponentOptions
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.DaprComponentOptions.html
+  name: DaprComponentOptions
+  nameWithType: DaprComponentOptions
+  fullName: Virtufin.Api.Configuration.DaprComponentOptions
 - uid: Virtufin.Api.Configuration.GatewayResilienceOptions
   commentId: T:Virtufin.Api.Configuration.GatewayResilienceOptions
   parent: Virtufin.Api.Configuration

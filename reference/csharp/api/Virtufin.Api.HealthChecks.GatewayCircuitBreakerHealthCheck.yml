@@ -21,11 +21,11 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GatewayCircuitBreakerHealthCheck
     path: ../../../src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-    startLine: 106
+    startLine: 156
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.HealthChecks
-  summary: Health check that reports Dapr circuit breaker state.
+  summary: Health check that reports the gateway circuit breaker's state.
   example: []
   syntax:
     content: 'public sealed class GatewayCircuitBreakerHealthCheck : IHealthCheck'
@@ -59,7 +59,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-    startLine: 110
+    startLine: 160
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.HealthChecks
@@ -91,7 +91,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: CheckHealthAsync
     path: ../../../src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-    startLine: 115
+    startLine: 165
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.HealthChecks

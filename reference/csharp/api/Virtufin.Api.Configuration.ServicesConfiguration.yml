@@ -21,7 +21,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ServicesConfiguration
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -39,6 +39,7 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
   extensionMethods:
+  - Virtufin.Api.Configuration.ServicesConfiguration.Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
   - Virtufin.Api.Configuration.ServicesConfiguration.Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(System.String)
 - uid: Virtufin.Api.Configuration.ServicesConfiguration.#ctor
   commentId: M:Virtufin.Api.Configuration.ServicesConfiguration.#ctor
@@ -58,7 +59,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: .ctor
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 15
+    startLine: 22
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -87,7 +88,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Services
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
-    startLine: 16
+    startLine: 23
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Configuration
@@ -359,6 +360,32 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: Virtufin.Api.Configuration.ServicesConfiguration.Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices
+  commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  parent: Virtufin.Api.Configuration.ServicesConfigurationExtensions
+  definition: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  name: DialableServices(ServicesConfiguration)
+  nameWithType: ServicesConfigurationExtensions.DialableServices(ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  spec.csharp:
+  - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+    name: DialableServices
+    href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  - name: (
+  - uid: Virtufin.Api.Configuration.ServicesConfiguration
+    name: ServicesConfiguration
+    href: Virtufin.Api.Configuration.ServicesConfiguration.html
+  - name: )
+  spec.vb:
+  - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+    name: DialableServices
+    href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  - name: (
+  - uid: Virtufin.Api.Configuration.ServicesConfiguration
+    name: ServicesConfiguration
+    href: Virtufin.Api.Configuration.ServicesConfiguration.html
+  - name: )
 - uid: Virtufin.Api.Configuration.ServicesConfiguration.Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(System.String)
   commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   parent: Virtufin.Api.Configuration.ServicesConfigurationExtensions
@@ -407,6 +434,37 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  name: DialableServices(ServicesConfiguration)
+  nameWithType: ServicesConfigurationExtensions.DialableServices(ServicesConfiguration)
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+  spec.csharp:
+  - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+    name: DialableServices
+    href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  - name: (
+  - uid: Virtufin.Api.Configuration.ServicesConfiguration
+    name: ServicesConfiguration
+    href: Virtufin.Api.Configuration.ServicesConfiguration.html
+  - name: )
+  spec.vb:
+  - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.DialableServices(Virtufin.Api.Configuration.ServicesConfiguration)
+    name: DialableServices
+    href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html#Virtufin_Api_Configuration_ServicesConfigurationExtensions_DialableServices_Virtufin_Api_Configuration_ServicesConfiguration_
+  - name: (
+  - uid: Virtufin.Api.Configuration.ServicesConfiguration
+    name: ServicesConfiguration
+    href: Virtufin.Api.Configuration.ServicesConfiguration.html
+  - name: )
+- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions
+  commentId: T:Virtufin.Api.Configuration.ServicesConfigurationExtensions
+  parent: Virtufin.Api.Configuration
+  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html
+  name: ServicesConfigurationExtensions
+  nameWithType: ServicesConfigurationExtensions
+  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions
 - uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   commentId: M:Virtufin.Api.Configuration.ServicesConfigurationExtensions.GetServiceConfig(Virtufin.Api.Configuration.ServicesConfiguration,System.String)
   isExternal: true
@@ -447,13 +505,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: Virtufin.Api.Configuration.ServicesConfigurationExtensions
-  commentId: T:Virtufin.Api.Configuration.ServicesConfigurationExtensions
-  parent: Virtufin.Api.Configuration
-  href: Virtufin.Api.Configuration.ServicesConfigurationExtensions.html
-  name: ServicesConfigurationExtensions
-  nameWithType: ServicesConfigurationExtensions
-  fullName: Virtufin.Api.Configuration.ServicesConfigurationExtensions
 - uid: Virtufin.Api.Configuration.ServicesConfiguration.#ctor*
   commentId: Overload:Virtufin.Api.Configuration.ServicesConfiguration.#ctor
   href: Virtufin.Api.Configuration.ServicesConfiguration.html#Virtufin_Api_Configuration_ServicesConfiguration__ctor

@@ -28,7 +28,7 @@ items:
   summary: >-
     Async callback interface for receiving stream events. Handlers that
 
-    implement this interface are awaited by <xref href="Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>,
+    implement this interface are awaited by <xref href="Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d%2cSystem.Threading.CancellationToken)" data-throw-if-not-resolved="false"></xref>,
 
     preventing slow handlers from causing gRPC stream backpressure.
   example: []
@@ -113,48 +113,24 @@ items:
     content.vb: Function OnErrorAsync(ex As Exception, cancellationToken As CancellationToken = Nothing) As Task
   overload: Virtufin.Api.Client.IAsyncStreamEventHandler.OnErrorAsync*
 references:
-- uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
-  commentId: M:Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+- uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  commentId: M:Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
   isExternal: true
-  href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
-  name: SubscribeAsync(IStreamEventHandler, IEnumerable<string>, IEnumerable<string>, IEnumerable<string>, CancellationToken)
-  nameWithType: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable<string>, IEnumerable<string>, IEnumerable<string>, CancellationToken)
-  fullName: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
-  nameWithType.vb: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
-  fullName.vb: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
-  name.vb: SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), IEnumerable(Of String), IEnumerable(Of String), CancellationToken)
+  href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  name: SubscribeAsync(IStreamEventHandler, IEnumerable<string>, CancellationToken)
+  nameWithType: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable<string>, CancellationToken)
+  fullName: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+  nameWithType.vb: GatewayClient.SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), CancellationToken)
+  fullName.vb: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler, System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  name.vb: SubscribeAsync(IStreamEventHandler, IEnumerable(Of String), CancellationToken)
   spec.csharp:
-  - uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  - uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
     name: SubscribeAsync
-    href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+    href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
   - name: (
   - uid: Virtufin.Api.Client.IStreamEventHandler
     name: IStreamEventHandler
     href: Virtufin.Api.Client.IStreamEventHandler.html
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
   - name: ','
   - name: " "
   - uid: System.Collections.Generic.IEnumerable`1
@@ -175,41 +151,13 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
   spec.vb:
-  - uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  - uid: Virtufin.Api.Client.GatewayClient.SubscribeAsync(Virtufin.Api.Client.IStreamEventHandler,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
     name: SubscribeAsync
-    href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+    href: Virtufin.Api.Client.GatewayClient.html#Virtufin_Api_Client_GatewayClient_SubscribeAsync_Virtufin_Api_Client_IStreamEventHandler_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
   - name: (
   - uid: Virtufin.Api.Client.IStreamEventHandler
     name: IStreamEventHandler
     href: Virtufin.Api.Client.IStreamEventHandler.html
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
   - name: ','
   - name: " "
   - uid: System.Collections.Generic.IEnumerable`1

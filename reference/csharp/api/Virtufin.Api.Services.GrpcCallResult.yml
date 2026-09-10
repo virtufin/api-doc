@@ -6,6 +6,7 @@ items:
   parent: Virtufin.Api.Services
   children:
   - Virtufin.Api.Services.GrpcCallResult.Data
+  - Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
   - Virtufin.Api.Services.GrpcCallResult.Message
   - Virtufin.Api.Services.GrpcCallResult.ResponseDataBytes
   - Virtufin.Api.Services.GrpcCallResult.StatusCode
@@ -24,7 +25,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: GrpcCallResult
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1508
+    startLine: 1697
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -61,7 +62,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Success
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1510
+    startLine: 1699
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -90,7 +91,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: StatusCode
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1511
+    startLine: 1700
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -101,6 +102,44 @@ items:
       type: System.String
     content.vb: Public Property StatusCode As String
   overload: Virtufin.Api.Services.GrpcCallResult.StatusCode*
+- uid: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  commentId: P:Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  id: FailedBeforeDispatch
+  parent: Virtufin.Api.Services.GrpcCallResult
+  langs:
+  - csharp
+  - vb
+  name: FailedBeforeDispatch
+  nameWithType: GrpcCallResult.FailedBeforeDispatch
+  fullName: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  type: Property
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/GrpcReflectionService.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: FailedBeforeDispatch
+    path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
+    startLine: 1708
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: >-
+    True when the call failed <b>before</b> the request reached the backend
+
+    (descriptor load, channel acquisition). Only these are safe to retry: nothing
+
+    distinguishes idempotent methods here, so replaying a call that may already
+
+    have been applied is not acceptable.
+  example: []
+  syntax:
+    content: public bool FailedBeforeDispatch { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FailedBeforeDispatch As Boolean
+  overload: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch*
 - uid: Virtufin.Api.Services.GrpcCallResult.Message
   commentId: P:Virtufin.Api.Services.GrpcCallResult.Message
   id: Message
@@ -119,7 +158,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Message
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1512
+    startLine: 1709
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -148,7 +187,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: Data
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1513
+    startLine: 1710
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -177,7 +216,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ResponseDataBytes
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
-    startLine: 1514
+    startLine: 1711
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -490,6 +529,12 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch*
+  commentId: Overload:Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
+  href: Virtufin.Api.Services.GrpcCallResult.html#Virtufin_Api_Services_GrpcCallResult_FailedBeforeDispatch
+  name: FailedBeforeDispatch
+  nameWithType: GrpcCallResult.FailedBeforeDispatch
+  fullName: Virtufin.Api.Services.GrpcCallResult.FailedBeforeDispatch
 - uid: Virtufin.Api.Services.GrpcCallResult.Message*
   commentId: Overload:Virtufin.Api.Services.GrpcCallResult.Message
   href: Virtufin.Api.Services.GrpcCallResult.html#Virtufin_Api_Services_GrpcCallResult_Message

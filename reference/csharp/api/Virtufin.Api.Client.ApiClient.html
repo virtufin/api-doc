@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/7475cd5faef0358601dba3c7b8914e3135d08933" target="_blank" rel="noopener" class="commit-badge" title="View commit 7475cd5faef0358601dba3c7b8914e3135d08933">
+            <a href="{git_repo_url}/commit/4efb529f69dc92308bd7e17148f461b137039a84" target="_blank" rel="noopener" class="commit-badge" title="View commit 4efb529f69dc92308bd7e17148f461b137039a84">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5faef0358601dba3c7b8914e3135d08933</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529f69dc92308bd7e17148f461b137039a84</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -311,8 +311,7 @@ Provides synchronous and asynchronous access to gateway operations.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Closes the client synchronously.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -350,6 +349,45 @@ Provides synchronous and asynchronous access to gateway operations.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Virtufin_Api_Client_ApiClient_DeleteTriggerAsync_" data-uid="Virtufin.Api.Client.ApiClient.DeleteTriggerAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_DeleteTriggerAsync_System_String_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.DeleteTriggerAsync(System.String,System.Threading.CancellationToken)">
+  DeleteTriggerAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a scheduled trigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteTriggerResponse&gt; DeleteTriggerAsync(string name, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">DeleteTriggerResponse</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -422,6 +460,84 @@ Provides synchronous and asynchronous access to gateway operations.</p>
 
 
 
+  <a id="Virtufin_Api_Client_ApiClient_GetConfigServiceAsync_" data-uid="Virtufin.Api.Client.ApiClient.GetConfigServiceAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_GetConfigServiceAsync_System_String_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.GetConfigServiceAsync(System.String,System.Threading.CancellationToken)">
+  GetConfigServiceAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets one service's configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetConfigServiceResponse&gt; GetConfigServiceAsync(string name, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">GetConfigServiceResponse</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Virtufin_Api_Client_ApiClient_GetTriggerAsync_" data-uid="Virtufin.Api.Client.ApiClient.GetTriggerAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_GetTriggerAsync_System_String_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.GetTriggerAsync(System.String,System.Threading.CancellationToken)">
+  GetTriggerAsync(string, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a scheduled trigger's details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTriggerResponse&gt; GetTriggerAsync(string name, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">GetTriggerResponse</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Virtufin_Api_Client_ApiClient_InvokeAsync_" data-uid="Virtufin.Api.Client.ApiClient.InvokeAsync*"></a>
 
   <h3 id="Virtufin_Api_Client_ApiClient_InvokeAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__" data-uid="Virtufin.Api.Client.ApiClient.InvokeAsync(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
@@ -455,6 +571,43 @@ Provides synchronous and asynchronous access to gateway operations.</p>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
     <dd><p>Response as dictionary.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Virtufin_Api_Client_ApiClient_ListConfigServicesAsync_" data-uid="Virtufin.Api.Client.ApiClient.ListConfigServicesAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_ListConfigServicesAsync_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.ListConfigServicesAsync(System.Threading.CancellationToken)">
+  ListConfigServicesAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists every registered service, including non-dialable entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListConfigServicesResponse&gt; ListConfigServicesAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ListConfigServicesResponse</span>&gt;</dt>
+    <dd></dd>
   </dl>
 
 
@@ -527,6 +680,92 @@ Provides synchronous and asynchronous access to gateway operations.</p>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
     <dd><p>List of service names.</p>
 </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Virtufin_Api_Client_ApiClient_ListTriggersAsync_" data-uid="Virtufin.Api.Client.ApiClient.ListTriggersAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_ListTriggersAsync_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.ListTriggersAsync(System.Threading.CancellationToken)">
+  ListTriggersAsync(CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lists all scheduled triggers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListTriggersResponse&gt; ListTriggersAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ListTriggersResponse</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Virtufin_Api_Client_ApiClient_ScheduleTriggerAsync_" data-uid="Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync*"></a>
+
+  <h3 id="Virtufin_Api_Client_ApiClient_ScheduleTriggerAsync_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Threading_CancellationToken_" data-uid="Virtufin.Api.Client.ApiClient.ScheduleTriggerAsync(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Threading.CancellationToken)">
+  ScheduleTriggerAsync(string, string, string?, string?, int, string?, CancellationToken)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the client synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ScheduleTriggerResponse&gt; ScheduleTriggerAsync(string name, string targetTopic, string? schedule = null, string? dueTime = null, int repeats = 0, string? ttl = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>targetTopic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>schedule</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>dueTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>repeats</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>ttl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">ScheduleTriggerResponse</span>&gt;</dt>
+    <dd></dd>
   </dl>
 
 

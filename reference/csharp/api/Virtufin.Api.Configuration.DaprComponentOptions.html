@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class GatewayCircuitBreakerHealthCheck | Virtufin API - C# Reference </title>
+      <title>Class DaprComponentOptions | Virtufin API - C# Reference </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GatewayCircuitBreakerHealthCheck | Virtufin API - C# Reference ">
+      <meta name="title" content="Class DaprComponentOptions | Virtufin API - C# Reference ">
       
-      <meta name="description" content="Health check that reports the gateway circuit breaker&#39;s state.">
+      <meta name="description" content="The Dapr component names the gateway talks to. Resolved once at startup and injected, rather than hard-coded at each call site.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,25 +88,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck">
+        <article data-uid="Virtufin.Api.Configuration.DaprComponentOptions">
 
 
 
-  <h1 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck" class="text-break">
-Class GatewayCircuitBreakerHealthCheck  
+  <h1 id="Virtufin_Api_Configuration_DaprComponentOptions" data-uid="Virtufin.Api.Configuration.DaprComponentOptions" class="text-break">
+Class DaprComponentOptions  
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Virtufin.html">Virtufin</a>.<a class="xref" href="Virtufin.Api.html">Api</a>.<a class="xref" href="Virtufin.Api.HealthChecks.html">HealthChecks</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Virtufin.html">Virtufin</a>.<a class="xref" href="Virtufin.Api.html">Api</a>.<a class="xref" href="Virtufin.Api.Configuration.html">Configuration</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Virtufin.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Health check that reports the gateway circuit breaker's state.</p>
+  <div class="markdown summary"><p>The Dapr component names the gateway talks to. Resolved once at startup and injected,
+rather than hard-coded at each call site.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GatewayCircuitBreakerHealthCheck : IHealthCheck</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DaprComponentOptions</code></pre>
   </div>
 
 
@@ -116,16 +117,10 @@ Class GatewayCircuitBreakerHealthCheck
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">GatewayCircuitBreakerHealthCheck</span></div>
+      <div><span class="xref">DaprComponentOptions</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.ihealthcheck">IHealthCheck</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -154,16 +149,33 @@ Class GatewayCircuitBreakerHealthCheck
 
 
 
+  <h2 id="Virtufin_Api_Configuration_DaprComponentOptions_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>
+Two knobs for the pub/sub component name existed and neither was read: the
+<code>--pubsub-name</code> / <code>PubsubName</code> setting, and the per-service
+<code>pubsub.pubsubName</code> field in services.json (which helm emits from
+<code>.Values.pubsub.name</code>). Publishing and subscribing used the literal
+<code>"pubsub"</code>, so renaming the component in helm produced a deployment that
+looked configured and could not publish.
+</p>
+<p>
+The per-service field cannot be honoured per service: <code>Pubsub.PublishEvent</code> and
+<code>Pubsub.Subscribe</code> take a topic and no service, so there is nothing to resolve
+against at call time. It is therefore treated as a gateway-wide setting that every
+entry must agree on — which is how it is actually produced, since helm renders one
+value into every entry.
+</p>
+</div>
 
 
   <h2 class="section" id="constructors">Constructors
 </h2>
 
 
-  <a id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck__ctor_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.#ctor*"></a>
+  <a id="Virtufin_Api_Configuration_DaprComponentOptions__ctor_" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.#ctor*"></a>
 
-  <h3 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck__ctor_Virtufin_Api_HealthChecks_GatewayResiliencePipeline_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.#ctor(Virtufin.Api.HealthChecks.GatewayResiliencePipeline)">
-  GatewayCircuitBreakerHealthCheck(GatewayResiliencePipeline)
+  <h3 id="Virtufin_Api_Configuration_DaprComponentOptions__ctor_System_String_" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.#ctor(System.String)">
+  DaprComponentOptions(string)
   
   </h3>
 
@@ -171,12 +183,12 @@ Class GatewayCircuitBreakerHealthCheck
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GatewayCircuitBreakerHealthCheck(GatewayResiliencePipeline resilience)</code></pre>
+    <pre><code class="lang-csharp hljs">public DaprComponentOptions(string pubsubName)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>resilience</code> <a class="xref" href="Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html">GatewayResiliencePipeline</a></dt>
+    <dt><code>pubsubName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -191,40 +203,139 @@ Class GatewayCircuitBreakerHealthCheck
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck_CheckHealthAsync_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.CheckHealthAsync*"></a>
 
-  <h3 id="Virtufin_Api_HealthChecks_GatewayCircuitBreakerHealthCheck_CheckHealthAsync_Microsoft_Extensions_Diagnostics_HealthChecks_HealthCheckContext_System_Threading_CancellationToken_" data-uid="Virtufin.Api.HealthChecks.GatewayCircuitBreakerHealthCheck.CheckHealthAsync(Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckContext,System.Threading.CancellationToken)">
-  CheckHealthAsync(HealthCheckContext, CancellationToken)
+  <h3 id="Virtufin_Api_Configuration_DaprComponentOptions_DefaultPubsubName" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.DefaultPubsubName">
+  DefaultPubsubName
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Runs the health check, returning the status of the component being checked.</p>
+  <div class="markdown level1 summary"><p>Component name used when nothing is configured.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;HealthCheckResult&gt; CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)</code></pre>
+    <pre><code class="lang-csharp hljs">public const string DefaultPubsubName = &quot;pubsub&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Configuration_DaprComponentOptions_PubsubNameKey" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.PubsubNameKey">
+  PubsubNameKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configuration key backing <code>--pubsub-name</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PubsubNameKey = &quot;PubsubName&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Virtufin_Api_Configuration_DaprComponentOptions_PubsubName_" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.PubsubName*"></a>
+
+  <h3 id="Virtufin_Api_Configuration_DaprComponentOptions_PubsubName" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.PubsubName">
+  PubsubName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PubsubName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Virtufin_Api_Configuration_DaprComponentOptions_Resolve_" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.Resolve*"></a>
+
+  <h3 id="Virtufin_Api_Configuration_DaprComponentOptions_Resolve_System_String_Virtufin_Api_Configuration_ServicesConfiguration_" data-uid="Virtufin.Api.Configuration.DaprComponentOptions.Resolve(System.String,Virtufin.Api.Configuration.ServicesConfiguration)">
+  Resolve(string?, ServicesConfiguration)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resolves the pub/sub component name. Precedence: the explicit
+<code>PubsubName</code> setting, then the value services.json agrees on, then the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DaprComponentOptions Resolve(string? explicitName, ServicesConfiguration config)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>context</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.healthcheckcontext">HealthCheckContext</a></dt>
-    <dd><p>A context object associated with the current execution.</p>
-</dd>
-    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a> that can be used to cancel the health check.</p>
-</dd>
+    <dt><code>explicitName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>config</code> <a class="xref" href="Virtufin.Api.Configuration.ServicesConfiguration.html">ServicesConfiguration</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.diagnostics.healthchecks.healthcheckresult">HealthCheckResult</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> that completes when the health check has finished, yielding the status of the component being checked.</p>
-</dd>
+    <dt><a class="xref" href="Virtufin.Api.Configuration.DaprComponentOptions.html">DaprComponentOptions</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -234,6 +345,14 @@ Class GatewayCircuitBreakerHealthCheck
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when registered services declare different <code>pubsub.pubsubName</code> values.
+Only one can be honoured, and silently picking one would reintroduce exactly the
+&quot;configured but ignored&quot; behaviour this replaces.</p>
+</dd>
+  </dl>
 
 
 

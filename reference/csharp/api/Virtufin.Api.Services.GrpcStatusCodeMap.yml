@@ -1,33 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Virtufin.Api.Services.DaprConstants
-  commentId: T:Virtufin.Api.Services.DaprConstants
-  id: DaprConstants
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap
+  commentId: T:Virtufin.Api.Services.GrpcStatusCodeMap
+  id: GrpcStatusCodeMap
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.DaprConstants.PubsubName
-  - Virtufin.Api.Services.DaprConstants.StateStoreName
+  - Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
   langs:
   - csharp
   - vb
-  name: DaprConstants
-  nameWithType: DaprConstants
-  fullName: Virtufin.Api.Services.DaprConstants
+  name: GrpcStatusCodeMap
+  nameWithType: GrpcStatusCodeMap
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap
   type: Class
   source:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: DaprConstants
+    id: GrpcStatusCodeMap
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 2
+    startLine: 67
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
+  summary: >-
+    Translates <xref href="Grpc.Core.StatusCode" data-throw-if-not-resolved="false"></xref> into the gateway's own
+
+    <xref href="Virtufin.Api.Services.GrpcCallStatusCodes" data-throw-if-not-resolved="false"></xref> vocabulary, so one condition yields one string
+
+    regardless of whether the gateway or the backend produced it.
+  example: []
   syntax:
-    content: public static class DaprConstants
-    content.vb: Public Module DaprConstants
+    content: public static class GrpcStatusCodeMap
+    content.vb: Public Module GrpcStatusCodeMap
   inheritance:
   - System.Object
   inheritedMembers:
@@ -38,61 +44,52 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.DaprConstants.PubsubName
-  commentId: F:Virtufin.Api.Services.DaprConstants.PubsubName
-  id: PubsubName
-  parent: Virtufin.Api.Services.DaprConstants
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  commentId: M:Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  id: ToGatewayStatus(Grpc.Core.StatusCode)
+  parent: Virtufin.Api.Services.GrpcStatusCodeMap
   langs:
   - csharp
   - vb
-  name: PubsubName
-  nameWithType: DaprConstants.PubsubName
-  fullName: Virtufin.Api.Services.DaprConstants.PubsubName
-  type: Field
+  name: ToGatewayStatus(StatusCode)
+  nameWithType: GrpcStatusCodeMap.ToGatewayStatus(StatusCode)
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus(Grpc.Core.StatusCode)
+  type: Method
   source:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: PubsubName
+    id: ToGatewayStatus
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 4
+    startLine: 69
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public const string PubsubName = "pubsub"
+    content: public static string ToGatewayStatus(StatusCode statusCode)
+    parameters:
+    - id: statusCode
+      type: Grpc.Core.StatusCode
     return:
       type: System.String
-    content.vb: Public Const PubsubName As String = "pubsub"
-- uid: Virtufin.Api.Services.DaprConstants.StateStoreName
-  commentId: F:Virtufin.Api.Services.DaprConstants.StateStoreName
-  id: StateStoreName
-  parent: Virtufin.Api.Services.DaprConstants
-  langs:
-  - csharp
-  - vb
-  name: StateStoreName
-  nameWithType: DaprConstants.StateStoreName
-  fullName: Virtufin.Api.Services.DaprConstants.StateStoreName
-  type: Field
-  source:
-    remote:
-      path: src/Virtufin.Api/Services/Constants.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: StateStoreName
-    path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 5
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.Services
-  syntax:
-    content: public const string StateStoreName = "statestore"
-    return:
-      type: System.String
-    content.vb: Public Const StateStoreName As String = "statestore"
+    content.vb: Public Shared Function ToGatewayStatus(statusCode As StatusCode) As String
+  overload: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus*
 references:
+- uid: Grpc.Core.StatusCode
+  commentId: T:Grpc.Core.StatusCode
+  parent: Grpc.Core
+  isExternal: true
+  href: https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Core.Api/StatusCode.cs
+  name: StatusCode
+  nameWithType: StatusCode
+  fullName: Grpc.Core.StatusCode
+- uid: Virtufin.Api.Services.GrpcCallStatusCodes
+  commentId: T:Virtufin.Api.Services.GrpcCallStatusCodes
+  href: Virtufin.Api.Services.GrpcCallStatusCodes.html
+  name: GrpcCallStatusCodes
+  nameWithType: GrpcCallStatusCodes
+  fullName: Virtufin.Api.Services.GrpcCallStatusCodes
 - uid: Virtufin.Api.Services
   commentId: N:Virtufin.Api.Services
   href: Virtufin.html
@@ -353,6 +350,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: Grpc.Core
+  commentId: N:Grpc.Core
+  isExternal: true
+  name: Grpc.Core
+  nameWithType: Grpc.Core
+  fullName: Grpc.Core
+  spec.csharp:
+  - uid: Grpc
+    name: Grpc
+    isExternal: true
+  - name: .
+  - uid: Grpc.Core
+    name: Core
+    isExternal: true
+  spec.vb:
+  - uid: Grpc
+    name: Grpc
+    isExternal: true
+  - name: .
+  - uid: Grpc.Core
+    name: Core
+    isExternal: true
 - uid: System
   commentId: N:System
   isExternal: true
@@ -360,6 +379,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus*
+  commentId: Overload:Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus
+  href: Virtufin.Api.Services.GrpcStatusCodeMap.html#Virtufin_Api_Services_GrpcStatusCodeMap_ToGatewayStatus_Grpc_Core_StatusCode_
+  name: ToGatewayStatus
+  nameWithType: GrpcStatusCodeMap.ToGatewayStatus
+  fullName: Virtufin.Api.Services.GrpcStatusCodeMap.ToGatewayStatus
 - uid: System.String
   commentId: T:System.String
   parent: System

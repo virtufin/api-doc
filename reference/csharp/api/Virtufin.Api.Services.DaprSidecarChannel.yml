@@ -1,36 +1,48 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle
-  commentId: T:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle
-  id: TopicDaprSubscriptionRegistry.SubscriptionHandle
+- uid: Virtufin.Api.Services.DaprSidecarChannel
+  commentId: T:Virtufin.Api.Services.DaprSidecarChannel
+  id: DaprSidecarChannel
   parent: Virtufin.Api.Services
   children:
-  - Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
+  - Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)
+  - Virtufin.Api.Services.DaprSidecarChannel.Channel
+  - Virtufin.Api.Services.DaprSidecarChannel.Dispose
   langs:
   - csharp
   - vb
-  name: TopicDaprSubscriptionRegistry.SubscriptionHandle
-  nameWithType: TopicDaprSubscriptionRegistry.SubscriptionHandle
-  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle
+  name: DaprSidecarChannel
+  nameWithType: DaprSidecarChannel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel
   type: Class
   source:
     remote:
-      path: src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
+      path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: SubscriptionHandle
-    path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 303
+    id: DaprSidecarChannel
+    path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
+    startLine: 13
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
-  summary: Per-caller handle. Disposing releases the caller's reference.
+  summary: The process-wide gRPC channel to the local Dapr sidecar.
+  remarks: >-
+    Registered as a singleton so every component talking to the sidecar shares one
+
+    connection. Distinct from <xref href="Virtufin.Api.Services.GrpcChannelPool" data-throw-if-not-resolved="false"></xref>, which manages channels to
+
+    downstream *application* services across many hosts; this is a single fixed
+
+    localhost target and needs no pooling or health validation.
   example: []
   syntax:
-    content: public sealed class TopicDaprSubscriptionRegistry.SubscriptionHandle
-    content.vb: Public NotInheritable Class TopicDaprSubscriptionRegistry.SubscriptionHandle
+    content: 'public sealed class DaprSidecarChannel : IDisposable'
+    content.vb: Public NotInheritable Class DaprSidecarChannel Implements IDisposable
   inheritance:
   - System.Object
+  implements:
+  - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -38,35 +50,105 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
-  commentId: M:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
-  id: DisposeAsync
-  parent: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Channel
+  commentId: P:Virtufin.Api.Services.DaprSidecarChannel.Channel
+  id: Channel
+  parent: Virtufin.Api.Services.DaprSidecarChannel
   langs:
   - csharp
   - vb
-  name: DisposeAsync()
-  nameWithType: TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync()
-  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync()
-  type: Method
+  name: Channel
+  nameWithType: DaprSidecarChannel.Channel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Channel
+  type: Property
   source:
     remote:
-      path: src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
+      path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: DisposeAsync
-    path: ../../../src/Virtufin.Api/Services/TopicDaprSubscriptionRegistry.cs
-    startLine: 323
+    id: Channel
+    path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
+    startLine: 15
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public ValueTask DisposeAsync()
+    content: public GrpcChannel Channel { get; }
+    parameters: []
     return:
-      type: System.Threading.Tasks.ValueTask
-    content.vb: Public Function DisposeAsync() As ValueTask
-  overload: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync*
+      type: Grpc.Net.Client.GrpcChannel
+    content.vb: Public ReadOnly Property Channel As GrpcChannel
+  overload: Virtufin.Api.Services.DaprSidecarChannel.Channel*
+- uid: Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)
+  commentId: M:Virtufin.Api.Services.DaprSidecarChannel.#ctor(Grpc.Net.Client.GrpcChannel)
+  id: '#ctor(Grpc.Net.Client.GrpcChannel)'
+  parent: Virtufin.Api.Services.DaprSidecarChannel
+  langs:
+  - csharp
+  - vb
+  name: DaprSidecarChannel(GrpcChannel)
+  nameWithType: DaprSidecarChannel.DaprSidecarChannel(GrpcChannel)
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.DaprSidecarChannel(Grpc.Net.Client.GrpcChannel)
+  type: Constructor
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: .ctor
+    path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
+    startLine: 17
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public DaprSidecarChannel(GrpcChannel channel)
+    parameters:
+    - id: channel
+      type: Grpc.Net.Client.GrpcChannel
+    content.vb: Public Sub New(channel As GrpcChannel)
+  overload: Virtufin.Api.Services.DaprSidecarChannel.#ctor*
+  nameWithType.vb: DaprSidecarChannel.New(GrpcChannel)
+  fullName.vb: Virtufin.Api.Services.DaprSidecarChannel.New(Grpc.Net.Client.GrpcChannel)
+  name.vb: New(GrpcChannel)
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  commentId: M:Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  id: Dispose
+  parent: Virtufin.Api.Services.DaprSidecarChannel
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DaprSidecarChannel.Dispose()
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Dispose
+    path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
+    startLine: 19
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Virtufin.Api.Services.DaprSidecarChannel.Dispose*
+  implements:
+  - System.IDisposable.Dispose
 references:
+- uid: Virtufin.Api.Services.GrpcChannelPool
+  commentId: T:Virtufin.Api.Services.GrpcChannelPool
+  parent: Virtufin.Api.Services
+  href: Virtufin.Api.Services.GrpcChannelPool.html
+  name: GrpcChannelPool
+  nameWithType: GrpcChannelPool
+  fullName: Virtufin.Api.Services.GrpcChannelPool
 - uid: Virtufin.Api.Services
   commentId: N:Virtufin.Api.Services
   href: Virtufin.html
@@ -108,6 +190,14 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -310,54 +400,84 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync*
-  commentId: Overload:Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
-  href: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.html#Virtufin_Api_Services_TopicDaprSubscriptionRegistry_SubscriptionHandle_DisposeAsync
-  name: DisposeAsync
-  nameWithType: TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
-  fullName: Virtufin.Api.Services.TopicDaprSubscriptionRegistry.SubscriptionHandle.DisposeAsync
-- uid: System.Threading.Tasks.ValueTask
-  commentId: T:System.Threading.Tasks.ValueTask
-  parent: System.Threading.Tasks
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Channel*
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.Channel
+  href: Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Channel
+  name: Channel
+  nameWithType: DaprSidecarChannel.Channel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Channel
+- uid: Grpc.Net.Client.GrpcChannel
+  commentId: T:Grpc.Net.Client.GrpcChannel
+  parent: Grpc.Net.Client
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
-  name: ValueTask
-  nameWithType: ValueTask
-  fullName: System.Threading.Tasks.ValueTask
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
+  href: https://github.com/grpc/grpc-dotnet/blob/master/src/Grpc.Net.Client/GrpcChannel.cs
+  name: GrpcChannel
+  nameWithType: GrpcChannel
+  fullName: Grpc.Net.Client.GrpcChannel
+- uid: Grpc.Net.Client
+  commentId: N:Grpc.Net.Client
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  name: Grpc.Net.Client
+  nameWithType: Grpc.Net.Client
+  fullName: Grpc.Net.Client
   spec.csharp:
-  - uid: System
-    name: System
+  - uid: Grpc
+    name: Grpc
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: Grpc.Net
+    name: Net
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
   - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
+  - uid: Grpc.Net.Client
+    name: Client
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
   spec.vb:
-  - uid: System
-    name: System
+  - uid: Grpc
+    name: Grpc
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
   - name: .
-  - uid: System.Threading
-    name: Threading
+  - uid: Grpc.Net
+    name: Net
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading
   - name: .
-  - uid: System.Threading.Tasks
-    name: Tasks
+  - uid: Grpc.Net.Client
+    name: Client
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Virtufin.Api.Services.DaprSidecarChannel.#ctor*
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.#ctor
+  href: Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel__ctor_Grpc_Net_Client_GrpcChannel_
+  name: DaprSidecarChannel
+  nameWithType: DaprSidecarChannel.DaprSidecarChannel
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.DaprSidecarChannel
+  nameWithType.vb: DaprSidecarChannel.New
+  fullName.vb: Virtufin.Api.Services.DaprSidecarChannel.New
+  name.vb: New
+- uid: Virtufin.Api.Services.DaprSidecarChannel.Dispose*
+  commentId: Overload:Virtufin.Api.Services.DaprSidecarChannel.Dispose
+  href: Virtufin.Api.Services.DaprSidecarChannel.html#Virtufin_Api_Services_DaprSidecarChannel_Dispose
+  name: Dispose
+  nameWithType: DaprSidecarChannel.Dispose
+  fullName: Virtufin.Api.Services.DaprSidecarChannel.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

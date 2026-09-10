@@ -7,8 +7,7 @@ items:
   children:
   - Virtufin.Api.HealthChecks.GatewayResiliencePipeline.#ctor(Microsoft.Extensions.Logging.ILogger{Virtufin.Api.HealthChecks.GatewayResiliencePipeline},Virtufin.Api.Configuration.GatewayResilienceOptions)
   - Virtufin.Api.HealthChecks.GatewayResiliencePipeline.CircuitBroken
-  - Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  - Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+  - Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
@@ -144,16 +143,16 @@ items:
   nameWithType.vb: GatewayResiliencePipeline.New(ILogger(Of GatewayResiliencePipeline), GatewayResilienceOptions)
   fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.New(Microsoft.Extensions.Logging.ILogger(Of Virtufin.Api.HealthChecks.GatewayResiliencePipeline), Virtufin.Api.Configuration.GatewayResilienceOptions)
   name.vb: New(ILogger(Of GatewayResiliencePipeline), GatewayResilienceOptions)
-- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
-  id: ExecuteAsync``1(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
+  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
+  id: ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}},System.Threading.CancellationToken)
   parent: Virtufin.Api.HealthChecks.GatewayResiliencePipeline
   langs:
   - csharp
   - vb
-  name: ExecuteAsync<T>(Func<CancellationToken, Task<T>>, CancellationToken)
-  nameWithType: GatewayResiliencePipeline.ExecuteAsync<T>(Func<CancellationToken, Task<T>>, CancellationToken)
-  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync<T>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
+  name: ExecuteAsync(Func<CancellationToken, Task<GrpcCallResult>>, CancellationToken)
+  nameWithType: GatewayResiliencePipeline.ExecuteAsync(Func<CancellationToken, Task<GrpcCallResult>>, CancellationToken)
+  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Virtufin.Api.Services.GrpcCallResult>>, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -162,62 +161,31 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/virtufin-api
     id: ExecuteAsync
     path: ../../../src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-    startLine: 92
+    startLine: 129
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.HealthChecks
+  summary: >-
+    Runs a proxied gateway call through retry + circuit breaker. Typed over
+
+    <xref href="Virtufin.Api.Services.GrpcCallResult" data-throw-if-not-resolved="false"></xref> because failures arrive as returned values,
+
+    not thrown exceptions — see the pipeline construction above.
+  example: []
   syntax:
-    content: public Task<T> ExecuteAsync<T>(Func<CancellationToken, Task<T>> action, CancellationToken cancellationToken)
+    content: public Task<GrpcCallResult> ExecuteAsync(Func<CancellationToken, Task<GrpcCallResult>> action, CancellationToken cancellationToken)
     parameters:
     - id: action
-      type: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{{T}}}
-    - id: cancellationToken
-      type: System.Threading.CancellationToken
-    typeParameters:
-    - id: T
-    return:
-      type: System.Threading.Tasks.Task{{T}}
-    content.vb: Public Function ExecuteAsync(Of T)(action As Func(Of CancellationToken, Task(Of T)), cancellationToken As CancellationToken) As Task(Of T)
-  overload: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync*
-  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Of T)(Func(Of CancellationToken, Task(Of T)), CancellationToken)
-  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(Of T)(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of T)), System.Threading.CancellationToken)
-  name.vb: ExecuteAsync(Of T)(Func(Of CancellationToken, Task(Of T)), CancellationToken)
-- uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  commentId: M:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  id: ExecuteAsync(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  parent: Virtufin.Api.HealthChecks.GatewayResiliencePipeline
-  langs:
-  - csharp
-  - vb
-  name: ExecuteAsync(Func<CancellationToken, Task>, CancellationToken)
-  nameWithType: GatewayResiliencePipeline.ExecuteAsync(Func<CancellationToken, Task>, CancellationToken)
-  fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>, System.Threading.CancellationToken)
-  type: Method
-  source:
-    remote:
-      path: src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-      branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
-    id: ExecuteAsync
-    path: ../../../src/Virtufin.Api/HealthChecks/GatewayResiliencePipeline.cs
-    startLine: 97
-  assemblies:
-  - Virtufin.Api
-  namespace: Virtufin.Api.HealthChecks
-  syntax:
-    content: public Task ExecuteAsync(Func<CancellationToken, Task> action, CancellationToken cancellationToken)
-    parameters:
-    - id: action
-      type: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task}
+      type: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}}
     - id: cancellationToken
       type: System.Threading.CancellationToken
     return:
-      type: System.Threading.Tasks.Task
-    content.vb: Public Function ExecuteAsync(action As Func(Of CancellationToken, Task), cancellationToken As CancellationToken) As Task
+      type: System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}
+    content.vb: Public Function ExecuteAsync(action As Func(Of CancellationToken, Task(Of GrpcCallResult)), cancellationToken As CancellationToken) As Task(Of GrpcCallResult)
   overload: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync*
-  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Func(Of CancellationToken, Task), CancellationToken)
-  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task), System.Threading.CancellationToken)
-  name.vb: ExecuteAsync(Func(Of CancellationToken, Task), CancellationToken)
+  nameWithType.vb: GatewayResiliencePipeline.ExecuteAsync(Func(Of CancellationToken, Task(Of GrpcCallResult)), CancellationToken)
+  fullName.vb: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Virtufin.Api.Services.GrpcCallResult)), System.Threading.CancellationToken)
+  name.vb: ExecuteAsync(Func(Of CancellationToken, Task(Of GrpcCallResult)), CancellationToken)
 references:
 - uid: Virtufin.Api.Configuration.GatewayResilienceOptions
   commentId: T:Virtufin.Api.Configuration.GatewayResilienceOptions
@@ -623,23 +591,29 @@ references:
     name: Logging
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Virtufin.Api.Services.GrpcCallResult
+  commentId: T:Virtufin.Api.Services.GrpcCallResult
+  href: Virtufin.Api.Services.GrpcCallResult.html
+  name: GrpcCallResult
+  nameWithType: GrpcCallResult
+  fullName: Virtufin.Api.Services.GrpcCallResult
 - uid: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync*
   commentId: Overload:Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync
-  href: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync__1_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_
+  href: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.html#Virtufin_Api_HealthChecks_GatewayResiliencePipeline_ExecuteAsync_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task_Virtufin_Api_Services_GrpcCallResult___System_Threading_CancellationToken_
   name: ExecuteAsync
   nameWithType: GatewayResiliencePipeline.ExecuteAsync
   fullName: Virtufin.Api.HealthChecks.GatewayResiliencePipeline.ExecuteAsync
-- uid: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{{T}}}
-  commentId: T:System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}}
+- uid: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}}
+  commentId: T:System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}}
   parent: System
   definition: System.Func`2
   href: https://learn.microsoft.com/dotnet/api/system.func-2
-  name: Func<CancellationToken, Task<T>>
-  nameWithType: Func<CancellationToken, Task<T>>
-  fullName: System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<T>>
-  nameWithType.vb: Func(Of CancellationToken, Task(Of T))
-  fullName.vb: System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of T))
-  name.vb: Func(Of CancellationToken, Task(Of T))
+  name: Func<CancellationToken, Task<GrpcCallResult>>
+  nameWithType: Func<CancellationToken, Task<GrpcCallResult>>
+  fullName: System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<Virtufin.Api.Services.GrpcCallResult>>
+  nameWithType.vb: Func(Of CancellationToken, Task(Of GrpcCallResult))
+  fullName.vb: System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of Virtufin.Api.Services.GrpcCallResult))
+  name.vb: Func(Of CancellationToken, Task(Of GrpcCallResult))
   spec.csharp:
   - uid: System.Func`2
     name: Func
@@ -657,7 +631,9 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - name: T
+  - uid: Virtufin.Api.Services.GrpcCallResult
+    name: GrpcCallResult
+    href: Virtufin.Api.Services.GrpcCallResult.html
   - name: '>'
   - name: '>'
   spec.vb:
@@ -681,7 +657,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - uid: Virtufin.Api.Services.GrpcCallResult
+    name: GrpcCallResult
+    href: Virtufin.Api.Services.GrpcCallResult.html
   - name: )
   - name: )
 - uid: System.Threading.CancellationToken
@@ -692,24 +670,26 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: System.Threading.CancellationToken
-- uid: System.Threading.Tasks.Task{{T}}
-  commentId: T:System.Threading.Tasks.Task{``0}
+- uid: System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}
+  commentId: T:System.Threading.Tasks.Task{Virtufin.Api.Services.GrpcCallResult}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<T>
-  nameWithType: Task<T>
-  fullName: System.Threading.Tasks.Task<T>
-  nameWithType.vb: Task(Of T)
-  fullName.vb: System.Threading.Tasks.Task(Of T)
-  name.vb: Task(Of T)
+  name: Task<GrpcCallResult>
+  nameWithType: Task<GrpcCallResult>
+  fullName: System.Threading.Tasks.Task<Virtufin.Api.Services.GrpcCallResult>
+  nameWithType.vb: Task(Of GrpcCallResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Virtufin.Api.Services.GrpcCallResult)
+  name.vb: Task(Of GrpcCallResult)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - name: T
+  - uid: Virtufin.Api.Services.GrpcCallResult
+    name: GrpcCallResult
+    href: Virtufin.Api.Services.GrpcCallResult.html
   - name: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
@@ -719,7 +699,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - uid: Virtufin.Api.Services.GrpcCallResult
+    name: GrpcCallResult
+    href: Virtufin.Api.Services.GrpcCallResult.html
   - name: )
 - uid: System.Func`2
   commentId: T:System.Func`2
@@ -847,58 +829,3 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task}
-  commentId: T:System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task}
-  parent: System
-  definition: System.Func`2
-  href: https://learn.microsoft.com/dotnet/api/system.func-2
-  name: Func<CancellationToken, Task>
-  nameWithType: Func<CancellationToken, Task>
-  fullName: System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task>
-  nameWithType.vb: Func(Of CancellationToken, Task)
-  fullName.vb: System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task)
-  name.vb: Func(Of CancellationToken, Task)
-  spec.csharp:
-  - uid: System.Func`2
-    name: Func
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.func-2
-  - name: <
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: ','
-  - name: " "
-  - uid: System.Threading.Tasks.Task
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  - name: '>'
-  spec.vb:
-  - uid: System.Func`2
-    name: Func
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.func-2
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Threading.CancellationToken
-    name: CancellationToken
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
-  - name: ','
-  - name: " "
-  - uid: System.Threading.Tasks.Task
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  - name: )
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task

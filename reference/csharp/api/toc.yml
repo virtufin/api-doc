@@ -55,6 +55,9 @@ items:
     name: Configuration
     type: Namespace
     items:
+    - uid: Virtufin.Api.Configuration.DaprComponentOptions
+      name: DaprComponentOptions
+      type: Class
     - uid: Virtufin.Api.Configuration.GatewayResilienceOptions
       name: GatewayResilienceOptions
       type: Class
@@ -126,8 +129,8 @@ items:
     - uid: Virtufin.Api.Services.DaprAppCallbackService
       name: DaprAppCallbackService
       type: Class
-    - uid: Virtufin.Api.Services.DaprConstants
-      name: DaprConstants
+    - uid: Virtufin.Api.Services.DaprSidecarChannel
+      name: DaprSidecarChannel
       type: Class
     - uid: Virtufin.Api.Services.DaprStableAppCallbackMethodProvider
       name: DaprStableAppCallbackMethodProvider
@@ -138,14 +141,11 @@ items:
     - uid: Virtufin.Api.Services.FieldSchema
       name: FieldSchema
       type: Class
+    - uid: Virtufin.Api.Services.ForwardedHeaders
+      name: ForwardedHeaders
+      type: Class
     - uid: Virtufin.Api.Services.GatewayService
       name: GatewayService
-      type: Class
-    - uid: Virtufin.Api.Services.GatewaySubscription
-      name: GatewaySubscription
-      type: Class
-    - uid: Virtufin.Api.Services.GatewaySubscriptionManager
-      name: GatewaySubscriptionManager
       type: Class
     - uid: Virtufin.Api.Services.GrpcCallResult
       name: GrpcCallResult
@@ -158,6 +158,9 @@ items:
       type: Class
     - uid: Virtufin.Api.Services.GrpcReflectionService
       name: GrpcReflectionService
+      type: Class
+    - uid: Virtufin.Api.Services.GrpcStatusCodeMap
+      name: GrpcStatusCodeMap
       type: Class
     - uid: Virtufin.Api.Services.MethodSchema
       name: MethodSchema
@@ -185,6 +188,9 @@ items:
       type: Class
     - uid: Virtufin.Api.Services.StateActionConstants
       name: StateActionConstants
+      type: Class
+    - uid: Virtufin.Api.Services.StateChangeEvents
+      name: StateChangeEvents
       type: Class
     - uid: Virtufin.Api.Services.StateService
       name: StateService

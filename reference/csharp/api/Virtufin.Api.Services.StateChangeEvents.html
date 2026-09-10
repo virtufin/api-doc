@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class GatewaySubscription | Virtufin API - C# Reference </title>
+      <title>Class StateChangeEvents | Virtufin API - C# Reference </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class GatewaySubscription | Virtufin API - C# Reference ">
+      <meta name="title" content="Class StateChangeEvents | Virtufin API - C# Reference ">
       
-      
+      <meta name="description" content="CloudEvent attributes for the Tier 0 state.change topic.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/7475cd5faef0358601dba3c7b8914e3135d08933" target="_blank" rel="noopener" class="commit-badge" title="View commit 7475cd5faef0358601dba3c7b8914e3135d08933">
+            <a href="{git_repo_url}/commit/4efb529f69dc92308bd7e17148f461b137039a84" target="_blank" rel="noopener" class="commit-badge" title="View commit 4efb529f69dc92308bd7e17148f461b137039a84">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">7475cd5faef0358601dba3c7b8914e3135d08933</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529f69dc92308bd7e17148f461b137039a84</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,12 +88,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Virtufin.Api.Services.GatewaySubscription">
+        <article data-uid="Virtufin.Api.Services.StateChangeEvents">
 
 
 
-  <h1 id="Virtufin_Api_Services_GatewaySubscription" data-uid="Virtufin.Api.Services.GatewaySubscription" class="text-break">
-Class GatewaySubscription  
+  <h1 id="Virtufin_Api_Services_StateChangeEvents" data-uid="Virtufin.Api.Services.StateChangeEvents" class="text-break">
+Class StateChangeEvents  
   </h1>
 
   <div class="facts text-secondary">
@@ -101,11 +101,12 @@ Class GatewaySubscription
   <dl><dt>Assembly</dt><dd>Virtufin.Api.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>CloudEvent attributes for the Tier 0 <code>state.change</code> topic.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GatewaySubscription</code></pre>
+    <pre><code class="lang-csharp hljs">public static class StateChangeEvents</code></pre>
   </div>
 
 
@@ -115,7 +116,7 @@ Class GatewaySubscription
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">GatewaySubscription</span></div>
+      <div><span class="xref">StateChangeEvents</span></div>
     </dd>
   </dl>
 
@@ -150,99 +151,37 @@ Class GatewaySubscription
 
 
 
+  <h2 id="Virtufin_Api_Services_StateChangeEvents_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Per the pubsub-topics spec, a Tier 0 <code>ce-type</code> is
+<code>com.virtufin.&lt;service&gt;.&lt;category&gt;.&lt;event&gt;</code> and <code>ce-source</code> is the
+publishing service's URN. These were <code>com.dapr.event.sent</code> and
+<code>urn:apigateway</code>: the same type for saves and deletes, so it discriminated
+nothing and every subscriber had to parse the payload to learn which had happened.</p>
+</div>
 
 
-  <h2 class="section" id="constructors">Constructors
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="Virtufin_Api_Services_GatewaySubscription__ctor_" data-uid="Virtufin.Api.Services.GatewaySubscription.#ctor*"></a>
 
-  <h3 id="Virtufin_Api_Services_GatewaySubscription__ctor_System_String_System_Threading_Channels_ChannelWriter_Virtufin_Api_Protos_SubscribeResponse__" data-uid="Virtufin.Api.Services.GatewaySubscription.#ctor(System.String,System.Threading.Channels.ChannelWriter{Virtufin.Api.Protos.SubscribeResponse})">
-  GatewaySubscription(string, ChannelWriter&lt;SubscribeResponse&gt;)
+  <h3 id="Virtufin_Api_Services_StateChangeEvents_Source" data-uid="Virtufin.Api.Services.StateChangeEvents.Source">
+  Source
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The API is the publishing service for these events.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GatewaySubscription(string topic, ChannelWriter&lt;SubscribeResponse&gt; writer)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1">ChannelWriter</a>&lt;<span class="xref">SubscribeResponse</span>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Virtufin_Api_Services_GatewaySubscription_AddedAt_" data-uid="Virtufin.Api.Services.GatewaySubscription.AddedAt*"></a>
-
-  <h3 id="Virtufin_Api_Services_GatewaySubscription_AddedAt" data-uid="Virtufin.Api.Services.GatewaySubscription.AddedAt">
-  AddedAt
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime AddedAt { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const string Source = &quot;urn:com.virtufin.api&quot;</code></pre>
   </div>
 
 
 
 
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="Virtufin_Api_Services_GatewaySubscription_Topic_" data-uid="Virtufin.Api.Services.GatewaySubscription.Topic*"></a>
-
-  <h3 id="Virtufin_Api_Services_GatewaySubscription_Topic" data-uid="Virtufin.Api.Services.GatewaySubscription.Topic">
-  Topic
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Topic { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
@@ -255,10 +194,10 @@ Class GatewaySubscription
 
 
 
-  <a id="Virtufin_Api_Services_GatewaySubscription_Writer_" data-uid="Virtufin.Api.Services.GatewaySubscription.Writer*"></a>
 
-  <h3 id="Virtufin_Api_Services_GatewaySubscription_Writer" data-uid="Virtufin.Api.Services.GatewaySubscription.Writer">
-  Writer
+
+  <h3 id="Virtufin_Api_Services_StateChangeEvents_TypeDeleted" data-uid="Virtufin.Api.Services.StateChangeEvents.TypeDeleted">
+  TypeDeleted
   
   </h3>
 
@@ -266,18 +205,89 @@ Class GatewaySubscription
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ChannelWriter&lt;SubscribeResponse&gt; Writer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const string TypeDeleted = &quot;com.virtufin.state.change.deleted&quot;</code></pre>
   </div>
 
 
 
 
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.channels.channelwriter-1">ChannelWriter</a>&lt;<span class="xref">SubscribeResponse</span>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Virtufin_Api_Services_StateChangeEvents_TypeSaved" data-uid="Virtufin.Api.Services.StateChangeEvents.TypeSaved">
+  TypeSaved
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TypeSaved = &quot;com.virtufin.state.change.saved&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Virtufin_Api_Services_StateChangeEvents_TypeForAction_" data-uid="Virtufin.Api.Services.StateChangeEvents.TypeForAction*"></a>
+
+  <h3 id="Virtufin_Api_Services_StateChangeEvents_TypeForAction_System_String_" data-uid="Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)">
+  TypeForAction(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Virtufin.Api.Services.StateActionConstants.html">StateActionConstants</a> action to its ce-type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string TypeForAction(string action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
 
 
 
