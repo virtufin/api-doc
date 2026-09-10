@@ -120,6 +120,9 @@ items:
     - uid: Virtufin.Api.Services.AggregatedReflectionV1Service
       name: AggregatedReflectionV1Service
       type: Class
+    - uid: Virtufin.Api.Services.AppMetrics
+      name: AppMetrics
+      type: Class
     - uid: Virtufin.Api.Services.CloudEventExtensions
       name: CloudEventExtensions
       type: Class

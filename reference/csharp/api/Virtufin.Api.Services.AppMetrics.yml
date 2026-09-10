@@ -1,0 +1,720 @@
+### YamlMime:ManagedReference
+items:
+- uid: Virtufin.Api.Services.AppMetrics
+  commentId: T:Virtufin.Api.Services.AppMetrics
+  id: AppMetrics
+  parent: Virtufin.Api.Services
+  children:
+  - Virtufin.Api.Services.AppMetrics.MeterName
+  - Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  - Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(System.String,System.String,System.String)
+  - Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  - Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  - Virtufin.Api.Services.AppMetrics.Tier0
+  - Virtufin.Api.Services.AppMetrics.Tier1
+  langs:
+  - csharp
+  - vb
+  name: AppMetrics
+  nameWithType: AppMetrics
+  fullName: Virtufin.Api.Services.AppMetrics
+  type: Class
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: AppMetrics
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 18
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: Application-level metrics for the API gateway.
+  remarks: >-
+    <p>
+
+    <code>Program.cs</code> has registered <code>AddMeter("Virtufin.Api")</code> since OpenTelemetry
+
+    was wired up, but nothing ever created that meter — the pipeline was configured and
+
+    empty. This is the type that gives it something to export.
+
+    </p>
+
+    <p>
+
+    The meter name must stay in step with the <code>AddMeter</code> call; <xref href="Virtufin.Api.Services.AppMetrics.MeterName" data-throw-if-not-resolved="false"></xref>
+
+    is referenced there so the two cannot drift.
+
+    </p>
+  example: []
+  syntax:
+    content: public static class AppMetrics
+    content.vb: Public Module AppMetrics
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Virtufin.Api.Services.AppMetrics.MeterName
+  commentId: F:Virtufin.Api.Services.AppMetrics.MeterName
+  id: MeterName
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: MeterName
+  nameWithType: AppMetrics.MeterName
+  fullName: Virtufin.Api.Services.AppMetrics.MeterName
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: MeterName
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 20
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  syntax:
+    content: public const string MeterName = "Virtufin.Api"
+    return:
+      type: System.String
+    content.vb: Public Const MeterName As String = "Virtufin.Api"
+- uid: Virtufin.Api.Services.AppMetrics.Tier0
+  commentId: F:Virtufin.Api.Services.AppMetrics.Tier0
+  id: Tier0
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: Tier0
+  nameWithType: AppMetrics.Tier0
+  fullName: Virtufin.Api.Services.AppMetrics.Tier0
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Tier0
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 34
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: 'Tier 0: the shared <code>state.change</code> topic (infrastructure state).'
+  example: []
+  syntax:
+    content: public const string Tier0 = "tier0"
+    return:
+      type: System.String
+    content.vb: Public Const Tier0 As String = "tier0"
+- uid: Virtufin.Api.Services.AppMetrics.Tier1
+  commentId: F:Virtufin.Api.Services.AppMetrics.Tier1
+  id: Tier1
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: Tier1
+  nameWithType: AppMetrics.Tier1
+  fullName: Virtufin.Api.Services.AppMetrics.Tier1
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: Tier1
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 37
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: 'Tier 1: a caller-supplied event on a caller-chosen topic (domain state).'
+  example: []
+  syntax:
+    content: public const string Tier1 = "tier1"
+    return:
+      type: System.String
+    content.vb: Public Const Tier1 As String = "tier1"
+- uid: Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  commentId: F:Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  id: StateChangePublishes
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: StateChangePublishes
+  nameWithType: AppMetrics.StateChangePublishes
+  fullName: Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: StateChangePublishes
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 46
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: State-change notifications the gateway attempted to publish, by tier.
+  remarks: >-
+    The denominator for <xref href="Virtufin.Api.Services.AppMetrics.StateChangePublishFailures" data-throw-if-not-resolved="false"></xref>. A failure count
+
+    without it says nothing about whether the gap is rare or routine.
+  example: []
+  syntax:
+    content: public static readonly Counter<long> StateChangePublishes
+    return:
+      type: System.Diagnostics.Metrics.Counter{System.Int64}
+    content.vb: Public Shared ReadOnly StateChangePublishes As Counter(Of Long)
+- uid: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  commentId: F:Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  id: StateChangePublishFailures
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: StateChangePublishFailures
+  nameWithType: AppMetrics.StateChangePublishFailures
+  fullName: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  type: Field
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: StateChangePublishFailures
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 69
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: >-
+    State-change notifications that failed to publish <b>after</b> the state write
+
+    had already succeeded — i.e. events silently lost.
+  remarks: >-
+    <p>
+
+    Publication is at-most-once and not atomic with the write (see the State Change
+
+    Events requirement in the pubsub-topics spec). When this fires, the write stands
+
+    and no subscriber is told: there is no retry, no dead letter, and the caller sees
+
+    success — correctly, since failing the call would make them repeat a write that
+
+    landed.
+
+    </p>
+
+    <p>
+
+    This counter exists to answer whether that gap needs closing. Closing it means a
+
+    transactional outbox, which flips the guarantee to at-least-once and makes every
+
+    subscriber's idempotency a breaking concern — worth it for a daily failure, not
+
+    obviously worth it for a twice-a-year one. Nobody currently knows which this is.
+
+    </p>
+  example: []
+  syntax:
+    content: public static readonly Counter<long> StateChangePublishFailures
+    return:
+      type: System.Diagnostics.Metrics.Counter{System.Int64}
+    content.vb: Public Shared ReadOnly StateChangePublishFailures As Counter(Of Long)
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  commentId: M:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  id: RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: RecordStateChangePublishAttempt(string, string, string)
+  nameWithType: AppMetrics.RecordStateChangePublishAttempt(string, string, string)
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: RecordStateChangePublishAttempt
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 74
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: Records an attempted state-change publish.
+  example: []
+  syntax:
+    content: public static void RecordStateChangePublishAttempt(string service, string action, string tier)
+    parameters:
+    - id: service
+      type: System.String
+    - id: action
+      type: System.String
+    - id: tier
+      type: System.String
+    content.vb: Public Shared Sub RecordStateChangePublishAttempt(service As String, action As String, tier As String)
+  overload: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt*
+  nameWithType.vb: AppMetrics.RecordStateChangePublishAttempt(String, String, String)
+  fullName.vb: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(String, String, String)
+  name.vb: RecordStateChangePublishAttempt(String, String, String)
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(System.String,System.String,System.String)
+  commentId: M:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(System.String,System.String,System.String)
+  id: RecordStateChangePublishFailure(System.String,System.String,System.String)
+  parent: Virtufin.Api.Services.AppMetrics
+  langs:
+  - csharp
+  - vb
+  name: RecordStateChangePublishFailure(string, string, string)
+  nameWithType: AppMetrics.RecordStateChangePublishFailure(string, string, string)
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Virtufin.Api/Services/AppMetrics.cs
+      branch: master
+      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+    id: RecordStateChangePublishFailure
+    path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
+    startLine: 81
+  assemblies:
+  - Virtufin.Api
+  namespace: Virtufin.Api.Services
+  summary: Records a state-change publish that failed after a successful write.
+  example: []
+  syntax:
+    content: public static void RecordStateChangePublishFailure(string service, string action, string tier)
+    parameters:
+    - id: service
+      type: System.String
+    - id: action
+      type: System.String
+    - id: tier
+      type: System.String
+    content.vb: Public Shared Sub RecordStateChangePublishFailure(service As String, action As String, tier As String)
+  overload: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure*
+  nameWithType.vb: AppMetrics.RecordStateChangePublishFailure(String, String, String)
+  fullName.vb: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(String, String, String)
+  name.vb: RecordStateChangePublishFailure(String, String, String)
+references:
+- uid: Virtufin.Api.Services.AppMetrics.MeterName
+  commentId: F:Virtufin.Api.Services.AppMetrics.MeterName
+  href: Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_MeterName
+  name: MeterName
+  nameWithType: AppMetrics.MeterName
+  fullName: Virtufin.Api.Services.AppMetrics.MeterName
+- uid: Virtufin.Api.Services
+  commentId: N:Virtufin.Api.Services
+  href: Virtufin.html
+  name: Virtufin.Api.Services
+  nameWithType: Virtufin.Api.Services
+  fullName: Virtufin.Api.Services
+  spec.csharp:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Services
+    name: Services
+    href: Virtufin.Api.Services.html
+  spec.vb:
+  - uid: Virtufin
+    name: Virtufin
+    href: Virtufin.html
+  - name: .
+  - uid: Virtufin.Api
+    name: Api
+    href: Virtufin.Api.html
+  - name: .
+  - uid: Virtufin.Api.Services
+    name: Services
+    href: Virtufin.Api.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  commentId: F:Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  href: Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_StateChangePublishFailures
+  name: StateChangePublishFailures
+  nameWithType: AppMetrics.StateChangePublishFailures
+  fullName: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+- uid: System.Diagnostics.Metrics.Counter{System.Int64}
+  commentId: T:System.Diagnostics.Metrics.Counter{System.Int64}
+  parent: System.Diagnostics.Metrics
+  definition: System.Diagnostics.Metrics.Counter`1
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  name: Counter<long>
+  nameWithType: Counter<long>
+  fullName: System.Diagnostics.Metrics.Counter<long>
+  nameWithType.vb: Counter(Of Long)
+  fullName.vb: System.Diagnostics.Metrics.Counter(Of Long)
+  name.vb: Counter(Of Long)
+  spec.csharp:
+  - uid: System.Diagnostics.Metrics.Counter`1
+    name: Counter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  - name: <
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '>'
+  spec.vb:
+  - uid: System.Diagnostics.Metrics.Counter`1
+    name: Counter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: System.Diagnostics.Metrics.Counter`1
+  commentId: T:System.Diagnostics.Metrics.Counter`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  name: Counter<T>
+  nameWithType: Counter<T>
+  fullName: System.Diagnostics.Metrics.Counter<T>
+  nameWithType.vb: Counter(Of T)
+  fullName.vb: System.Diagnostics.Metrics.Counter(Of T)
+  name.vb: Counter(Of T)
+  spec.csharp:
+  - uid: System.Diagnostics.Metrics.Counter`1
+    name: Counter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Diagnostics.Metrics.Counter`1
+    name: Counter
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics.counter-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Diagnostics.Metrics
+  commentId: N:System.Diagnostics.Metrics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics.Metrics
+  nameWithType: System.Diagnostics.Metrics
+  fullName: System.Diagnostics.Metrics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  - name: .
+  - uid: System.Diagnostics.Metrics
+    name: Metrics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  - name: .
+  - uid: System.Diagnostics.Metrics
+    name: Metrics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.metrics
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt*
+  commentId: Overload:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt
+  href: Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishAttempt_System_String_System_String_System_String_
+  name: RecordStateChangePublishAttempt
+  nameWithType: AppMetrics.RecordStateChangePublishAttempt
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure*
+  commentId: Overload:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure
+  href: Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishFailure_System_String_System_String_System_String_
+  name: RecordStateChangePublishFailure
+  nameWithType: AppMetrics.RecordStateChangePublishFailure
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure

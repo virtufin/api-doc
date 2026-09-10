@@ -606,6 +606,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Virtufin.Api.Services.AppMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Virtufin.Api.Services.AppMetrics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Virtufin.Api.Services.AppMetrics",
+      "Summary": "<p sourcefile=\"api/Virtufin.Api.Services.AppMetrics.yml\" sourcestartlinenumber=\"1\">Application-level metrics for the API gateway.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Virtufin.Api.Services.CloudEventExtensions.yml",
       "output": {
         ".html": {

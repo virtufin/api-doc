@@ -2749,6 +2749,74 @@ references:
   isSpec: "True"
   fullName: Virtufin.Api.Services.AggregatedReflectionV1Service.ServerReflectionInfo
   nameWithType: AggregatedReflectionV1Service.ServerReflectionInfo
+- uid: Virtufin.Api.Services.AppMetrics
+  name: AppMetrics
+  href: api/Virtufin.Api.Services.AppMetrics.html
+  commentId: T:Virtufin.Api.Services.AppMetrics
+  fullName: Virtufin.Api.Services.AppMetrics
+  nameWithType: AppMetrics
+- uid: Virtufin.Api.Services.AppMetrics.MeterName
+  name: MeterName
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_MeterName
+  commentId: F:Virtufin.Api.Services.AppMetrics.MeterName
+  fullName: Virtufin.Api.Services.AppMetrics.MeterName
+  nameWithType: AppMetrics.MeterName
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  name: RecordStateChangePublishAttempt(string, string, string)
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishAttempt_System_String_System_String_System_String_
+  commentId: M:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(System.String,System.String,System.String)
+  name.vb: RecordStateChangePublishAttempt(String, String, String)
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(string, string, string)
+  fullName.vb: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt(String, String, String)
+  nameWithType: AppMetrics.RecordStateChangePublishAttempt(string, string, string)
+  nameWithType.vb: AppMetrics.RecordStateChangePublishAttempt(String, String, String)
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt*
+  name: RecordStateChangePublishAttempt
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishAttempt_
+  commentId: Overload:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishAttempt
+  nameWithType: AppMetrics.RecordStateChangePublishAttempt
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(System.String,System.String,System.String)
+  name: RecordStateChangePublishFailure(string, string, string)
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishFailure_System_String_System_String_System_String_
+  commentId: M:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(System.String,System.String,System.String)
+  name.vb: RecordStateChangePublishFailure(String, String, String)
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(string, string, string)
+  fullName.vb: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure(String, String, String)
+  nameWithType: AppMetrics.RecordStateChangePublishFailure(string, string, string)
+  nameWithType.vb: AppMetrics.RecordStateChangePublishFailure(String, String, String)
+- uid: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure*
+  name: RecordStateChangePublishFailure
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_RecordStateChangePublishFailure_
+  commentId: Overload:Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure
+  isSpec: "True"
+  fullName: Virtufin.Api.Services.AppMetrics.RecordStateChangePublishFailure
+  nameWithType: AppMetrics.RecordStateChangePublishFailure
+- uid: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  name: StateChangePublishFailures
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_StateChangePublishFailures
+  commentId: F:Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  fullName: Virtufin.Api.Services.AppMetrics.StateChangePublishFailures
+  nameWithType: AppMetrics.StateChangePublishFailures
+- uid: Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  name: StateChangePublishes
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_StateChangePublishes
+  commentId: F:Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  fullName: Virtufin.Api.Services.AppMetrics.StateChangePublishes
+  nameWithType: AppMetrics.StateChangePublishes
+- uid: Virtufin.Api.Services.AppMetrics.Tier0
+  name: Tier0
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_Tier0
+  commentId: F:Virtufin.Api.Services.AppMetrics.Tier0
+  fullName: Virtufin.Api.Services.AppMetrics.Tier0
+  nameWithType: AppMetrics.Tier0
+- uid: Virtufin.Api.Services.AppMetrics.Tier1
+  name: Tier1
+  href: api/Virtufin.Api.Services.AppMetrics.html#Virtufin_Api_Services_AppMetrics_Tier1
+  commentId: F:Virtufin.Api.Services.AppMetrics.Tier1
+  fullName: Virtufin.Api.Services.AppMetrics.Tier1
+  nameWithType: AppMetrics.Tier1
 - uid: Virtufin.Api.Services.CloudEventExtensions
   name: CloudEventExtensions
   href: api/Virtufin.Api.Services.CloudEventExtensions.html

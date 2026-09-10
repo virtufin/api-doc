@@ -205,14 +205,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/b9aec880bbf333721224ce9a9206a64eeecd2d83"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 4efb529">
+       title="View commit b9aec88">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">b9aec88</text>
       </svg>
     </a>
 </div>
@@ -372,14 +372,14 @@
     </div>
     <span class="md-source__repository">virtufin/virtufin-api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/4efb529f69dc92308bd7e17148f461b137039a84"
+    <a href="https://git.haenerconsulting.com/virtufin/virtufin-api/commit/b9aec880bbf333721224ce9a9206a64eeecd2d83"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 4efb529">
+       title="View commit b9aec88">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4efb529</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">b9aec88</text>
       </svg>
     </a>
 </div>
@@ -802,6 +802,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-the-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measuring the gap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1413,6 +1430,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Delivery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-the-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measuring the gap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1726,6 +1760,40 @@ and the publish fails, the event is lost — the API logs it and still reports t
 successful, because failing the call would make you repeat a write that already landed.
 Design subscribers to reconcile from state rather than assuming every change produced an
 event.</p>
+<h4 id="measuring-the-gap">Measuring the gap</h4>
+<p>A lost event is otherwise invisible: no retry, no dead letter, and the caller sees
+success. Two counters make it countable:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>virtufin_api_state_change_publishes_total</code></td>
+<td>notifications attempted, after a successful write</td>
+</tr>
+<tr>
+<td><code>virtufin_api_state_change_publish_failures_total</code></td>
+<td>of those, the ones lost</td>
+</tr>
+</tbody>
+</table>
+<p>Both are tagged <code>service</code>, <code>action</code> (<code>save</code>/<code>delete</code>) and <code>tier</code> (<code>tier0</code>/<code>tier1</code>) — the
+tiers are separated because a lost Tier 1 domain event matters considerably more than a
+lost Tier 0 infra notification.</p>
+<p>They are exported over OTLP <strong>only when <code>OTEL_EXPORTER_OTLP_ENDPOINT</code> is set</strong>. There is
+no collector in the deployment today, so until one exists the metrics are collected
+in-process and go nowhere, and the structured log is the measurement path:</p>
+<div class="highlight"><pre><span></span><code>State change publish failed after a successful write: service=… key=… topic=… tier=…
+</code></pre></div>
+<p>logged at <code>Error</code> from <code>StateService</code>. Counting those occurrences over a period is what
+should decide whether the at-most-once gap is worth closing with a transactional outbox —
+which would flip the guarantee to at-least-once and make every subscriber's idempotency a
+breaking concern. That trade is worth making for a frequent failure and not for a rare
+one, and nothing measured it before.</p>
 <h2 id="subscribing">Subscribing</h2>
 <p><code>Pubsub.Subscribe</code> is server-streaming: one call, many <code>SubscribeResponse</code> messages, one
 gRPC stream per client call regardless of how many topics it names.</p>
@@ -1940,7 +2008,7 @@ backoff:</p>
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-10T02:02:12Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-10T03:03:14Z</span>
 </div>
 
     </div>
