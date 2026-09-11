@@ -17,7 +17,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprStableAppCallbackMethodProvider.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DaprStableAppCallbackMethodProvider
     path: ../../../src/Virtufin.Api/Services/DaprStableAppCallbackMethodProvider.cs
     startLine: 54
@@ -138,7 +138,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprStableAppCallbackMethodProvider.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: OnServiceMethodDiscovery
     path: ../../../src/Virtufin.Api/Services/DaprStableAppCallbackMethodProvider.cs
     startLine: 89

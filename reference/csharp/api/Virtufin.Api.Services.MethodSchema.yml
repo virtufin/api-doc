@@ -20,7 +20,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcReflectionService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: MethodSchema
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
     startLine: 1661
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcReflectionService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: InputTypeName
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
     startLine: 1663
@@ -86,7 +86,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcReflectionService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: OutputTypeName
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
     startLine: 1664
@@ -115,7 +115,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcReflectionService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: SchemaType
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
     startLine: 1665
@@ -144,7 +144,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcReflectionService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Fields
     path: ../../../src/Virtufin.Api/Services/GrpcReflectionService.cs
     startLine: 1666

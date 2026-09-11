@@ -22,7 +22,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcChannelPool
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 9
@@ -59,7 +59,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 16
@@ -93,7 +93,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ChannelCount
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 22
@@ -122,7 +122,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ConfiguredServiceCount
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 29
@@ -158,7 +158,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: IsDialable
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 41
@@ -204,7 +204,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GetChannelAsync
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 44
@@ -238,7 +238,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/GrpcChannelPool.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Dispose
     path: ../../../src/Virtufin.Api/Services/GrpcChannelPool.cs
     startLine: 66

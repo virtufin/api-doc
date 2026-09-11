@@ -21,7 +21,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: TriggerService
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 12
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 25
@@ -93,7 +93,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ScheduleTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 35
@@ -128,7 +128,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GetTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 86
@@ -163,7 +163,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DeleteTrigger
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 137
@@ -198,7 +198,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/TriggerService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ListTriggers
     path: ../../../src/Virtufin.Api/Services/TriggerService.cs
     startLine: 191

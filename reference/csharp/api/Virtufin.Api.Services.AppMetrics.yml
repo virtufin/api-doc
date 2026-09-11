@@ -23,7 +23,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: AppMetrics
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 18
@@ -78,7 +78,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: MeterName
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 20
@@ -105,7 +105,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Tier0
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 34
@@ -134,7 +134,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Tier1
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 37
@@ -163,7 +163,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: StateChangePublishes
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 46
@@ -196,7 +196,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: StateChangePublishFailures
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 69
@@ -254,7 +254,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: RecordStateChangePublishAttempt
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 74
@@ -292,7 +292,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/AppMetrics.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: RecordStateChangePublishFailure
     path: ../../../src/Virtufin.Api/Services/AppMetrics.cs
     startLine: 81

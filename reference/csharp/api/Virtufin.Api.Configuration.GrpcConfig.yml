@@ -20,7 +20,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcConfig
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 51
@@ -55,7 +55,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 53
@@ -84,7 +84,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Host
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 54
@@ -113,7 +113,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Port
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 55
@@ -142,7 +142,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Hosts
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 56

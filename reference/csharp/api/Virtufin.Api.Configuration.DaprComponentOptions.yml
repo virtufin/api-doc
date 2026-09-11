@@ -21,7 +21,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DaprComponentOptions
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 23
@@ -90,7 +90,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: PubsubNameKey
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 26
@@ -119,7 +119,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DefaultPubsubName
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 29
@@ -148,7 +148,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: PubsubName
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 31
@@ -177,7 +177,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 33
@@ -209,7 +209,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/DaprComponentOptions.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Resolve
     path: ../../../src/Virtufin.Api/Configuration/DaprComponentOptions.cs
     startLine: 44

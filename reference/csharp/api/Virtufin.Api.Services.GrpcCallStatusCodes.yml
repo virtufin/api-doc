@@ -32,7 +32,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcCallStatusCodes
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 30
@@ -89,7 +89,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Ok
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 32
@@ -116,7 +116,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Unknown
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 33
@@ -143,7 +143,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: NotFound
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 34
@@ -170,7 +170,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Unsupported
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 35
@@ -197,7 +197,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Internal
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 36
@@ -224,7 +224,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: InvalidArgument
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 38
@@ -253,7 +253,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Unavailable
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 39
@@ -280,7 +280,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DeadlineExceeded
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 40
@@ -307,7 +307,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: PermissionDenied
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 41
@@ -334,7 +334,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Unauthenticated
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 42
@@ -361,7 +361,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ResourceExhausted
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 43
@@ -388,7 +388,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: FailedPrecondition
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 44
@@ -415,7 +415,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Aborted
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 45
@@ -442,7 +442,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: AlreadyExists
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 46
@@ -469,7 +469,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Cancelled
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 47
@@ -496,7 +496,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: IndicatesBackendFault
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 55

@@ -20,7 +20,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: StateChangeEvents
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 122
@@ -67,7 +67,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeSaved
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 124
@@ -94,7 +94,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeDeleted
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 125
@@ -121,7 +121,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Source
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 128
@@ -150,7 +150,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeForAction
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 131

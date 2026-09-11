@@ -20,7 +20,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/PubSubService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: PubsubService
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
     startLine: 14
@@ -61,7 +61,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/PubSubService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
     startLine: 29
@@ -101,7 +101,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/PubSubService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: PublishEvent
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
     startLine: 43
@@ -136,7 +136,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/PubSubService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Subscribe
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
     startLine: 98
@@ -180,7 +180,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/PubSubService.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Unsubscribe
     path: ../../../src/Virtufin.Api/Services/PubSubService.cs
     startLine: 252

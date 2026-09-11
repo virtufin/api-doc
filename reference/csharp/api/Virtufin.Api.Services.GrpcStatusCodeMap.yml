@@ -17,7 +17,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcStatusCodeMap
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 67
@@ -59,7 +59,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ToGatewayStatus
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 69

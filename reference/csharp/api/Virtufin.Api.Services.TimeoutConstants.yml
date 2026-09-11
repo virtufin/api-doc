@@ -24,7 +24,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: TimeoutConstants
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 89
@@ -59,7 +59,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: SendEventTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 91
@@ -86,7 +86,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: MessageHandlingTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 92
@@ -113,7 +113,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcGatewayTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 93
@@ -140,7 +140,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcKeepAlivePingDelaySeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 94
@@ -167,7 +167,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcKeepAlivePingTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 95
@@ -194,7 +194,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ReflectionProbeTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 96
@@ -221,7 +221,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GrpcReflectionCacheTtlMinutes
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 97
@@ -248,7 +248,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/Constants.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: SubscriptionWriterDrainTimeoutSeconds
     path: ../../../src/Virtufin.Api/Services/Constants.cs
     startLine: 98

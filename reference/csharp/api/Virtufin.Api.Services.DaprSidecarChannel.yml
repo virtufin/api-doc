@@ -19,7 +19,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DaprSidecarChannel
     path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
     startLine: 13
@@ -65,7 +65,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Channel
     path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
     startLine: 15
@@ -94,7 +94,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: .ctor
     path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
     startLine: 17
@@ -126,7 +126,7 @@ items:
     remote:
       path: src/Virtufin.Api/Services/DaprSidecarChannel.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: Dispose
     path: ../../../src/Virtufin.Api/Services/DaprSidecarChannel.cs
     startLine: 19

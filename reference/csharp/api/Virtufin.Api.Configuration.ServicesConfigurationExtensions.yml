@@ -18,7 +18,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: ServicesConfigurationExtensions
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 2
@@ -54,7 +54,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: DialableServices
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 8
@@ -91,7 +91,7 @@ items:
     remote:
       path: src/Virtufin.Api/Configuration/Models.cs
       branch: master
-      repo: https://git.haenerconsulting.com/virtufin/virtufin-api
+      repo: https://git.haenerconsulting.com/virtufin/api
     id: GetServiceConfig
     path: ../../../src/Virtufin.Api/Configuration/Models.cs
     startLine: 11
