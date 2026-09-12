@@ -23,21 +23,31 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: StateChangeEvents
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 122
+    startLine: 128
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   summary: CloudEvent attributes for the Tier 0 <code>state.change</code> topic.
   remarks: >-
-    Per the pubsub-topics spec, a Tier 0 <code>ce-type</code> is
+    Per the pubsub-topics spec, a ce-type is
 
-    <code>com.virtufin.&lt;service&gt;.&lt;category&gt;.&lt;event&gt;</code> and <code>ce-source</code> is the
+    <code>com.virtufin.&lt;service&gt;.&lt;action&gt;</code> and <code>ce-source</code> is the publishing
 
-    publishing service's URN. These were <code>com.dapr.event.sent</code> and
+    service's URN, <code>urn:com.virtufin:&lt;service&gt;</code>.
 
-    <code>urn:apigateway</code>: the same type for saves and deletes, so it discriminated
 
-    nothing and every subscriber had to parse the payload to learn which had happened.
+    The type carries no category segment: the topic already is
+
+    <code>&lt;service&gt;.&lt;category&gt;</code>, so repeating it here duplicated routing the
+
+    subscriber already has.
+
+
+    These were <code>com.dapr.event.sent</code> and <code>urn:apigateway</code>: the same type for
+
+    saves and deletes, so it discriminated nothing and every subscriber had to parse
+
+    the payload to learn which had happened.
   example: []
   syntax:
     content: public static class StateChangeEvents
@@ -70,15 +80,15 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeSaved
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 124
+    startLine: 130
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public const string TypeSaved = "com.virtufin.state.change.saved"
+    content: public const string TypeSaved = "com.virtufin.api.state-saved"
     return:
       type: System.String
-    content.vb: Public Const TypeSaved As String = "com.virtufin.state.change.saved"
+    content.vb: Public Const TypeSaved As String = "com.virtufin.api.state-saved"
 - uid: Virtufin.Api.Services.StateChangeEvents.TypeDeleted
   commentId: F:Virtufin.Api.Services.StateChangeEvents.TypeDeleted
   id: TypeDeleted
@@ -97,15 +107,15 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeDeleted
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 125
+    startLine: 131
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   syntax:
-    content: public const string TypeDeleted = "com.virtufin.state.change.deleted"
+    content: public const string TypeDeleted = "com.virtufin.api.state-deleted"
     return:
       type: System.String
-    content.vb: Public Const TypeDeleted As String = "com.virtufin.state.change.deleted"
+    content.vb: Public Const TypeDeleted As String = "com.virtufin.api.state-deleted"
 - uid: Virtufin.Api.Services.StateChangeEvents.Source
   commentId: F:Virtufin.Api.Services.StateChangeEvents.Source
   id: Source
@@ -124,17 +134,17 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: Source
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 128
+    startLine: 134
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   summary: The API is the publishing service for these events.
   example: []
   syntax:
-    content: public const string Source = "urn:com.virtufin.api"
+    content: public const string Source = "urn:com.virtufin:api"
     return:
       type: System.String
-    content.vb: Public Const Source As String = "urn:com.virtufin.api"
+    content.vb: Public Const Source As String = "urn:com.virtufin:api"
 - uid: Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
   commentId: M:Virtufin.Api.Services.StateChangeEvents.TypeForAction(System.String)
   id: TypeForAction(System.String)
@@ -153,7 +163,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeForAction
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 131
+    startLine: 137
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

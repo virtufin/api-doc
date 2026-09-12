@@ -205,14 +205,14 @@
     </div>
     <span class="md-source__repository">virtufin/api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/api/commit/650a4414a28bf92c7b174252406476a25b52de99"
+    <a href="https://git.haenerconsulting.com/virtufin/api/commit/4f075ece36379f5f97af753b604e2df96b9b59ba"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 650a441">
+       title="View commit 4f075ec">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">650a441</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4f075ec</text>
       </svg>
     </a>
 </div>
@@ -372,14 +372,14 @@
     </div>
     <span class="md-source__repository">virtufin/api</span>
   </a>
-    <a href="https://git.haenerconsulting.com/virtufin/api/commit/650a4414a28bf92c7b174252406476a25b52de99"
+    <a href="https://git.haenerconsulting.com/virtufin/api/commit/4f075ece36379f5f97af753b604e2df96b9b59ba"
        class="md-source-commit-badge"
        target="_blank"
        rel="noopener"
-       title="View commit 650a441">
+       title="View commit 4f075ec">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
         <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"/>
-        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">650a441</text>
+        <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4f075ec</text>
       </svg>
     </a>
 </div>
@@ -1692,7 +1692,7 @@ change.</p>
 registrations, connection records, leader leases. Leave <code>change</code> unset and the API
 publishes to the global <code>state.change</code> topic with:</p>
 <ul>
-<li><code>type</code> = <code>com.virtufin.state.change.saved</code> or <code>com.virtufin.state.change.deleted</code>, so
+<li><code>type</code> = <code>com.virtufin.api.state-saved</code> or <code>com.virtufin.api.state-deleted</code>, so
   subscribers can filter on the action without parsing the payload;</li>
 <li><code>source</code> = <code>urn:com.virtufin.api</code>, the publishing service.</li>
 </ul>
@@ -1863,7 +1863,7 @@ unsubscribe until the pool is exhausted.</p>
 <h2 id="cron-triggers">Cron triggers</h2>
 <p><code>Trigger.ScheduleTrigger</code> schedules a recurring job through Dapr's Scheduler. When it fires,
 <code>DaprAppCallbackService</code> publishes an <strong>empty</strong> CloudEvent to the trigger's <code>target_topic</code>
-(<code>type</code> = <code>com.dapr.event.sent</code>, <code>source</code> = <code>urn:apigateway</code>). The trigger carries no payload;
+(<code>type</code> = <code>com.dapr.event.sent</code>, <code>source</code> = <code>urn:com.virtufin:api</code>). The trigger carries no payload;
 subscribers react to the fact that it fired.</p>
 <h2 id="configuration">Configuration</h2>
 <p>The Dapr pub/sub component name defaults to <code>"pubsub"</code> and is configurable, in this
@@ -2008,7 +2008,7 @@ backoff:</p>
     <div class="md-copyright__highlight">
       <div style="display:table;width:100%">
   <span style="display:table-cell">&copy; 2026 Häner Consulting. All Rights Reserved.</span>
-  <span style="display:table-cell;text-align:right">2026-09-12T09:29:36Z</span>
+  <span style="display:table-cell;text-align:right">2026-09-12T09:55:50Z</span>
 </div>
 
     </div>
