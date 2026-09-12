@@ -23,24 +23,35 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: StateChangeEvents
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 128
+    startLine: 134
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
   summary: CloudEvent attributes for the Tier 0 <code>state.change</code> topic.
   remarks: >-
-    Per the pubsub-topics spec, a ce-type is
+    <code>ce-source</code> is the publishing service's URN, <code>urn:com.virtufin:&lt;service&gt;</code>.
 
-    <code>com.virtufin.&lt;service&gt;.&lt;action&gt;</code> and <code>ce-source</code> is the publishing
-
-    service's URN, <code>urn:com.virtufin:&lt;service&gt;</code>.
+    That form is the same at every tier.
 
 
-    The type carries no category segment: the topic already is
+    The ce-type rule below is <b>Tier 0 only</b>: <code>com.virtufin.&lt;service&gt;.&lt;action&gt;</code>,
 
-    <code>&lt;service&gt;.&lt;category&gt;</code>, so repeating it here duplicated routing the
+    with no category segment, because a Tier 0 topic already is
+
+    <code>&lt;service&gt;.&lt;category&gt;</code> and repeating it here duplicated routing the
 
     subscriber already has.
+
+
+    Do not generalise that to Tier 1. A Tier 1 type is domain-based and carries no
+
+    service segment at all (<code>com.virtufin.trading.order.filled</code>), and a Tier 1
+
+    topic is scenario- or world-prefixed (<code>sc.&lt;scenarioId&gt;.trading.…</code>) rather
+
+    than <code>&lt;service&gt;.&lt;category&gt;</code> — so neither half of the reasoning above
+
+    applies. See the pubsub-topics spec for the per-tier patterns.
 
 
     These were <code>com.dapr.event.sent</code> and <code>urn:apigateway</code>: the same type for
@@ -80,7 +91,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeSaved
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 130
+    startLine: 136
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -107,7 +118,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeDeleted
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 131
+    startLine: 137
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -134,7 +145,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: Source
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 134
+    startLine: 140
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services
@@ -163,7 +174,7 @@ items:
       repo: https://git.haenerconsulting.com/virtufin/api
     id: TypeForAction
     path: ../../../src/Virtufin.Api/Services/Constants.cs
-    startLine: 137
+    startLine: 143
   assemblies:
   - Virtufin.Api
   namespace: Virtufin.Api.Services

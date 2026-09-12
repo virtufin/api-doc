@@ -49,10 +49,10 @@
             Virtufin.Api
           </a>
           <div class="git-info">
-            <a href="{git_repo_url}/commit/4f075ece36379f5f97af753b604e2df96b9b59ba" target="_blank" rel="noopener" class="commit-badge" title="View commit 4f075ece36379f5f97af753b604e2df96b9b59ba">
+            <a href="{git_repo_url}/commit/c31f411e3be2e28fa2565b8174977b4a44ded998" target="_blank" rel="noopener" class="commit-badge" title="View commit c31f411e3be2e28fa2565b8174977b4a44ded998">
               <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 82 22" width="82" height="22" style="vertical-align:middle;">
                 <rect width="82" height="22" rx="4" fill="#e9ecef" stroke="currentColor" stroke-width="0.75" opacity="0.6"></rect>
-                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">4f075ece36379f5f97af753b604e2df96b9b59ba</text>
+                <text x="41" y="15.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="600" fill="currentColor">c31f411e3be2e28fa2565b8174977b4a44ded998</text>
               </svg>
             </a>
           </div>          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,12 +152,17 @@ Class StateChangeEvents
 
 
   <h2 id="Virtufin_Api_Services_StateChangeEvents_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>Per the pubsub-topics spec, a ce-type is
-<code>com.virtufin.&lt;service&gt;.&lt;action&gt;</code> and <code>ce-source</code> is the publishing
-service's URN, <code>urn:com.virtufin:&lt;service&gt;</code>.</p>
-<p>The type carries no category segment: the topic already is
-<code>&lt;service&gt;.&lt;category&gt;</code>, so repeating it here duplicated routing the
+  <div class="markdown level0 remarks"><p><code>ce-source</code> is the publishing service's URN, <code>urn:com.virtufin:&lt;service&gt;</code>.
+That form is the same at every tier.</p>
+<p>The ce-type rule below is <b>Tier 0 only</b>: <code>com.virtufin.&lt;service&gt;.&lt;action&gt;</code>,
+with no category segment, because a Tier 0 topic already is
+<code>&lt;service&gt;.&lt;category&gt;</code> and repeating it here duplicated routing the
 subscriber already has.</p>
+<p>Do not generalise that to Tier 1. A Tier 1 type is domain-based and carries no
+service segment at all (<code>com.virtufin.trading.order.filled</code>), and a Tier 1
+topic is scenario- or world-prefixed (<code>sc.&lt;scenarioId&gt;.trading.…</code>) rather
+than <code>&lt;service&gt;.&lt;category&gt;</code> — so neither half of the reasoning above
+applies. See the pubsub-topics spec for the per-tier patterns.</p>
 <p>These were <code>com.dapr.event.sent</code> and <code>urn:apigateway</code>: the same type for
 saves and deletes, so it discriminated nothing and every subscriber had to parse
 the payload to learn which had happened.</p>
